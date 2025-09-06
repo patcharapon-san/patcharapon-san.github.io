@@ -9,6 +9,21 @@ plugins:
   - jekyll-feed
   - jekyll-seo-tag
 
+# Navigation menu order
+header_pages:
+  - index.md
+  - projects/index.md
+  - about.md
+
+# Alternative navigation structure
+navigation:
+  - title: "Home"
+    url: "/"
+  - title: "Projects"
+    url: "/projects/"
+  - title: "About"
+    url: "/about/"
+
 # Exclude files and folders from Jekyll processing
 exclude:
   - asset/

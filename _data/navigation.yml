@@ -1,0 +1,20 @@
+# Navigation Data File
+# This controls the order and structure of your site navigation
+
+main:
+  - name: "Home"
+    link: "/"
+    weight: 1
+  - name: "Projects"
+    link: "/projects/"
+    weight: 2
+    children:
+      - name: "Enterprise Solutions"
+        link: "/projects/enterprise-solutions/"
+      - name: "Web Applications"
+        link: "/projects/web-platforms/"
+      - name: "Desktop Systems"
+        link: "/projects/desktop-systems/"
+  - name: "About"
+    link: "/about/"
+    weight: 3

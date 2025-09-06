@@ -5,7 +5,9 @@ title: Home
 
 # Hey, I'm Patcharapon Sangsatra 
 
-With over 10 years of experience across both enterprise environments and independent c## 🤝 Let's Connect
+With over 10 years of experience across both enterprise environments and independent 
+
+🤝 Let's Connect
 
 - [LinkedIn](https://www.linkedin.com/in/patcharaponsan/)
 - [Email Me](p.sangsartra@gmail.com)
