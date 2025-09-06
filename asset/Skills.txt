@@ -1,0 +1,45 @@
+Skills
+
+Web Pages
+C#
+Desktop Application Development
+Azure Functions
+.NET Framework
+Unit Testing
+Troubleshooting
+Debugging
+Azure DevOps Services
+REST APIs
+System Requirements
+Entity Framework
+Extract, Transform, Load (ETL)
+Web Development
+Business Requirements
+Microsoft SQL Server
+Swagger API
+ASP.NET Core
+Language Integrated Query (LINQ)
+Python (Programming Language)
+JSON
+SQL Server Management Studio
+API Management
+Software Development
+Node.js
+OAuth
+Microsoft Azure
+React.js
+Problem Solving
+.NET Core
+Office 365
+Communication
+Azure Data Factory
+Technical Requirements
+Integration Testing
+Design & Build Enablement
+Azure Key Vault
+Web Services API
+Microsoft Office
+REST API
+C# in .NET
+API Development
+Software Requirements

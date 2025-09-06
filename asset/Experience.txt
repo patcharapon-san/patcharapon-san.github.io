@@ -1,0 +1,62 @@
+Experience
+
+Packaged App Development Specialist
+Build, configure and test packaged software & Software as a Service (SaaS) products. Develop and test new components or enhancements. Use declarative features to develop functionality where applicable. Provide primary support for application releases into production, including deployment plan and schedule.Build, configure and test packaged software & Software as a Service (SaaS) products. Develop and test new components or enhancements. Use declarative features to develop functionality where applicable. Provide primary support for application releases into production, including deployment plan and schedule.
+
+Package App Development Senior Analyst
+• Oil & gas experience background (Reservoir Management, Petroleum Engineering, Drilling and Completion Engineering) 
+• Experience in Desktop application, Console application, Web application development (.NET Framework or .NET Core), Entity Framework, LINQ expression and extension methods, Design patterns, SOAP Web Services, RESTful API, JSON, JWT, OAuth2 
+• Experience in MSSQL Database, Oracle Database 
+• Integrate applications with Azure databases, storage, and other services. 
+• Implement security measures and authentication in Azure applications. 
+• Create APIs and integrate external Azure solutions with services. 
+• Implement CI/CD pipelines and automate application deployment processes. 
+• Maintain and develop application to generate report using Crystals Report 
+• Experience in ReactJS Experience in automated test tools.
+• Experience with Agile, SCRUM and lean software development• Oil & gas experience background (Reservoir Management, Petroleum Engineering, Drilling and Completion Engineering) • Experience in Desktop application, Console application, Web application development (.NET Framework or .NET Core), Entity Framework, LINQ expression and extension methods, Design patterns, SOAP Web Services, RESTful API, JSON, JWT, OAuth2 • Experience in MSSQL Database, Oracle Database • Integrate applications with Azure databases, storage, and other services. • Implement security measures and authentication in Azure applications. • Create APIs and integrate external Azure solutions with services. • Implement CI/CD pipelines and automate application deployment processes. • Maintain and develop application to generate report using Crystals Report • Experience in ReactJS Experience in automated test tools. • Experience with Agile, SCRUM and lean software development
+Web Pages, C# and +41 skills
+
+Application Developer
+• Oil & gas experience background (Reservoir Management, Petroleum Engineering, Drilling and Completion Engineering) 
+• Experience in Desktop application, Console application, Web application development (.NET Framework or .NET Core), Entity Framework, LINQ expression and extension methods, Design patterns, SOAP Web Services, RESTful API, JSON, JWT, OAuth2 
+• Experience in MSSQL Database, Oracle Database
+• Integrate applications with Azure databases, storage, and other services.
+• Implement security measures and authentication in Azure applications.
+• Create APIs and integrate external Azure solutions with services.
+• Implement CI/CD pipelines and automate application deployment processes.
+• Maintain and develop application to generate report using Crystals Report
+• Experience in ReactJS• Oil & gas experience background (Reservoir Management, Petroleum Engineering, Drilling and Completion Engineering) • Experience in Desktop application, Console application, Web application development (.NET Framework or .NET Core), Entity Framework, LINQ expression and extension methods, Design patterns, SOAP Web Services, RESTful API, JSON, JWT, OAuth2 • Experience in MSSQL Database, Oracle Database • Integrate applications with Azure databases, storage, and other services. • Implement security measures and authentication in Azure applications. • Create APIs and integrate external Azure solutions with services. • Implement CI/CD pipelines and automate application deployment processes. • Maintain and develop application to generate report using Crystals Report • Experience in ReactJS
+
+Senior Software Developer
+• In charge of supporting technology for System integration (SI) projects
+• Integrated system with third party in term of data communication, payment method and personal identity verification
+• Develop and maintain the website to its full potential (increase page speed, tuning database performance, upgrade website and data security) 
+• Design distribution system of document and certificate
+• Developed an electronic visa application system and backoffice system for embassy and consular
+• Contribute technology idea to enhance the overall product experience
+• Implementation of security and data protection 
+• Work closely with the support team to handle and deliver faster solution for every incident
+• Work with various teams to support the demand of customer
+• Monitor and optimize application in Maintenance Service Agreement (MA) phase
+• Revamped website in order to serve the demand of users both in the side of colleagues and the customer• In charge of supporting technology for System integration (SI) projects • Integrated system with third party in term of data communication, payment method and personal identity verification • Develop and maintain the website to its full potential (increase page speed, tuning database performance, upgrade website and data security) • Design distribution system of document and certificate • Developed an electronic visa application system and backoffice system for embassy and consular • Contribute technology idea to enhance the overall product experience • Implementation of security and data protection • Work closely with the support team to handle and deliver faster solution for every incident • Work with various teams to support the demand of customer • Monitor and optimize application in Maintenance Service Agreement (MA) phase • Revamped website in order to serve the demand of users both in the side of colleagues and the customer
+
+Solutions Architect
+• Maintain all websites of company, both internal and external
+• Developed email blast service to support the company’s demand for sending email to large or specific target customers
+• Revamped website in order to serve the demand of users both in the side of colleagues and the customer
+• Designed database schema, feature and user interface for the company website
+• develop and maintain the website to its full potential (increase page speed, upgrade website and data security) 
+• Implement robot chat to plug into company website
+• Design and develop APIs to transfer and exchange data to both internal system and external system vender
+• Researching new technology to adapt to organization system
+• In charge of testing the process and outcome of whole website system
+• Work closely to marketing team (in Thailand, we merged Marketing & Technology together) to handle and deliver faster digital work such as website modification, application development, and digital campaign
+• Maintain all websites of company, both internal and external • Developed email blast service to support the company’s demand for sending email to large or specific target customers • Revamped website in order to serve the demand of users both in the side of colleagues and the customer • Designed database schema, feature and user interface for the company website • develop and maintain the website to its full potential (increase page speed, upgrade website and data security) • Implement robot chat to plug into company website • Design and develop APIs to transfer and exchange data to both internal system and external system vender • Researching new technology to adapt to organization system • In charge of testing the process and outcome of whole website system • Work closely to marketing team (in Thailand, we merged Marketing & Technology together) to handle and deliver faster digital work such as website modification, application development, and digital campaign 
+
+
+FRONT-END / BACK-END DEVELOPER 
+• In charge of supporting technology for delivery services
+• Developed warehouse management application to enhance the capability of working within the organization
+• Developed eCommerce system to serve the needs of customers to be comfortable and completable
+• Design and generate to data report from database to serve organization requirement
+• Maintain database of customer and internal data
