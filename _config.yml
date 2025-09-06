@@ -8,3 +8,21 @@ markdown: kramdown
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
+
+# Exclude files and folders from Jekyll processing
+exclude:
+  - asset/
+  - node_modules/
+  - vendor/
+  - .bundle/
+  - .sass-cache/
+  - .git/
+  - README.md
+
+navigation:
+  - title: Home
+    url: /
+  - title: Projects
+    url: /projects/
+  - title: About
+    url: /about/

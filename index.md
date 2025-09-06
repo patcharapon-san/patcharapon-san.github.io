@@ -5,7 +5,17 @@ title: Home
 
 # Hey, I'm Patcharapon Sangsatra 
 
-With over 10 years of experience across both enterprise environments and independent contractor/freelance projects. I've grown through serveral positions with specialized experience in oil & gas industry applications, CRM systems, Job hiring and seeking system, e-commerce systems, and government solutions.
+With over 10 years of experience across both enterprise environments and independent c## 🤝 Let's Connect
+
+- [LinkedIn](https://www.linkedin.com/in/patcharaponsan/)
+- [Email Me](p.sangsartra@gmail.com)
+- [GitHub](https://github.com/patcharapon-san)
+
+---
+
+## 🎯 Explore My Work
+
+Want to see my projects in action? Check out my [**Project Portfolio**](/projects/) featuring screenshots and detailed examples of my work across enterprise solutions, web applications, and desktop systems.ctor/freelance projects. I've grown through serveral positions with specialized experience in oil & gas industry applications, CRM systems, Job hiring and seeking system, e-commerce systems, and government solutions.
 
 I've provided technical support and developed enterprise-level solutions to enhance organizational capacity, while also delivering custom software solutions for various clients as an independent contractor. My experience spans from warehouse management systems to complex system integrations with third-party payment and identity verification services.
 
