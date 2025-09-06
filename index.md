@@ -40,6 +40,7 @@ I specialize in building full-stack applications, serverless cloud systems, and 
 ### Cloud & DevOps
 - **AWS**: Lambda, API Gateway, S3, RDS, Amplify, Cognito, CloudWatch
 - **Azure**: Azure Functions, Azure DevOps Services, Azure Data Factory, Azure Key Vault
+- **Backend-as-a-Service**: Supabase
 - **DevOps**: Docker, GitHub Actions, CI/CD pipelines
 - **Platforms**: Azure, Vercel, Office 365
 
