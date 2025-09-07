@@ -1,0 +1,771 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Enterprise Solutions | Patcharapon Sangsatra Portfolio</title>
+<meta name="generator" content="Jekyll v4.4.1" />
+<meta property="og:title" content="Enterprise Solutions" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Built by using Markdown and GitHub Actions" />
+<meta property="og:description" content="Built by using Markdown and GitHub Actions" />
+<link rel="canonical" href="https://patcharapon-san.github.io/projects/enterprise-solutions/" />
+<meta property="og:url" content="https://patcharapon-san.github.io/projects/enterprise-solutions/" />
+<meta property="og:site_name" content="Patcharapon Sangsatra Portfolio" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Enterprise Solutions" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","description":"Built by using Markdown and GitHub Actions","headline":"Enterprise Solutions","url":"https://patcharapon-san.github.io/projects/enterprise-solutions/"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="https://patcharapon-san.github.io/feed.xml" title="Patcharapon Sangsatra Portfolio" /></head>
+<body><header class="site-header" role="banner">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/">Patcharapon Sangsatra Portfolio</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/">Home</a><a class="page-link" href="/projects/">Project Portfolio</a><a class="page-link" href="/about.html">About Me</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <h1 id="enterprise-solutions">Enterprise Solutions</h1>
+
+<p>Showcasing cloud-based systems, serverless architectures, and integration platforms that automate business processes and connect multiple systems for large organizations. Experience includes oil &amp; gas industry applications, government systems, and marketing technology platforms.</p>
+
+<h2 id="-aws-lambda-microservices-suite">🚀 AWS Lambda Microservices Suite</h2>
+
+<p><strong>Technology Stack</strong>: Python, AWS Lambda, API Gateway, S3, RDS, CloudWatch<br />
+<strong>Role</strong>: Backend Developer<br />
+<strong>Industry</strong>: Manufacturing<br />
+<strong>Project Duration</strong>: Ongoing (1+ years)</p>
+
+<h3 id="project-overview">Project Overview</h3>
+<p>Built a comprehensive collection of serverless functions for enterprise system automation, handling CRM integration, financial quotations, and document management for a mid-size manufacturing company.</p>
+
+<h3 id="technical-challenges-solved">Technical Challenges Solved</h3>
+<ul>
+  <li><strong>Scalability</strong>: Designed auto-scaling architecture to handle 10x traffic spikes</li>
+  <li><strong>Integration</strong>: Connected 3+ legacy systems through standardized APIs</li>
+  <li><strong>Security</strong>: Implemented OAuth2 and JWT for secure data exchange</li>
+  <li><strong>Performance</strong>: Achieved &lt;2000ms response times for critical operations</li>
+</ul>
+
+<h3 id="architecture-highlights">Architecture Highlights</h3>
+<ul>
+  <li><strong>Microservices Design</strong>: 30+ independent Lambda functions</li>
+  <li><strong>Data Pipeline</strong>: Automated ETL processes for business intelligence</li>
+  <li><strong>Monitoring</strong>: CloudWatch dashboards with custom metrics</li>
+</ul>
+
+<h3 id="measurable-impact">Measurable Impact</h3>
+<ul>
+  <li>Reduced manual processing time by 80%</li>
+  <li>Improved system reliability to 99.9% uptime</li>
+  <li>Decreased operational costs</li>
+  <li>Enhanced data accuracy</li>
+</ul>
+
+<h3 id="aws-lambda-architecture">AWS Lambda Architecture</h3>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>┌────────────────────────────────────────────────────────────────┐
+│                    API Gateway Layer                           │
+│  ┌─────────────────┐  ┌─────────────────┐  ┌─────────────────┐ │
+│  │ REST Endpoints  │  │ Authentication  │  │ Rate Limiting   │ │
+│  │ • CRM APIs      │  │ • OAuth2/JWT    │  │ • Throttling    │ │
+│  │ • Quote APIs    │  │ • IAM Roles     │  │ • Monitoring    │ │
+│  │ • Document APIs │  │ • CORS Config   │  │ • Caching       │ │
+│  └─────────────────┘  └─────────────────┘  └─────────────────┘ │
+└────────────────────────────────────────────────────────────────┘
+                              │
+                              ▼
+┌────────────────────────────────────────────────────────────────┐
+│                   Lambda Functions Layer                       │
+│  ┌─────────────────┐  ┌─────────────────┐  ┌─────────────────┐ │
+│  │ CRM Integration │  │ Quote Generator │  │ Document Mgmt   │ │
+│  │ • Contact Sync  │  │ • Price Calc    │  │ • PDF Creation  │ │
+│  │ • Lead Process  │  │ • Approval Flow │  │ • File Storage  │ │
+│  │ • Data Transform│  │ • Email Alerts  │  │ • Version Ctrl  │ │
+│  └─────────────────┘  └─────────────────┘  └─────────────────┘ │
+└────────────────────────────────────────────────────────────────┘
+                              │
+                              ▼
+┌────────────────────────────────────────────────────────────────┐
+│                   Storage &amp; Monitoring                         │
+│  ┌─────────────────┐  ┌─────────────────┐  ┌─────────────────┐ │
+│  │ S3 Storage      │  │ CloudWatch      │  │ RDS Database    │ │
+│  │ • Documents     │  │ • Metrics       │  │ • Relational    │ │
+│  │ • Backups       │  │ • Logs          │  │   Data Store    │ │
+│  │ • Static Assets │  │ • Alerts        │  │ • ACID Txns     │ │
+│  └─────────────────┘  └─────────────────┘  └─────────────────┘ │
+└────────────────────────────────────────────────────────────────┘
+</code></pre></div></div>
+
+<h3 id="lambda-functions-inventory">Lambda Functions Inventory</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Function Name</th>
+      <th>Runtime</th>
+      <th>Memory</th>
+      <th>Timeout</th>
+      <th>Trigger</th>
+      <th>Purpose</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>CRMIntegration</strong></td>
+      <td>Python 3.12</td>
+      <td>512MB</td>
+      <td>30s</td>
+      <td>API Gateway</td>
+      <td>Salesforce data synchronization</td>
+    </tr>
+    <tr>
+      <td><strong>QuoteGenerator</strong></td>
+      <td>Python 3.12</td>
+      <td>1024MB</td>
+      <td>60s</td>
+      <td>S3 Event</td>
+      <td>PDF quote generation</td>
+    </tr>
+    <tr>
+      <td><strong>DocumentProcessor</strong></td>
+      <td>Python 3.12</td>
+      <td>256MB</td>
+      <td>15s</td>
+      <td>SQS Queue</td>
+      <td>File validation and storage</td>
+    </tr>
+    <tr>
+      <td><strong>EmailNotifier</strong></td>
+      <td>Python 3.12</td>
+      <td>128MB</td>
+      <td>10s</td>
+      <td>SNS Topic</td>
+      <td>Automated notifications</td>
+    </tr>
+    <tr>
+      <td><strong>DataETL</strong></td>
+      <td>Python 3.12</td>
+      <td>2048MB</td>
+      <td>300s</td>
+      <td>CloudWatch</td>
+      <td>Daily data processing</td>
+    </tr>
+    <tr>
+      <td><strong>HealthCheck</strong></td>
+      <td>Python 3.12</td>
+      <td>128MB</td>
+      <td>5s</td>
+      <td>CloudWatch</td>
+      <td>System monitoring</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="performance-metrics">Performance Metrics</h3>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>┌─────────────────────────────────────────────────────────────┐
+│                   System Performance                        │
+├─────────────────────────────────────────────────────────────┤
+│ Function Execution:    avg 850ms, 95th percentile 1.8s      │
+│ Error Rate:            &lt;0.5% across all functions           │
+│ Cost Optimization:     65% reduction vs EC2 equivalent      │
+│ Concurrent Executions: Peak 150, Average 45                 │
+└─────────────────────────────────────────────────────────────┘
+</code></pre></div></div>
+
+<hr />
+
+<h2 id="️-government-electronic-visa-system">🏛️ Government Electronic Visa System</h2>
+
+<p><strong>Technology Stack</strong>: React.js, .NET, C#, SQL Server, Oracle<br />
+<strong>Role</strong>: Senior Software Developer<br />
+<strong>Industry</strong>: Government Services<br />
+<strong>Project Duration</strong>: 11 months</p>
+
+<h3 id="project-overview-1">Project Overview</h3>
+<p>Developed a comprehensive electronic visa application system for diplomatic missions, handling the complete application lifecycle from submission to approval. Led the frontend migration from legacy .NET web forms to modern React.js application while maintaining backend .NET services.</p>
+
+<h3 id="technical-architecture">Technical Architecture</h3>
+<ul>
+  <li><strong>Frontend Migration</strong>: React.js replacing legacy .NET web interface</li>
+  <li><strong>Multi-tier Architecture</strong>: Presentation, Business Logic, Data Access layers</li>
+  <li><strong>Database Design</strong>: Normalized schema handling 10,000+ daily applications</li>
+  <li><strong>Security Framework</strong>: Role-based access control with audit trails</li>
+  <li><strong>Integration Layer</strong>: RESTful APIs for third-party verification services</li>
+</ul>
+
+<h3 id="key-technical-features">Key Technical Features</h3>
+<ul>
+  <li><strong>Frontend Modernization</strong>: React.js with responsive design and improved UX</li>
+  <li><strong>Legacy Integration</strong>: Seamless integration with existing .NET backend services</li>
+  <li><strong>Document Processing</strong>: Automated validation and verification workflows</li>
+  <li><strong>Payment Gateway</strong>: PCI-DSS compliant transaction processing</li>
+  <li><strong>Reporting Engine</strong>: Crystal Reports for administrative dashboards</li>
+  <li><strong>Backup &amp; Recovery</strong>: Automated data backup with 99.99% recovery guarantee</li>
+</ul>
+
+<h3 id="migration-strategy">Migration Strategy</h3>
+<ul>
+  <li><strong>Phased Approach</strong>: Gradual migration from .NET web forms to React.js</li>
+  <li><strong>API Modernization</strong>: RESTful API layer supporting both legacy and new frontend</li>
+  <li><strong>User Training</strong>: Smooth transition with minimal disruption to daily operations</li>
+  <li><strong>Performance Optimization</strong>: Improved load times and user experience with React</li>
+</ul>
+
+<h3 id="business-value-delivered">Business Value Delivered</h3>
+<ul>
+  <li>Reduced traveller process time from physical submit visa to e-visa submit</li>
+  <li>Enhanced user experience with modern, responsive React.js interface</li>
+  <li>Improved application accuracy through automated validation</li>
+  <li>Enhanced security compliance with government standards</li>
+</ul>
+
+<h3 id="system-architecture">System Architecture</h3>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>┌─────────────────────────────────────────────────────────────────┐
+│              Presentation Layer (React.js + .NET)               │
+│  ┌──────────────────┐  ┌─────────────────┐  ┌─────────────────┐ │
+│  │ Public Portal    │  │ Admin Console   │  │ Officer Portal  │ │
+│  │ • Application    │  │ • Dashboard     │  │ • Review Tools  │ │
+│  │ • Status Check   │  │ • Reports       │  │ • Decision Mgmt │ │
+│  │ • Document Upload│  │ • User Mgmt     │  │ • Audit Trails  │ │
+│  │ • Responsive UI  │  │ • Legacy Views  │  │ • Legacy Forms  │ │
+│  └──────────────────┘  └─────────────────┘  └─────────────────┘ │
+└─────────────────────────────────────────────────────────────────┘
+                              │
+                              ▼
+┌────────────────────────────────────────────────────────────────┐
+│                 Business Logic Layer (C#)                      │
+│  ┌─────────────────┐  ┌─────────────────┐  ┌─────────────────┐ │
+│  │ Application     │  │ Document        │  │ Payment         │ │
+│  │ Processing      │  │ Validation      │  │ Processing      │ │
+│  │ • Workflow Mgmt │  │ • OCR Engine    │  │ • Gateway Integ │ │
+│  │ • Status Track  │  │ • Format Check  │  │ • Transaction   │ │
+│  │ • Auto Approval │  │ • Security Scan │  │ • Refund Mgmt   │ │
+│  └─────────────────┘  └─────────────────┘  └─────────────────┘ │
+└────────────────────────────────────────────────────────────────┘
+                              │
+                              ▼
+┌────────────────────────────────────────────────────────────────┐
+│                Data Access Layer (SQL/Oracle)                  │
+│  ┌─────────────────┐  ┌─────────────────┐  ┌─────────────────┐ │
+│  │ Application DB  │  │ Document Store  │  │ Audit Database  │ │
+│  │ (SQL Server)    │  │ (File System)   │  │ (Oracle)        │ │
+│  │ • User Data     │  │ • Passports     │  │ • Access Logs   │ │
+│  │ • Applications  │  │ • Photos        │  │ • Changes Track │ │
+│  │ • Decisions     │  │ • Certificates  │  │ • Compliance    │ │
+│  └─────────────────┘  └─────────────────┘  └─────────────────┘ │
+└────────────────────────────────────────────────────────────────┘
+</code></pre></div></div>
+
+<h3 id="technical-implementation-details">Technical Implementation Details</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Component</th>
+      <th>Technology</th>
+      <th>Implementation</th>
+      <th>Security Features</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Frontend</strong></td>
+      <td>React.js + .NET</td>
+      <td>Legacy Web Forms</td>
+      <td>JWT authentication, CSRF protection</td>
+    </tr>
+    <tr>
+      <td><strong>Authentication</strong></td>
+      <td>Active Directory</td>
+      <td>LDAP Integration</td>
+      <td>Multi-factor authentication</td>
+    </tr>
+    <tr>
+      <td><strong>Session Management</strong></td>
+      <td>ASP.NET Core</td>
+      <td>JWT Tokens</td>
+      <td>Session timeout, secure cookies</td>
+    </tr>
+    <tr>
+      <td><strong>Data Encryption</strong></td>
+      <td>AES 256</td>
+      <td>Database &amp; Transit</td>
+      <td>TLS 1.3, encrypted storage</td>
+    </tr>
+    <tr>
+      <td><strong>Audit Logging</strong></td>
+      <td>Custom Framework</td>
+      <td>Real-time tracking</td>
+      <td>Immutable log entries</td>
+    </tr>
+    <tr>
+      <td><strong>API Security</strong></td>
+      <td>OAuth 2.0</td>
+      <td>Rate limiting</td>
+      <td>IP whitelisting, API keys</td>
+    </tr>
+    <tr>
+      <td><strong>Document Security</strong></td>
+      <td>Digital Signatures</td>
+      <td>Hash verification</td>
+      <td>Tamper detection</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="application-processing-workflow">Application Processing Workflow</h3>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Application Submission Flow:
+┌─────────────┐     ┌─────────────┐     ┌─────────────┐
+│ Online Form │────►│ Validation  │────►│ Payment     │
+│ Completion  │     │ Engine      │     │ Processing  │
+└─────────────┘     └─────────────┘     └─────────────┘
+       │                    │                    │
+       ▼                    ▼                    ▼
+┌─────────────┐     ┌─────────────┐     ┌─────────────┐
+│ Document    │     │ Biometric   │     │ Officer     │
+│ Upload      │     │ Verification│     │ Review      │
+└─────────────┘     └─────────────┘     └─────────────┘
+       │                    │                    │
+       ▼                    ▼                    ▼
+┌─────────────┐     ┌─────────────┐     ┌─────────────┐
+│ Background  │     │ Final       │     │ Visa        │
+│ Check       │     │ Decision    │     │ Issuance    │
+└─────────────┘     └─────────────┘     └─────────────┘
+</code></pre></div></div>
+
+<h3 id="performance--security-metrics">Performance &amp; Security Metrics</h3>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>┌─────────────────────────────────────────────────────────────┐
+│                   System Metrics                            │
+├─────────────────────────────────────────────────────────────┤
+│ Daily Applications:   10,000+ processed per day             │
+│ Response Time:        &lt;3s for form submission               │
+│ Database Performance: &lt;500ms average query time             │
+│ Uptime:               99.95% availability                   │
+│ Security Incidents:   Zero breaches in production           │
+│ Document Validation:  95% automated accuracy                │
+│ Payment Success:      99.2% transaction completion          │
+└─────────────────────────────────────────────────────────────┘
+</code></pre></div></div>
+
+<hr />
+
+<h2 id="-oil--gas-industry-solutions">⚡ Oil &amp; Gas Industry Solutions</h2>
+
+<p><strong>Technology Stack</strong>: C# .NET Framework, .NET 8, Azure Cloud Services<br />
+<strong>Role</strong>: Senior Software Developer<br />
+<strong>Industry</strong>: Oil &amp; Gas / Petroleum Engineering<br />
+<strong>Project Duration</strong>: 3+ years</p>
+
+<h3 id="platform-overview">Platform Overview</h3>
+<p>Developed comprehensive software solutions for petroleum engineering applications including reservoir management, drilling optimization, and production analysis systems for oil &amp; gas operations.</p>
+
+<h3 id="technical-architecture-1">Technical Architecture</h3>
+<ul>
+  <li><strong>Desktop Applications</strong>: .NET Framework (legacy) and .NET 8 (modern) engineering tools with advanced data visualization</li>
+  <li><strong>Web Applications</strong>: ASP.NET Core dashboards for real-time monitoring and reporting</li>
+  <li><strong>Azure Cloud Platform</strong>: Comprehensive cloud infrastructure and services</li>
+  <li><strong>Data Processing</strong>: Complex engineering calculations and analysis algorithms</li>
+</ul>
+
+<h3 id="azure-services-implementation">Azure Services Implementation</h3>
+<ul>
+  <li><strong>Azure Storage Account</strong>: Secure storage for engineering data and documents</li>
+  <li><strong>Azure Data Factory</strong>: ETL pipelines for petroleum engineering data processing</li>
+  <li><strong>Azure Functions</strong>: Serverless computing for calculation-intensive operations</li>
+  <li><strong>Azure Key Vault</strong>: Secure management of API keys and connection strings</li>
+  <li><strong>Azure DevOps</strong>: CI/CD pipelines and project management</li>
+  <li><strong>Azure Application Insights</strong>: Performance monitoring and diagnostics</li>
+  <li><strong>Azure App Service Plan</strong>: Scalable hosting for web applications</li>
+  <li><strong>Azure Web Services</strong>: RESTful APIs for data integration</li>
+</ul>
+
+<h3 id="engineering-applications">Engineering Applications</h3>
+<ul>
+  <li><strong>Reservoir Management</strong>: Production forecasting and decline curve analysis</li>
+  <li><strong>Drilling Engineering</strong>: Well planning and drilling parameter optimization</li>
+  <li><strong>Completion Engineering</strong>: Perforation design and stimulation analysis</li>
+  <li><strong>Production Optimization</strong>: Real-time monitoring and performance analysis</li>
+</ul>
+
+<h3 id="technical-innovations">Technical Innovations</h3>
+<ul>
+  <li><strong>Real-time Data Integration</strong>: Live data feeds from field operations</li>
+  <li><strong>Complex Calculations</strong>: High-performance computing for reservoir simulations</li>
+  <li><strong>Regulatory Compliance</strong>: Industry-standard reporting and data management</li>
+</ul>
+
+<h3 id="business-impact">Business Impact</h3>
+<ul>
+  <li>Enhanced engineering decision-making with real-time data analysis</li>
+  <li>Reduced operational costs through optimized drilling parameters</li>
+  <li>Improved safety through predictive analytics and monitoring</li>
+  <li>Streamlined regulatory reporting and compliance processes</li>
+</ul>
+
+<h3 id="comprehensive-azure-cloud-architecture">Comprehensive Azure Cloud Architecture</h3>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>┌────────────────────────────────────────────────────────────────┐
+│                    Frontend Applications                       │
+│  ┌─────────────────┐  ┌─────────────────┐  ┌─────────────────┐ │
+│  │ .NET Desktop    │  │ Web Dashboard   │  │ Mobile App      │ │
+│  │ Engineering     │  │ (ASP.NET Core)  │  │ Field Data      │ │
+│  │ Workstation     │  │ • Real-time     │  │ Collection      │ │
+│  │ • Calculations  │  │   Monitoring    │  │ • Offline Sync  │ │
+│  │ • Modeling      │  │ • Analytics     │  │ • GPS Tracking  │ │
+│  │ • Reporting     │  │ • Reporting     │  │ • Photo Upload  │ │
+│  └─────────────────┘  └─────────────────┘  └─────────────────┘ │
+└────────────────────────────────────────────────────────────────┘
+                              │
+                              ▼
+┌────────────────────────────────────────────────────────────────┐
+│                    Azure App Services                          │
+│  ┌─────────────────┐  ┌─────────────────┐  ┌─────────────────┐ │
+│  │ Web APIs        │  │ Background      │  │ SignalR Hub     │ │
+│  │ • RESTful       │  │ Services        │  │ • Real-time     │ │
+│  │ • GraphQL       │  │ • Data Proc     │  │   Updates       │ │
+│  │ • Authentication│  │ • Calculations  │  │ • Notifications │ │
+│  └─────────────────┘  └─────────────────┘  └─────────────────┘ │
+└────────────────────────────────────────────────────────────────┘
+                              │
+                              ▼
+┌────────────────────────────────────────────────────────────────┐
+│                    Azure Functions &amp; Logic                     │
+│  ┌─────────────────┐  ┌─────────────────┐  ┌─────────────────┐ │
+│  │ Data Processing │  │ ETL Pipelines   │  │ Alert System    │ │
+│  │ • Calculations  │  │ (Data Factory)  │  │ • Threshold     │ │
+│  │ • Aggregations  │  │ • Transformation│  │   Monitoring    │ │
+│  │ • Analysis      │  │ • Scheduling    │  │ • Email/SMS     │ │
+│  └─────────────────┘  └─────────────────┘  └─────────────────┘ │
+└────────────────────────────────────────────────────────────────┘
+                              │
+                              ▼
+┌────────────────────────────────────────────────────────────────┐
+│                    Data Storage Layer                          │
+│  ┌─────────────────┐  ┌─────────────────┐  ┌─────────────────┐ │
+│  │ Azure SQL       │  │ Blob Storage    │  │ Cosmos DB       │ │
+│  │ • Operational   │  │ • Documents     │  │ • Time Series   │ │
+│  │   Data          │  │ • Images        │  │   Data          │ │
+│  │ • Configuration │  │ • Backup Files  │  │ • IoT Data      │ │
+│  └─────────────────┘  └─────────────────┘  └─────────────────┘ │
+└────────────────────────────────────────────────────────────────┘
+</code></pre></div></div>
+
+<h3 id="development--deployment-pipeline">Development &amp; Deployment Pipeline</h3>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Development Workflow:
+┌─────────────┐     ┌─────────────┐     ┌─────────────┐
+│ Feature     │────►│ Code        │────►│ Pull        │
+│ Branch      │     │ Review      │     │ Request     │
+└─────────────┘     └─────────────┘     └─────────────┘
+       │                    │                    │
+       ▼                    ▼                    ▼
+┌─────────────┐     ┌─────────────┐     ┌─────────────┐
+│ Unit Tests  │     │ Integration │     │ Staging     │
+│ Coverage    │     │ Testing     │     │ Deployment  │
+└─────────────┘     └─────────────┘     └─────────────┘
+       │                    │                    │
+       ▼                    ▼                    ▼
+┌─────────────┐     ┌─────────────┐     ┌─────────────┐
+│ SonarQube   │     │ Performance │     │ Production  │
+│ Analysis    │     │ Testing     │     │ Release     │
+└─────────────┘     └─────────────┘     └─────────────┘
+</code></pre></div></div>
+
+<h3 id="engineering-application-modules">Engineering Application Modules</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Application Area</th>
+      <th>Technology Stack</th>
+      <th>Key Features</th>
+      <th>Technical Complexity</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Reservoir Management</strong></td>
+      <td>.NET Framework + SQL</td>
+      <td>Production forecasting, decline curves</td>
+      <td>High - Complex algorithms</td>
+    </tr>
+    <tr>
+      <td><strong>Drilling Engineering</strong></td>
+      <td>.NET 8 + Azure Functions</td>
+      <td>Well planning, parameter optimization</td>
+      <td>High - Real-time calculations</td>
+    </tr>
+    <tr>
+      <td><strong>Completion Design</strong></td>
+      <td>ASP.NET Core + SignalR</td>
+      <td>Perforation design, stimulation</td>
+      <td>Medium - Engineering models</td>
+    </tr>
+    <tr>
+      <td><strong>Production Analysis</strong></td>
+      <td>Power BI + Cosmos DB</td>
+      <td>Performance monitoring, reporting</td>
+      <td>Medium - Data visualization</td>
+    </tr>
+    <tr>
+      <td><strong>Field Data Collection</strong></td>
+      <td>Xamarin + Offline Sync</td>
+      <td>Mobile data entry, GPS tracking</td>
+      <td>Medium - Offline capabilities</td>
+    </tr>
+    <tr>
+      <td><strong>Regulatory Reporting</strong></td>
+      <td>Crystal Reports + SQL</td>
+      <td>Compliance reports, submissions</td>
+      <td>Low - Template-based</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="engineering-calculations--algorithms">Engineering Calculations &amp; Algorithms</h3>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Production Forecasting Models:
+┌─────────────────┐     ┌─────────────────┐     ┌─────────────────┐
+│ Decline Curve   │────►│ Economic Limit  │────►│ Recovery Factor │
+│ Analysis        │     │ Calculation     │     │ Estimation      │
+│ • Exponential   │     │ • Operating Cost│     │ • Primary       │
+│ • Hyperbolic    │     │ • Product Price │     │ • Secondary     │
+│ • Harmonic      │     │ • Net Revenue   │     │ • Enhanced      │
+└─────────────────┘     └─────────────────┘     └─────────────────┘
+
+Well Design Optimization:
+┌─────────────────┐     ┌─────────────────┐     ┌─────────────────┐
+│ Drilling        │────►│ Completion      │────►│ Production      │
+│ Parameters      │     │ Design          │     │ Optimization    │
+│ • Bit Selection │     │ • Casing Design │     │ • Choke Mgmt    │
+│ • Mud Program   │     │ • Perforation   │     │ • Gas Lift      │
+│ • Trajectory    │     │ • Stimulation   │     │ • ESP Design    │
+└─────────────────┘     └─────────────────┘     └─────────────────┘
+</code></pre></div></div>
+
+<h3 id="performance--business-impact">Performance &amp; Business Impact</h3>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>┌─────────────────────────────────────────────────────────────┐
+│                   Business Impact Metrics                   │
+├─────────────────────────────────────────────────────────────┤
+│ Production Increase:   15% improvement in well performance  │
+│ Decision Speed:        Real-time vs 24-48hr manual analysis │
+│ Data Accuracy:         99.5% vs 85% manual calculations     │
+│ Regulatory Compliance: 100% on-time report submissions      │
+│ System Availability:   99.8% uptime (Azure SLA)             │
+│ User Adoption:         95% of engineering staff active      │
+└─────────────────────────────────────────────────────────────┘
+</code></pre></div></div>
+
+<hr />
+
+<h2 id="-marketing-technology-solutions-platform">🏢 Marketing Technology Solutions Platform</h2>
+
+<p><strong>Technology Stack</strong>: .NET, Web APIs, SMTP, JavaScript<br />
+<strong>Role</strong>: Solutions Architect<br />
+<strong>Industry</strong>: Marketing Technology<br />
+<strong>Project Duration</strong>: 2 years 4 months</p>
+
+<h3 id="platform-architecture">Platform Architecture</h3>
+<p>Designed and implemented a comprehensive digital marketing ecosystem supporting multiple business units with centralized data management and distributed service architecture.</p>
+
+<h3 id="technical-components">Technical Components</h3>
+<ul>
+  <li><strong>CMS Platform</strong>: Custom content management for multiple websites</li>
+  <li><strong>Email Engine</strong>: Scalable SMTP service handling 100K+ emails daily</li>
+  <li><strong>Analytics Integration</strong>: Real-time data collection and reporting</li>
+  <li><strong>API Gateway</strong>: Centralized endpoint management for internal/external services</li>
+</ul>
+
+<h3 id="infrastructure-management">Infrastructure Management</h3>
+<ul>
+  <li><strong>Load Balancing</strong>: High-availability configuration across multiple servers</li>
+  <li><strong>Caching Strategy</strong>: Redis implementation for improved performance</li>
+  <li><strong>Database Optimization</strong>: Query optimization reducing load times by 70%</li>
+  <li><strong>Security Hardening</strong>: SSL/TLS, SQL injection prevention, XSS protection</li>
+</ul>
+
+<h3 id="development-practices">Development Practices</h3>
+<ul>
+  <li><strong>CI/CD Pipeline</strong>: Automated testing and deployment workflows</li>
+  <li><strong>Code Quality</strong>: SonarQube integration with 95%+ code coverage</li>
+  <li><strong>Documentation</strong>: Comprehensive API documentation with Swagger</li>
+  <li><strong>Monitoring</strong>: Application performance monitoring with custom dashboards</li>
+</ul>
+
+<h3 id="marketing-technology-architecture">Marketing Technology Architecture</h3>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>┌────────────────────────────────────────────────────────────────┐
+│                    Frontend Layer                              │
+│  ┌─────────────────┐  ┌─────────────────┐  ┌─────────────────┐ │
+│  │ Corporate       │  │ Product         │  │ Campaign        │ │
+│  │ Website         │  │ Landing Pages   │  │ Microsites      │ │
+│  │ • CMS Admin     │  │ • A/B Testing   │  │ • Event Pages   │ │
+│  │ • Multi-lang    │  │ • Conversion    │  │ • Lead Capture  │ │
+│  │ • SEO Optimize  │  │ • Analytics     │  │ • Social Media  │ │
+│  └─────────────────┘  └─────────────────┘  └─────────────────┘ │
+└────────────────────────────────────────────────────────────────┘
+                              │
+                              ▼
+┌─────────────────────────────────────────────────────────────────┐
+│                   API Gateway &amp; Services                        │
+│  ┌─────────────────┐  ┌─────────────────┐  ┌──────────────────┐ │
+│  │ Content API     │  │ Email Service   │  │ Analytics API    │ │
+│  │ • CMS Backend   │  │ • SMTP Engine   │  │ • Data Collection│ │
+│  │ • Asset Mgmt    │  │ • Template Eng  │  │ • Reporting      │ │
+│  │ • Workflow      │  │ • List Mgmt     │  │ • Real-time      │ │
+│  └─────────────────┘  └─────────────────┘  └──────────────────┘ │
+└─────────────────────────────────────────────────────────────────┘
+                              │
+                              ▼
+┌────────────────────────────────────────────────────────────────┐
+│                   Infrastructure Layer                         │
+│  ┌─────────────────┐  ┌─────────────────┐  ┌─────────────────┐ │
+│  │ Load Balancer   │  │ Application     │  │ Database        │ │
+│  │ • SSL Termina   │  │ Servers         │  │ Cluster         │ │
+│  │ • Health Check  │  │ • IIS/.NET      │  │ • SQL Server    │ │
+│  │                 │  │                 │  │ • Replication   │ │
+│  └─────────────────┘  └─────────────────┘  └─────────────────┘ │
+└────────────────────────────────────────────────────────────────┘
+</code></pre></div></div>
+
+<h3 id="email-marketing-engine-performance">Email Marketing Engine Performance</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Metric</th>
+      <th>Specification</th>
+      <th>Implementation</th>
+      <th>Performance</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Daily Volume</strong></td>
+      <td>100K+ emails</td>
+      <td>Multi-threaded processing</td>
+      <td>99.2% delivery rate</td>
+    </tr>
+    <tr>
+      <td><strong>Template Engine</strong></td>
+      <td>Dynamic content</td>
+      <td>Razor template engine</td>
+      <td>&lt;200ms generation</td>
+    </tr>
+    <tr>
+      <td><strong>List Management</strong></td>
+      <td>500K+ subscribers</td>
+      <td>Segmentation &amp; targeting</td>
+      <td>Real-time updates</td>
+    </tr>
+    <tr>
+      <td><strong>Bounce Handling</strong></td>
+      <td>Automatic cleanup</td>
+      <td>SMTP feedback loops</td>
+      <td>&lt;1% bounce rate</td>
+    </tr>
+    <tr>
+      <td><strong>Personalization</strong></td>
+      <td>50+ data points</td>
+      <td>Database-driven tokens</td>
+      <td>Dynamic insertion</td>
+    </tr>
+    <tr>
+      <td><strong>Compliance</strong></td>
+      <td>CAN-SPAM/GDPR</td>
+      <td>Unsubscribe automation</td>
+      <td>100% compliance</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="content-management--analytics">Content Management &amp; Analytics</h3>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>CMS Capabilities:
+┌─────────────────┐     ┌─────────────────┐     ┌─────────────────┐
+│ Content         │────►│ Workflow        │────►│ Publishing      │
+│ Creation        │     │ Management      │     │ &amp; Distribution  │
+│ • Rich Editor   │     │ • Approval      │     │ • Multi-site    │
+│ • Media Library │     │ • Version Ctrl  │     │ • CDN Deploy    │
+│ • Templates     │     │ • Schedule      │     │ • Cache Purge   │
+└─────────────────┘     └─────────────────┘     └─────────────────┘
+
+Analytics Integration:
+┌─────────────────┐     ┌─────────────────┐     ┌─────────────────┐
+│ Data Collection │────►│ Processing      │────►│ Reporting       │
+│ • Page Views    │     │ • Aggregation   │     │ • Dashboards    │
+│ • User Events   │     │ • Segmentation  │     │ • Custom Reports│
+│ • Conversions   │     │ • Attribution   │     │ • Data Export   │
+└─────────────────┘     └─────────────────┘     └─────────────────┘
+</code></pre></div></div>
+
+<hr />
+
+<h2 id="️-data-protection--compliance">🛡️ Data Protection &amp; Compliance</h2>
+
+<p>All projects showcased follow strict data protection guidelines:</p>
+
+<ul>
+  <li><strong>Client Confidentiality</strong>: No actual client names, logos, or proprietary information displayed</li>
+  <li><strong>Data Anonymization</strong>: All screenshots and examples use mock or anonymized data</li>
+  <li><strong>Technical Focus</strong>: Emphasis on technical implementation rather than business specifics</li>
+  <li><strong>Generic Descriptions</strong>: Industry-standard terminology without revealing unique business processes</li>
+  <li><strong>Compliance</strong>: Adherence to NDAs and employment agreements</li>
+</ul>
+
+<hr />
+
+<table>
+  <tbody>
+    <tr>
+      <td><a href="/projects/">← Back to Projects</a></td>
+      <td><a href="/projects/web-platforms/">Next: Web Applications →</a></td>
+    </tr>
+  </tbody>
+</table>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">Patcharapon Sangsatra Portfolio</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">Patcharapon Sangsatra Portfolio</li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p>Built by using Markdown and GitHub Actions</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>

@@ -1,0 +1,758 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Desktop Systems | Patcharapon Sangsatra Portfolio</title>
+<meta name="generator" content="Jekyll v4.4.1" />
+<meta property="og:title" content="Desktop Systems" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Built by using Markdown and GitHub Actions" />
+<meta property="og:description" content="Built by using Markdown and GitHub Actions" />
+<link rel="canonical" href="https://patcharapon-san.github.io/projects/desktop-systems/" />
+<meta property="og:url" content="https://patcharapon-san.github.io/projects/desktop-systems/" />
+<meta property="og:site_name" content="Patcharapon Sangsatra Portfolio" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Desktop Systems" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","description":"Built by using Markdown and GitHub Actions","headline":"Desktop Systems","url":"https://patcharapon-san.github.io/projects/desktop-systems/"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="https://patcharapon-san.github.io/feed.xml" title="Patcharapon Sangsatra Portfolio" /></head>
+<body><header class="site-header" role="banner">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/">Patcharapon Sangsatra Portfolio</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/">Home</a><a class="page-link" href="/projects/">Project Portfolio</a><a class="page-link" href="/about.html">About Me</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <h1 id="desktop-systems">Desktop Systems</h1>
+
+<p>Rich client applications and specialized software solutions built for manufacturing, oil &amp; gas, education, and production management. These applications demonstrate expertise in WPF, Windows Forms, and desktop integration technologies.</p>
+
+<h2 id="-manufacturing-management-desktop-application">🏭 Manufacturing Management Desktop Application</h2>
+
+<p><strong>Technology Stack</strong>: C# .NET, WPF, SQL Server<br />
+<strong>Role</strong>: Full-Stack Developer</p>
+
+<h3 id="project-overview">Project Overview</h3>
+<p>Built a comprehensive system for tracking production processes, managing equipment, and generating reports in manufacturing facilities. Used by production teams to monitor daily operations with integration to cloud systems.</p>
+
+<h3 id="key-features">Key Features</h3>
+<ul>
+  <li><strong>Production Tracking</strong>: Real-time monitoring of daily operations</li>
+  <li><strong>Equipment Management</strong>: Comprehensive asset tracking and maintenance</li>
+  <li><strong>Report Generation</strong>: Crystal Reports integration with custom templates</li>
+  <li><strong>Role-based Access</strong>: Multi-level user permissions and security</li>
+  <li><strong>Cloud Integration</strong>: Connected to Enterprise Serverless Platform</li>
+  <li><strong>3D Visualization</strong>: Integration with Modern Web Application</li>
+</ul>
+
+<h3 id="implementation-highlights">Implementation Highlights</h3>
+<ul>
+  <li>Made production tracking easier for daily operations</li>
+  <li>Reduced report generation time from hours to minutes</li>
+  <li>Implemented role-based access for different user levels</li>
+  <li>Integrated with cloud systems for automated quotation-to-billing workflow</li>
+  <li>Connected with web applications for real-time delivery tracking</li>
+</ul>
+
+<h3 id="technical-architecture">Technical Architecture</h3>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>┌─────────────────┐    ┌─────────────────┐    ┌─────────────────┐
+│   WPF Client    │    │   Web API       │    │   SQL Server    │
+│   (MVVM)        │◄──►│   (.NET Core)   │◄──►│   Database      │
+│                 │    │                 │    │                 │
+│ • Production UI │    │ • REST APIs     │    │ • Production    │
+│ • Equipment Mgmt│    │ • Authentication│    │ • Equipment     │
+│ • Reports       │    │ • Business Logic│    │ • Users         │
+└─────────────────┘    └─────────────────┘    └─────────────────┘
+         │                       │                       │
+         └───────────────────────┼───────────────────────┘
+                                 │
+                    ┌─────────────────┐
+                    │  Cloud Services │
+                    │  (AWS Lambda)   │
+                    │                 │
+                    │ • Quotation API │
+                    │ • Billing API   │
+                    │ • Notifications │
+                    └─────────────────┘
+</code></pre></div></div>
+
+<h3 id="key-technical-features">Key Technical Features</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Component</th>
+      <th>Technology</th>
+      <th>Implementation Details</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>UI Framework</strong></td>
+      <td>WPF with XAML</td>
+      <td>MVVM pattern, data binding, custom controls</td>
+    </tr>
+    <tr>
+      <td><strong>Database Access</strong></td>
+      <td>Entity Framework</td>
+      <td>Code-first approach, migrations, connection pooling</td>
+    </tr>
+    <tr>
+      <td><strong>Authentication</strong></td>
+      <td>JWT + Role-based</td>
+      <td>Multi-level permissions (Admin, Operator, Viewer)</td>
+    </tr>
+    <tr>
+      <td><strong>Reporting</strong></td>
+      <td>Crystal Reports</td>
+      <td>A4/A3 formats, automated generation, PDF export</td>
+    </tr>
+    <tr>
+      <td><strong>Cloud Integration</strong></td>
+      <td>REST APIs</td>
+      <td>Async calls to AWS Lambda functions</td>
+    </tr>
+    <tr>
+      <td><strong>Real-time Updates</strong></td>
+      <td>SignalR</td>
+      <td>Live production status, equipment alerts</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="performance-metrics">Performance Metrics</h3>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>┌─────────────────────────────────────────────────────────────┐
+│                    Performance Improvements                 │
+├─────────────────────────────────────────────────────────────┤
+│ Report Generation:  2 hours → 5 minutes  (96% reduction)    │
+│ Data Entry Speed:   Manual → Automated   (80% faster)       │
+│ System Uptime:      95% → 99.5%         (improved)          │
+│ User Adoption:      40% → 95%           (training success)  │
+└─────────────────────────────────────────────────────────────┘
+</code></pre></div></div>
+
+<h3 id="code-example---production-tracking-integration">Code Example - Production Tracking Integration</h3>
+
+<div class="language-csharp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// Production tracking with cloud integration</span>
+<span class="k">public</span> <span class="k">class</span> <span class="nc">ProductionService</span> <span class="p">:</span> <span class="n">IProductionService</span>
+<span class="p">{</span>
+    <span class="k">private</span> <span class="k">readonly</span> <span class="n">IApiClient</span> <span class="n">_cloudApi</span><span class="p">;</span>
+    <span class="k">private</span> <span class="k">readonly</span> <span class="n">IRepository</span><span class="p">&lt;</span><span class="n">Production</span><span class="p">&gt;</span> <span class="n">_repository</span><span class="p">;</span>
+    
+    <span class="k">public</span> <span class="k">async</span> <span class="n">Task</span><span class="p">&lt;</span><span class="kt">bool</span><span class="p">&gt;</span> <span class="nf">UpdateProductionStatus</span><span class="p">(</span><span class="kt">int</span> <span class="n">productionId</span><span class="p">,</span> <span class="n">ProductionStatus</span> <span class="n">status</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="c1">// Update local database</span>
+        <span class="kt">var</span> <span class="n">production</span> <span class="p">=</span> <span class="k">await</span> <span class="n">_repository</span><span class="p">.</span><span class="nf">GetByIdAsync</span><span class="p">(</span><span class="n">productionId</span><span class="p">);</span>
+        <span class="n">production</span><span class="p">.</span><span class="n">Status</span> <span class="p">=</span> <span class="n">status</span><span class="p">;</span>
+        <span class="n">production</span><span class="p">.</span><span class="n">UpdatedAt</span> <span class="p">=</span> <span class="n">DateTime</span><span class="p">.</span><span class="n">UtcNow</span><span class="p">;</span>
+        
+        <span class="k">await</span> <span class="n">_repository</span><span class="p">.</span><span class="nf">UpdateAsync</span><span class="p">(</span><span class="n">production</span><span class="p">);</span>
+        
+        <span class="c1">// Sync with cloud system for quotation-to-billing workflow</span>
+        <span class="kt">var</span> <span class="n">cloudRequest</span> <span class="p">=</span> <span class="k">new</span> <span class="n">ProductionUpdateRequest</span>
+        <span class="p">{</span>
+            <span class="n">ProductionId</span> <span class="p">=</span> <span class="n">productionId</span><span class="p">,</span>
+            <span class="n">Status</span> <span class="p">=</span> <span class="n">status</span><span class="p">.</span><span class="nf">ToString</span><span class="p">(),</span>
+            <span class="n">Timestamp</span> <span class="p">=</span> <span class="n">DateTime</span><span class="p">.</span><span class="n">UtcNow</span>
+        <span class="p">};</span>
+        
+        <span class="k">return</span> <span class="k">await</span> <span class="n">_cloudApi</span><span class="p">.</span><span class="nf">PostAsync</span><span class="p">(</span><span class="s">"/api/production/update"</span><span class="p">,</span> <span class="n">cloudRequest</span><span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<hr />
+
+<h2 id="-educational-electrical-engineering-tool">⚡ Educational Electrical Engineering Tool</h2>
+
+<p><strong>Technology Stack</strong>: C# Windows Forms<br />
+<strong>Role</strong>: Software Developer</p>
+
+<h3 id="project-overview-1">Project Overview</h3>
+<p>Created an interactive learning application that helps engineering students understand electrical power systems through visual simulations and real-time feedback.</p>
+
+<h3 id="key-features-1">Key Features</h3>
+<ul>
+  <li><strong>Bus Schema Visualization</strong>: Multiple electrical substation configurations</li>
+  <li><strong>Interactive Simulation</strong>: Real-time electrical component interaction</li>
+  <li><strong>Visual Learning</strong>: Simplified complex electrical concepts</li>
+  <li><strong>Component Library</strong>: Circuit breakers, transformers, generators</li>
+  <li><strong>Status Indicators</strong>: Real-time system state visualization</li>
+  <li><strong>Educational Modules</strong>: Structured learning progression</li>
+</ul>
+
+<h3 id="implementation-highlights-1">Implementation Highlights</h3>
+<ul>
+  <li>Improved learning outcomes with hands-on simulation</li>
+  <li>Simplified complex electrical concepts through visual representation</li>
+  <li>Support for multiple bus arrangement types</li>
+</ul>
+
+<h3 id="electrical-bus-configuration-types">Electrical Bus Configuration Types</h3>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Single Bus Configuration:
+┌───────────────────────────────────────────────────────────┐
+│                          BUS                              │
+├─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┤
+│ CB1 │ CB2 │ CB3 │ CB4 │ CB5 │ CB6 │ CB7 │ CB8 │ CB9 │CB10 │
+└─────┴─────┴─────┴─────┴─────┴─────┴─────┴─────┴─────┴─────┘
+  │     │     │     │     │     │     │     │     │     │
+ GEN   T1    T2   LINE  LINE  LINE  LINE   T3   LOAD  LOAD
+
+Double Main and Transfer Bus:
+┌───────────────────────────────────────────────────────────┐
+│                      MAIN BUS 1                           │
+├─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┤
+│ CB1 │     │ CB3 │     │ CB5 │     │ CB7 │     │ CB9 │     │
+└─────┘     └─────┘     └─────┘     └─────┘     └─────┘     │
+                                                            │
+┌─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┤
+│     │ CB2 │     │ CB4 │     │ CB6 │     │ CB8 │     │CB10 │
+│ └─────┴─────┴─────┴─────┴─────┴─────┴─────┴─────┴─────┴───┤
+│                      MAIN BUS 2                           │
+└───────────────────────────────────────────────────────────┘
+</code></pre></div></div>
+
+<h3 id="technical-implementation-features">Technical Implementation Features</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Component</th>
+      <th>Technology</th>
+      <th>Educational Purpose</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Graphics Engine</strong></td>
+      <td>GDI+ Custom Drawing</td>
+      <td>Real-time visual updates of electrical states</td>
+    </tr>
+    <tr>
+      <td><strong>Component Library</strong></td>
+      <td>OOP Design Patterns</td>
+      <td>Reusable electrical components (CB, Gen, Trans)</td>
+    </tr>
+    <tr>
+      <td><strong>State Management</strong></td>
+      <td>Event-driven Architecture</td>
+      <td>Component interaction and system state changes</td>
+    </tr>
+    <tr>
+      <td><strong>Simulation Engine</strong></td>
+      <td>Mathematical Models</td>
+      <td>Electrical flow calculations and fault analysis</td>
+    </tr>
+    <tr>
+      <td><strong>User Interface</strong></td>
+      <td>Windows Forms</td>
+      <td>Drag-and-drop component placement</td>
+    </tr>
+    <tr>
+      <td><strong>Data Persistence</strong></td>
+      <td>XML Configuration</td>
+      <td>Save/load different bus configurations</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="code-example---component-interaction-system">Code Example - Component Interaction System</h3>
+
+<div class="language-csharp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// Electrical component base class with state management</span>
+<span class="k">public</span> <span class="k">abstract</span> <span class="k">class</span> <span class="nc">ElectricalComponent</span>
+<span class="p">{</span>
+    <span class="k">public</span> <span class="n">ComponentState</span> <span class="n">State</span> <span class="p">{</span> <span class="k">get</span><span class="p">;</span> <span class="k">protected</span> <span class="k">set</span><span class="p">;</span> <span class="p">}</span>
+    <span class="k">public</span> <span class="n">List</span><span class="p">&lt;</span><span class="n">ElectricalComponent</span><span class="p">&gt;</span> <span class="n">ConnectedComponents</span> <span class="p">{</span> <span class="k">get</span><span class="p">;</span> <span class="p">}</span>
+    
+    <span class="k">public</span> <span class="k">virtual</span> <span class="k">void</span> <span class="nf">ChangeState</span><span class="p">(</span><span class="n">ComponentState</span> <span class="n">newState</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="n">State</span> <span class="p">=</span> <span class="n">newState</span><span class="p">;</span>
+        <span class="nf">OnStateChanged</span><span class="p">();</span>
+        <span class="nf">NotifyConnectedComponents</span><span class="p">();</span>
+    <span class="p">}</span>
+    
+    <span class="k">protected</span> <span class="k">virtual</span> <span class="k">void</span> <span class="nf">NotifyConnectedComponents</span><span class="p">()</span>
+    <span class="p">{</span>
+        <span class="k">foreach</span> <span class="p">(</span><span class="kt">var</span> <span class="n">component</span> <span class="k">in</span> <span class="n">ConnectedComponents</span><span class="p">)</span>
+        <span class="p">{</span>
+            <span class="n">component</span><span class="p">.</span><span class="nf">OnNeighborStateChanged</span><span class="p">(</span><span class="k">this</span><span class="p">);</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="c1">// Circuit breaker implementation</span>
+<span class="k">public</span> <span class="k">class</span> <span class="nc">CircuitBreaker</span> <span class="p">:</span> <span class="n">ElectricalComponent</span>
+<span class="p">{</span>
+    <span class="k">public</span> <span class="kt">bool</span> <span class="n">IsClosed</span> <span class="p">=&gt;</span> <span class="n">State</span> <span class="p">==</span> <span class="n">ComponentState</span><span class="p">.</span><span class="n">Closed</span><span class="p">;</span>
+    
+    <span class="k">public</span> <span class="k">override</span> <span class="k">void</span> <span class="nf">ChangeState</span><span class="p">(</span><span class="n">ComponentState</span> <span class="n">newState</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="c1">// Validate state transition for circuit breaker logic</span>
+        <span class="k">if</span> <span class="p">(</span><span class="nf">IsValidTransition</span><span class="p">(</span><span class="n">State</span><span class="p">,</span> <span class="n">newState</span><span class="p">))</span>
+        <span class="p">{</span>
+            <span class="k">base</span><span class="p">.</span><span class="nf">ChangeState</span><span class="p">(</span><span class="n">newState</span><span class="p">);</span>
+            <span class="nf">UpdateVisualization</span><span class="p">();</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<hr />
+
+<h2 id="production-sheet-management-system">Production Sheet Management System</h2>
+
+<p><strong>Technology Stack</strong>: WPF, .NET, ASP.NET Core Web API, SQL Server<br />
+<strong>Role</strong>: Full-Stack Developer</p>
+
+<h3 id="project-overview-2">Project Overview</h3>
+<p>Developed a 3-tier desktop application for manufacturing environments with comprehensive production sheet management, equipment tracking, and report generation capabilities.</p>
+
+<h3 id="key-features-2">Key Features</h3>
+<ul>
+  <li><strong>Production Sheets</strong>: Complete manufacturing documentation</li>
+  <li><strong>Equipment Tracking</strong>: Asset management and maintenance logs</li>
+  <li><strong>Water Batch Monitoring</strong>: Quality control and process tracking</li>
+  <li><strong>User Management</strong>: JWT authentication with role-based access</li>
+  <li><strong>Report Generation</strong>: A3/A4 format printing and Excel export</li>
+  <li><strong>API Integration</strong>: RESTful services for data synchronization</li>
+</ul>
+
+<h3 id="implementation-highlights-2">Implementation Highlights</h3>
+<ul>
+  <li>Built 3-tier architecture for scalable manufacturing operations</li>
+  <li>Implemented dual database support (SQL Server/MS Access)</li>
+  <li>Created comprehensive reporting system with multiple formats</li>
+  <li>Added JWT authentication for secure multi-user access</li>
+</ul>
+
+<h3 id="3-tier-architecture-design">3-Tier Architecture Design</h3>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>┌────────────────────────────────────────────────────────────────┐
+│                    Presentation Tier                           │
+│  ┌─────────────────┐  ┌─────────────────┐  ┌─────────────────┐ │
+│  │ Production Sheet│  │ Equipment Mgmt  │  │ User Management │ │
+│  │ Editor (WPF)    │  │ Interface       │  │ &amp; Reports       │ │
+│  └─────────────────┘  └─────────────────┘  └─────────────────┘ │
+└────────────────────────────────────────────────────────────────┘
+                              │
+                              ▼
+┌────────────────────────────────────────────────────────────────┐
+│                    Business Logic Tier                         │
+│  ┌─────────────────┐  ┌─────────────────┐  ┌─────────────────┐ │
+│  │ Production      │  │ Equipment       │  │ Authentication  │ │
+│  │ Services        │  │ Services        │  │ Services        │ │
+│  │                 │  │                 │  │                 │ │
+│  │ • Validation    │  │ • Asset Tracking│  │ • JWT Tokens    │ │
+│  │ • Calculations  │  │ • Maintenance   │  │ • Role Checking │ │
+│  │ • Workflows     │  │ • Scheduling    │  │ • Audit Logs    │ │
+│  └─────────────────┘  └─────────────────┘  └─────────────────┘ │
+└────────────────────────────────────────────────────────────────┘
+                              │
+                              ▼
+┌────────────────────────────────────────────────────────────────┐
+│                      Data Access Tier                          │
+│  ┌─────────────────┐  ┌─────────────────┐  ┌─────────────────┐ │
+│  │ SQL Server      │  │ MS Access       │  │ Web API         │ │
+│  │ (Primary)       │  │ (Legacy Support)│  │ Integration     │ │
+│  │                 │  │                 │  │                 │ │
+│  │ • Production    │  │ • Historical    │  │ • External      │ │
+│  │ • Equipment     │  │ • Import/Export │  │ • Sync Services │ │
+│  │ • Users         │  │ • Migration     │  │ • Backup APIs   │ │
+│  └─────────────────┘  └─────────────────┘  └─────────────────┘ │
+└────────────────────────────────────────────────────────────────┘
+</code></pre></div></div>
+
+<h3 id="database-schema-overview">Database Schema Overview</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Table</th>
+      <th>Purpose</th>
+      <th>Key Fields</th>
+      <th>Relationships</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>ProductionSheets</strong></td>
+      <td>Manufacturing documentation</td>
+      <td>ID, Date, ProductType, Status, CreatedBy</td>
+      <td>→ Users, → Equipment</td>
+    </tr>
+    <tr>
+      <td><strong>Equipment</strong></td>
+      <td>Asset management</td>
+      <td>ID, Name, Type, Location, MaintenanceDate</td>
+      <td>→ MaintenanceLogs</td>
+    </tr>
+    <tr>
+      <td><strong>WaterBatches</strong></td>
+      <td>Quality control tracking</td>
+      <td>BatchID, Temperature, pH, Conductivity, TestDate</td>
+      <td>→ ProductionSheets</td>
+    </tr>
+    <tr>
+      <td><strong>Users</strong></td>
+      <td>Authentication &amp; authorization</td>
+      <td>UserID, Username, Role, Department, LastLogin</td>
+      <td>→ ProductionSheets</td>
+    </tr>
+    <tr>
+      <td><strong>Reports</strong></td>
+      <td>Generated reports</td>
+      <td>ReportID, Type, Format, GeneratedDate, FilePath</td>
+      <td>→ Users</td>
+    </tr>
+    <tr>
+      <td><strong>AuditLogs</strong></td>
+      <td>System activity tracking</td>
+      <td>LogID, Action, UserID, Timestamp, Details</td>
+      <td>→ Users</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="performance--feature-metrics">Performance &amp; Feature Metrics</h3>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>┌─────────────────────────────────────────────────────────────┐
+│                    System Performance                       │
+├─────────────────────────────────────────────────────────────┤
+│ Data Entry Speed:     Manual → Automated (90% reduction)    │
+│ Database Migration:   100% data integrity maintained        │
+│ User Training Time:   2 days → 4 hours (75% reduction)      │
+│ System Availability:  99.2% uptime with planned maintenance │
+│ File Formats:         PDF, Excel, Crystal Reports, A3/A4    │
+└─────────────────────────────────────────────────────────────┘
+</code></pre></div></div>
+
+<h3 id="code-example---dual-database-support">Code Example - Dual Database Support</h3>
+
+<div class="language-csharp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// Repository pattern with dual database support</span>
+<span class="k">public</span> <span class="k">class</span> <span class="nc">ProductionSheetRepository</span> <span class="p">:</span> <span class="n">IProductionSheetRepository</span>
+<span class="p">{</span>
+    <span class="k">private</span> <span class="k">readonly</span> <span class="n">IDbContextFactory</span><span class="p">&lt;</span><span class="n">SqlServerContext</span><span class="p">&gt;</span> <span class="n">_sqlFactory</span><span class="p">;</span>
+    <span class="k">private</span> <span class="k">readonly</span> <span class="n">IDbContextFactory</span><span class="p">&lt;</span><span class="n">AccessContext</span><span class="p">&gt;</span> <span class="n">_accessFactory</span><span class="p">;</span>
+    <span class="k">private</span> <span class="k">readonly</span> <span class="n">IConfiguration</span> <span class="n">_config</span><span class="p">;</span>
+    
+    <span class="k">public</span> <span class="k">async</span> <span class="n">Task</span><span class="p">&lt;</span><span class="n">ProductionSheet</span><span class="p">&gt;</span> <span class="nf">GetByIdAsync</span><span class="p">(</span><span class="kt">int</span> <span class="n">id</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="kt">var</span> <span class="n">useSqlServer</span> <span class="p">=</span> <span class="n">_config</span><span class="p">.</span><span class="n">GetValue</span><span class="p">&lt;</span><span class="kt">bool</span><span class="p">&gt;(</span><span class="s">"Database:UseSqlServer"</span><span class="p">);</span>
+        
+        <span class="k">if</span> <span class="p">(</span><span class="n">useSqlServer</span><span class="p">)</span>
+        <span class="p">{</span>
+            <span class="k">using</span> <span class="nn">var</span> <span class="n">context</span> <span class="p">=</span> <span class="n">_sqlFactory</span><span class="p">.</span><span class="nf">CreateDbContext</span><span class="p">();</span>
+            <span class="k">return</span> <span class="k">await</span> <span class="n">context</span><span class="p">.</span><span class="n">ProductionSheets</span>
+                <span class="p">.</span><span class="nf">Include</span><span class="p">(</span><span class="n">p</span> <span class="p">=&gt;</span> <span class="n">p</span><span class="p">.</span><span class="n">Equipment</span><span class="p">)</span>
+                <span class="p">.</span><span class="nf">Include</span><span class="p">(</span><span class="n">p</span> <span class="p">=&gt;</span> <span class="n">p</span><span class="p">.</span><span class="n">WaterBatches</span><span class="p">)</span>
+                <span class="p">.</span><span class="nf">FirstOrDefaultAsync</span><span class="p">(</span><span class="n">p</span> <span class="p">=&gt;</span> <span class="n">p</span><span class="p">.</span><span class="n">Id</span> <span class="p">==</span> <span class="n">id</span><span class="p">);</span>
+        <span class="p">}</span>
+        <span class="k">else</span>
+        <span class="p">{</span>
+            <span class="k">using</span> <span class="nn">var</span> <span class="n">context</span> <span class="p">=</span> <span class="n">_accessFactory</span><span class="p">.</span><span class="nf">CreateDbContext</span><span class="p">();</span>
+            <span class="k">return</span> <span class="k">await</span> <span class="n">context</span><span class="p">.</span><span class="n">ProductionSheets</span>
+                <span class="p">.</span><span class="nf">Include</span><span class="p">(</span><span class="n">p</span> <span class="p">=&gt;</span> <span class="n">p</span><span class="p">.</span><span class="n">Equipment</span><span class="p">)</span>
+                <span class="p">.</span><span class="nf">FirstOrDefaultAsync</span><span class="p">(</span><span class="n">p</span> <span class="p">=&gt;</span> <span class="n">p</span><span class="p">.</span><span class="n">Id</span> <span class="p">==</span> <span class="n">id</span><span class="p">);</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+    
+    <span class="k">public</span> <span class="k">async</span> <span class="n">Task</span><span class="p">&lt;</span><span class="kt">bool</span><span class="p">&gt;</span> <span class="nf">GenerateReportAsync</span><span class="p">(</span><span class="kt">int</span> <span class="n">sheetId</span><span class="p">,</span> <span class="n">ReportFormat</span> <span class="n">format</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="kt">var</span> <span class="n">sheet</span> <span class="p">=</span> <span class="k">await</span> <span class="nf">GetByIdAsync</span><span class="p">(</span><span class="n">sheetId</span><span class="p">);</span>
+        
+        <span class="k">return</span> <span class="n">format</span> <span class="k">switch</span>
+        <span class="p">{</span>
+            <span class="n">ReportFormat</span><span class="p">.</span><span class="n">PDF</span> <span class="p">=&gt;</span> <span class="k">await</span> <span class="nf">GeneratePdfReport</span><span class="p">(</span><span class="n">sheet</span><span class="p">),</span>
+            <span class="n">ReportFormat</span><span class="p">.</span><span class="n">Excel</span> <span class="p">=&gt;</span> <span class="k">await</span> <span class="nf">GenerateExcelReport</span><span class="p">(</span><span class="n">sheet</span><span class="p">),</span>
+            <span class="n">ReportFormat</span><span class="p">.</span><span class="n">Crystal</span> <span class="p">=&gt;</span> <span class="k">await</span> <span class="nf">GenerateCrystalReport</span><span class="p">(</span><span class="n">sheet</span><span class="p">),</span>
+            <span class="n">_</span> <span class="p">=&gt;</span> <span class="k">throw</span> <span class="k">new</span> <span class="nf">NotSupportedException</span><span class="p">(</span><span class="s">$"Format </span><span class="p">{</span><span class="n">format</span><span class="p">}</span><span class="s"> not supported"</span><span class="p">)</span>
+        <span class="p">};</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<hr />
+
+<h2 id="-legacy-system-modernization-suite">🔧 Legacy System Modernization Suite</h2>
+
+<p><strong>Technology Stack</strong>: C# .NET, SQL Server, MS Access<br />
+<strong>Role</strong>: Systems Architect</p>
+
+<h3 id="project-overview-3">Project Overview</h3>
+<p>Modernized legacy desktop applications while maintaining backward compatibility, implementing modern UI frameworks and database migration strategies.</p>
+
+<h3 id="key-features-3">Key Features</h3>
+<ul>
+  <li><strong>Legacy Integration</strong>: MS Access to SQL Server migration</li>
+  <li><strong>Modern UI</strong>: WPF implementation with XAML styling</li>
+  <li><strong>Data Migration</strong>: ETL processes for legacy data</li>
+  <li><strong>Backward Compatibility</strong>: Support for existing workflows</li>
+  <li><strong>Performance Optimization</strong>: Database tuning and optimization</li>
+  <li><strong>Security Updates</strong>: Modern authentication and encryption</li>
+</ul>
+
+<h3 id="implementation-highlights-3">Implementation Highlights</h3>
+<ul>
+  <li>Successfully migrated legacy systems to modern architecture</li>
+  <li>Maintained 100% data integrity during migration processes</li>
+  <li>Improved performance by 300% through database optimization</li>
+  <li>Implemented modern security standards while preserving functionality</li>
+</ul>
+
+<h3 id="migration-architecture-strategy">Migration Architecture Strategy</h3>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>LEGACY SYSTEM                    MODERNIZED SYSTEM
+┌─────────────────┐              ┌─────────────────┐
+│ MS Access DB    │              │ SQL Server DB   │
+│ (File-based)    │ ──────────►  │ (Client-Server) │
+│                 │              │                 │
+│ • Limited Users │              │ • Multi-user    │
+│ • File Locking  │              │ • Concurrent    │
+│ • No Backup     │              │ • Auto Backup   │
+└─────────────────┘              └─────────────────┘
+         │                               │
+         ▼                               ▼
+┌─────────────────┐              ┌─────────────────┐
+│ Windows Forms   │              │ WPF Application │
+│ (Legacy UI)     │ ──────────►  │ (Modern UI)     │
+│                 │              │                 │
+│ • Fixed Layout  │              │ • MVVM Pattern  │
+│ • Basic Events  │              │ • Data Binding  │
+│ • No Theming    │              │ • Custom Styles │
+└─────────────────┘              └─────────────────┘
+         │                               │
+         ▼                               ▼
+┌─────────────────┐              ┌─────────────────┐
+│ Basic Security  │              │ Enterprise Auth │
+│ (Login Only)    │ ──────────►  │ (Role-based)    │
+│                 │              │                 │
+│ • Simple Auth   │              │ • JWT Tokens    │
+│ • No Encryption │              │ • AES Encryption│
+│ • No Audit Log  │              │ • Audit Trails  │
+└─────────────────┘              └─────────────────┘
+</code></pre></div></div>
+
+<h3 id="data-migration-process">Data Migration Process</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Phase</th>
+      <th>Legacy → Modern</th>
+      <th>Data Integrity</th>
+      <th>Performance Impact</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Phase 1</strong></td>
+      <td>Schema Analysis</td>
+      <td>100% preserved</td>
+      <td>Baseline established</td>
+    </tr>
+    <tr>
+      <td><strong>Phase 2</strong></td>
+      <td>Data Extraction</td>
+      <td>Validation checksums</td>
+      <td>Read-only mode</td>
+    </tr>
+    <tr>
+      <td><strong>Phase 3</strong></td>
+      <td>Transformation</td>
+      <td>Type conversion &amp; cleaning</td>
+      <td>ETL processing</td>
+    </tr>
+    <tr>
+      <td><strong>Phase 4</strong></td>
+      <td>Load &amp; Verify</td>
+      <td>Record-by-record validation</td>
+      <td>Performance testing</td>
+    </tr>
+    <tr>
+      <td><strong>Phase 5</strong></td>
+      <td>Cutover**</td>
+      <td>Parallel verification</td>
+      <td>Live system switch</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="modernization-results">Modernization Results</h3>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>┌─────────────────────────────────────────────────────────────┐
+│                   Modernization Impact                      │
+├─────────────────────────────────────────────────────────────┤
+│ Database Performance:  Baseline → 300% improvement          │
+│ Concurrent Users:      1 user → 50+ users                   │
+│ Data Security:         Basic → Enterprise-grade encryption  │
+│ System Reliability:    85% → 99.5% uptime                   │
+│ Backup &amp; Recovery:     Manual → Automated (15min RTO)       │
+│ UI Responsiveness:     2-3 seconds → &lt;500ms                 │
+└─────────────────────────────────────────────────────────────┘
+</code></pre></div></div>
+
+<h3 id="technology-transition-matrix">Technology Transition Matrix</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Component</th>
+      <th>Legacy Technology</th>
+      <th>Modern Technology</th>
+      <th>Migration Strategy</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Database</strong></td>
+      <td>MS Access (.mdb)</td>
+      <td>SQL Server Express</td>
+      <td>ETL with validation</td>
+    </tr>
+    <tr>
+      <td><strong>UI Framework</strong></td>
+      <td>Windows Forms</td>
+      <td>WPF + MVVM</td>
+      <td>Gradual screen migration</td>
+    </tr>
+    <tr>
+      <td><strong>Data Access</strong></td>
+      <td>ADO.NET Classic</td>
+      <td>Entity Framework Core</td>
+      <td>Repository pattern</td>
+    </tr>
+    <tr>
+      <td><strong>Authentication</strong></td>
+      <td>Custom login</td>
+      <td>JWT + Role-based</td>
+      <td>User mapping + training</td>
+    </tr>
+    <tr>
+      <td><strong>Reporting</strong></td>
+      <td>Basic queries</td>
+      <td>Crystal Reports</td>
+      <td>Template conversion</td>
+    </tr>
+    <tr>
+      <td><strong>Deployment</strong></td>
+      <td>Manual copy</td>
+      <td>ClickOnce</td>
+      <td>Automated installer</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="code-example---backward-compatibility-layer">Code Example - Backward Compatibility Layer</h3>
+
+<div class="language-csharp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// Compatibility service to support legacy data formats</span>
+<span class="k">public</span> <span class="k">class</span> <span class="nc">LegacyCompatibilityService</span> <span class="p">:</span> <span class="n">ILegacyCompatibilityService</span>
+<span class="p">{</span>
+    <span class="k">private</span> <span class="k">readonly</span> <span class="n">IModernRepository</span> <span class="n">_modernRepo</span><span class="p">;</span>
+    <span class="k">private</span> <span class="k">readonly</span> <span class="n">ILegacyRepository</span> <span class="n">_legacyRepo</span><span class="p">;</span>
+    <span class="k">private</span> <span class="k">readonly</span> <span class="n">ILogger</span><span class="p">&lt;</span><span class="n">LegacyCompatibilityService</span><span class="p">&gt;</span> <span class="n">_logger</span><span class="p">;</span>
+    
+    <span class="k">public</span> <span class="k">async</span> <span class="n">Task</span><span class="p">&lt;</span><span class="kt">bool</span><span class="p">&gt;</span> <span class="nf">ImportLegacyDataAsync</span><span class="p">(</span><span class="kt">string</span> <span class="n">legacyFilePath</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="k">try</span>
+        <span class="p">{</span>
+            <span class="c1">// Read legacy MS Access data</span>
+            <span class="kt">var</span> <span class="n">legacyRecords</span> <span class="p">=</span> <span class="k">await</span> <span class="n">_legacyRepo</span><span class="p">.</span><span class="nf">ReadAllAsync</span><span class="p">(</span><span class="n">legacyFilePath</span><span class="p">);</span>
+            
+            <span class="k">foreach</span> <span class="p">(</span><span class="kt">var</span> <span class="n">legacyRecord</span> <span class="k">in</span> <span class="n">legacyRecords</span><span class="p">)</span>
+            <span class="p">{</span>
+                <span class="c1">// Transform legacy format to modern format</span>
+                <span class="kt">var</span> <span class="n">modernRecord</span> <span class="p">=</span> <span class="nf">TransformToModernFormat</span><span class="p">(</span><span class="n">legacyRecord</span><span class="p">);</span>
+                
+                <span class="c1">// Validate data integrity</span>
+                <span class="k">if</span> <span class="p">(</span><span class="nf">ValidateRecord</span><span class="p">(</span><span class="n">modernRecord</span><span class="p">))</span>
+                <span class="p">{</span>
+                    <span class="k">await</span> <span class="n">_modernRepo</span><span class="p">.</span><span class="nf">InsertAsync</span><span class="p">(</span><span class="n">modernRecord</span><span class="p">);</span>
+                <span class="p">}</span>
+                <span class="k">else</span>
+                <span class="p">{</span>
+                    <span class="n">_logger</span><span class="p">.</span><span class="nf">LogWarning</span><span class="p">(</span><span class="s">$"Data validation failed for record </span><span class="p">{</span><span class="n">legacyRecord</span><span class="p">.</span><span class="n">Id</span><span class="p">}</span><span class="s">"</span><span class="p">);</span>
+                <span class="p">}</span>
+            <span class="p">}</span>
+            
+            <span class="k">return</span> <span class="k">true</span><span class="p">;</span>
+        <span class="p">}</span>
+        <span class="k">catch</span> <span class="p">(</span><span class="n">Exception</span> <span class="n">ex</span><span class="p">)</span>
+        <span class="p">{</span>
+            <span class="n">_logger</span><span class="p">.</span><span class="nf">LogError</span><span class="p">(</span><span class="n">ex</span><span class="p">,</span> <span class="s">"Legacy data import failed"</span><span class="p">);</span>
+            <span class="k">return</span> <span class="k">false</span><span class="p">;</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+    
+    <span class="k">private</span> <span class="n">ModernDataRecord</span> <span class="nf">TransformToModernFormat</span><span class="p">(</span><span class="n">LegacyDataRecord</span> <span class="n">legacy</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="k">return</span> <span class="k">new</span> <span class="n">ModernDataRecord</span>
+        <span class="p">{</span>
+            <span class="n">Id</span> <span class="p">=</span> <span class="n">legacy</span><span class="p">.</span><span class="n">LegacyId</span><span class="p">,</span>
+            <span class="n">Name</span> <span class="p">=</span> <span class="n">legacy</span><span class="p">.</span><span class="n">OldName</span><span class="p">?.</span><span class="nf">Trim</span><span class="p">(),</span>
+            <span class="n">CreatedDate</span> <span class="p">=</span> <span class="n">legacy</span><span class="p">.</span><span class="n">CreateDate</span> <span class="p">??</span> <span class="n">DateTime</span><span class="p">.</span><span class="n">MinValue</span><span class="p">,</span>
+            <span class="c1">// Handle legacy null values and data type conversions</span>
+            <span class="n">Status</span> <span class="p">=</span> <span class="nf">ParseLegacyStatus</span><span class="p">(</span><span class="n">legacy</span><span class="p">.</span><span class="n">StatusCode</span><span class="p">),</span>
+            <span class="n">IsActive</span> <span class="p">=</span> <span class="n">legacy</span><span class="p">.</span><span class="n">ActiveFlag</span> <span class="p">==</span> <span class="s">"Y"</span>
+        <span class="p">};</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<hr />
+
+<hr />
+
+<table>
+  <tbody>
+    <tr>
+      <td><a href="/projects/">← Back to Projects</a></td>
+      <td><a href="/projects/enterprise-solutions/">Enterprise Solutions →</a></td>
+      <td><a href="/projects/independent-consulting/">Independent Consulting →</a></td>
+    </tr>
+  </tbody>
+</table>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">Patcharapon Sangsatra Portfolio</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">Patcharapon Sangsatra Portfolio</li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p>Built by using Markdown and GitHub Actions</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>

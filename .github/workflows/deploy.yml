@@ -38,9 +38,7 @@ jobs:
         uses: actions/jekyll-build-pages@v1
         with:
           source: ./
-          destination: ./_site          
-      #- name: Build Jekyll Site
-      #  run: bundle exec jekyll build
+          destination: ./_site
       
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
@@ -56,8 +54,3 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
-      #- name: Deploy to GitHub Pages
-      #  uses: peaceiris/actions-gh-pages@v3
-      #  with:
-      #    github_token: ${{ secrets.GITHUB_TOKEN }}
-      #    publish_dir: ./_site

@@ -10,7 +10,7 @@ With over 10 years of experience across both enterprise environments and indepen
 🤝 Let's Connect
 
 - [LinkedIn](https://www.linkedin.com/in/patcharaponsan/)
-- [Email Me](p.sangsartra@gmail.com)
+- [Email Me](mailto:p.sangsartra@gmail.com)
 - [GitHub](https://github.com/patcharapon-san)
 
 ---
@@ -38,11 +38,10 @@ I specialize in building full-stack applications, serverless cloud systems, and 
 - **Reporting**: Crystal Reports, Telerik, Infragistic
 
 ### Cloud & DevOps
-- **AWS**: Lambda, API Gateway, S3, RDS, Amplify, Cognito, CloudWatch
-- **Azure**: Azure Functions, Azure DevOps Services, Azure Data Factory, Azure Key Vault
-- **Backend-as-a-Service**: Supabase
-- **DevOps**: Docker, GitHub Actions, CI/CD pipelines
-- **Platforms**: Azure, Vercel, Office 365
+- **AWS**: Lambda, EC2, S3, RDS, Aurora, VPC, IAM, API Gateway, Amplify, CodeCommit, CloudWatch, Key Management Service, Secrets Manager, Cognito
+- **Azure**: App Service, Functions App, Azure DevOps, Data Factory, Azure Key Vault, SQL Database, Azure Cache for Redis, Application Insights, App Service Plans
+- **DevOps**: GitHub Actions, CI/CD pipelines, automated testing
+- **Platforms**: Supabase, Vercel, Office 365
 
 ### Databases & Storage
 - **Relational**: SQL Server, MySQL, PostgreSQL, Oracle
@@ -86,49 +85,50 @@ I specialize in building full-stack applications, serverless cloud systems, and 
 ## 🚀 Project Portfolio
 
 ### Enterprise Serverless Platform
-**Role**: Backend Developer | **Tech**: Python, AWS Lambda, API Gateway
-**What it does**: Built a cloud-based system that automates business processes including customer relationship management, financial quotations, and document handling. The system processes thousands of requests daily with 99.9% uptime. Specifically implemented in manufacturing to replace manual quotation-to-billing workflows.
+**Role**: Backend Developer | **Tech**: Python, AWS Lambda, API Gateway, S3
+
+**What it does**: Built a cloud-based system that automates business processes including customer relationship management, financial quotations, and document handling. Specifically implemented in manufacturing to replace manual quotation-to-billing workflows.
 - Reduced manual processing time by 80%
 - Integrated multiple business systems into one unified platform
 - Implemented secure authentication for external partners
 - Built comprehensive test suites using Jest for frontend components and pytest for backend services
 - Design and implement flow to complete quotation-to-billing process in manufacturing operations
+- Integrated with Enterprise Serverless Platform for automated quotation to billing workflow
+- Connected with Modern Web Application for real-time process tracking and 3D visualization
 
 ### Modern Web Application with 3D Visualization
 **Role**: Full-Stack Developer | **Tech**: Next.js, TypeScript, AWS, Vercel
-**What it does**: Created an interactive web platform that shows 3D models and complex data visualizations for business analysis. Features a customizable dashboard with multiple chart types, grid views, and tables for detailed reporting. Users can interact with 3D objects and generate reports in real-time. Implemented in manufacturing for delivery tracking and process visualization.
+
+**What it does**: Created an interactive web platform that shows 3D models and complex data visualizations for business analysis. Features a customizable dashboard with multiple chart types, grid views, and tables for detailed reporting. Users can interact with 3D objects for analysis to help in deciding the price of the workpiece. Implemented in manufacturing for delivery tracking and process visualization.
 - Improved user engagement by 150% with interactive 3D features
 - Built flexible reporting dashboard with customizable chart types and data views
-- Supports multiple languages for international users
 - Real-time data updates and analytics dashboard
-- Deployed and optimized using Vercel for fast global delivery
 - Replaced manual ordering processes with system
 
 ### Manufacturing Management Desktop Application
 **Role**: Full-Stack Developer | **Tech**: C# .NET, WPF, SQL Server
+
 **What it does**: Developed a comprehensive system for tracking production processes, managing equipment, and generating reports in manufacturing facilities. Used by production teams to monitor daily operations.
-- Streamlined production tracking for 500+ daily operations
+- Streamlined production tracking for daily operations
 - Reduced report generation time from hours to minutes
 - Implemented role-based access for different user levels
-- Integrated with Enterprise Serverless Platform for automated quotation to billing workflow
-- Connected with Modern Web Application for real-time delivery tracking and 3D visualization
 
 ### E-commerce Integration Platform
 **Role**: API Developer | **Tech**: C# .NET, REST APIs
+
 **What it does**: Built a middleware system that connects online stores with payment processors, shipping companies, and social media platforms. Handles order processing, payment verification, and shipment tracking automatically.
-- Processed over $1M in transactions with zero security incidents
-- Automated 95% of order fulfillment processes
 - Integrated with major social media platforms for customer service
 
 ### Educational Electrical Engineering Tool
 **Role**: Software Developer | **Tech**: C# Windows Forms
+
 **What it does**: Created an interactive learning application that helps engineering students understand electrical power systems through visual simulations and real-time feedback.
-- Used by 200+ engineering students across multiple universities
 - Improved learning outcomes with hands-on simulation
 - Simplified complex electrical concepts through visual representation
 
 ### Government Electronic Visa System
 **Role**: Senior Software Developer | **Tech**: .NET, C#, SQL Server, Oracle
+
 **What it does**: Developed a comprehensive electronic visa application system and backoffice management system for embassies and consular services. Includes document distribution, certificate management, and identity verification capabilities.
 - Streamlined visa processing for government embassies
 - Implemented secure document distribution and certificate systems
@@ -137,6 +137,7 @@ I specialize in building full-stack applications, serverless cloud systems, and 
 
 ### E-commerce & Warehouse Management Platform
 **Role**: Front-End/Back-End Developer | **Tech**: .NET, React.js, SQL Server
+
 **What it does**: Built complete e-commerce ecosystem including customer-facing online store, warehouse management application, and delivery tracking system for delivery services industry.
 - Developed end-to-end e-commerce solution for retail operations
 - Created warehouse management system improving operational efficiency
@@ -145,6 +146,7 @@ I specialize in building full-stack applications, serverless cloud systems, and 
 
 ### Marketing Technology Solutions Platform
 **Role**: Solutions Architect | **Tech**: .NET, Web APIs, Email Systems, Chatbot
+
 **What it does**: Architected and maintained comprehensive web ecosystem including internal and external company websites, email marketing automation, and customer engagement systems.
 - Maintained all company websites (internal and external)
 - Developed email blast service for large-scale customer targeting
@@ -156,6 +158,7 @@ I specialize in building full-stack applications, serverless cloud systems, and 
 
 ### Oil & Gas Industry Applications
 **Role**: Application Developer / Package App Development Specialist | **Tech**: .NET Core, Azure, Oracle, SQL Server, Crystal Reports, Telerik, Infragistic
+
 **What it does**: Developed specialized applications for oil & gas industry covering reservoir management, petroleum engineering, and drilling operations. Includes detailed reporting and data analysis features.
 - Built industry-specific applications for petroleum engineering workflows
 - Implemented Azure cloud integration for scalable data processing
