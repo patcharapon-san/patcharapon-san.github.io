@@ -10,22 +10,18 @@ const webPlatformProjects = [
   {
     name: "Manufacturing Order Management Platform",
     text: "Collaborative platform for manufacturers enabling order process management with 3D STEP data visualization, post-sale and engineering team coordination, customer information management from multiple sources, AI-powered STEP to order data conversion, and seamless integration with internal systems and third-party services like FlowAccount.",
-    image: "https://picsum.photos/400/300?random=30"
   },
   {
     name: "E-commerce & Warehouse Management Platform",
     text: "Complete e-commerce ecosystem with customer store, warehouse management, delivery tracking, and business intelligence. Reduced order processing time by 81% and improved inventory accuracy to 96%.",
-    image: "https://picsum.photos/400/300?random=31"
   },
   {
     name: "Business Analytics Web Platform",
     text: "Comprehensive analytics platform with interactive charts (Recharts/MUI X), real-time dashboards, static reports, and multi-format export capabilities. Supports 500+ concurrent users with optimized performance.",
-    image: "https://picsum.photos/400/300?random=32"
   },
   {
     name: "HR Job Platform Web Application",
     text: "Dual-portal job platform serving employers and job seekers with advanced matching algorithms, application tracking, and automated workflow. Reduced time-to-hire by 44% and improved application response time by 83%.",
-    image: "https://picsum.photos/400/300?random=33"
   },
 ];
 

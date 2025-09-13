@@ -25,7 +25,6 @@ export default function About() {
             <LargeImage src="/overall.png" alt="Technology Innovation" maxWidth={1150} maxHeight={600} />
 
             <ContentFullWidth
-                image={["https://picsum.photos/600/400?random=73"]}
                 title="Work Philosophy & Approach"
                 text="As both enterprise team member and independent contractor, I've learned to be self-motivated, client-focused with strong communication skills, and adaptable to different team dynamics. I believe in quality over quantity and building robust, maintainable solutions."
                 text2="Whether it's helping manufacturing teams track production efficiently, enabling students to learn complex engineering concepts through interactive tools, or streamlining government processes, I'm driven by the impact my work has on real people's daily lives."

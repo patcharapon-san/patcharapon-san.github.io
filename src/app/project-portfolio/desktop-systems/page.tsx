@@ -10,22 +10,18 @@ const desktopProjects = [
   {
     name: "Manufacturing Management Desktop Application",
     text: "Comprehensive system for tracking production processes, managing equipment, and generating reports in manufacturing facilities. Built with WPF and MVVM pattern, integrated with cloud systems for automated workflows.",
-    image: "https://picsum.photos/400/300?random=50"
   },
   {
     name: "Educational Electrical Engineering Tool",
     text: "Interactive learning application helping engineering students understand electrical power systems through visual simulations, bus schema visualization, and real-time component interaction.",
-    image: "https://picsum.photos/400/300?random=51"
   },
   {
     name: "Production Sheet Management System",
     text: "3-tier desktop application with comprehensive production sheet management, equipment tracking, and multi-format report generation. Features JWT authentication and dual database support.",
-    image: "https://picsum.photos/400/300?random=52"
   },
   {
     name: "Legacy System Modernization Suite",
     text: "Modernized legacy desktop applications with MS Access to SQL Server migration, WPF implementation, and 300% performance improvement while maintaining backward compatibility.",
-    image: "https://picsum.photos/400/300?random=53"
   },
 ];
 

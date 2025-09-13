@@ -1,94 +1,212 @@
-# MyAgency - Multi-Page Portfolio Website
+# Patcharapon Sangsatra Portfolio
 
-This is a [Next.js](https://nextjs.org) project showcasing a professional agency website with multiple pages and a comprehensive project portfolio section.
+A modern, professional portfolio website built with Next.js showcasing full-stack development expertise across multiple industries. This static site is optimized for GitHub Pages deployment and features a comprehensive project portfolio with specialized category sections.
 
-## Website Structure
+## 🌐 Live Demo
 
-The website includes the following pages:
+Visit the live website: [patcharapon-san.github.io](https://patcharapon-san.github.io)
 
-### Main Navigation
-1. **Home** (`/`) - Landing page with hero section, services overview, and call-to-action
-2. **About** (`/about`) - Detailed information about the agency, mission, and team
-3. **Project Portfolio** (`/project-portfolio`) - Comprehensive portfolio with category navigation and featured projects overview
+## 🚀 Features
 
-### Project Portfolio Sub-pages
-- **Enterprise Solutions** (`/project-portfolio/enterprise-solutions`) - Large-scale enterprise applications
-- **Web Platforms** (`/project-portfolio/web-platforms`) - Modern web applications and platforms  
-- **Desktop Systems** (`/project-portfolio/desktop-systems`) - Desktop applications and system solutions
+### 🎨 Modern Design
+- **Responsive Design**: Mobile-first approach using Material-UI components
+- **Consistent Theme**: Centralized color palette system with CSS custom properties
+- **Smooth Animations**: Hover effects and transitions throughout the interface
+- **Professional Typography**: Geist Sans and Geist Mono fonts for modern aesthetics
 
-## Key Features
+### 🛠️ Technical Excellence
+- **Next.js 15** with App Router for optimal performance
+- **Static Site Generation**: Configured for GitHub Pages deployment
+- **TypeScript**: Full type safety across the codebase
+- **Material-UI v7**: Latest component library with Emotion styling
+- **SEO Optimized**: Comprehensive meta tags and Open Graph support
 
-- **Responsive Design**: Mobile-first design using Material-UI components
-- **Next.js App Router**: Modern routing with nested routes for portfolio sections
-- **Interactive Navigation**: Breadcrumb navigation and category chips in portfolio sections
-- **Reusable Components**: Modular components for consistent design across pages
-- **SEO Optimized**: Proper page structure and metadata for search engines
+### 📱 Portfolio Showcase
+- **Multi-Category Portfolio**: Enterprise Solutions, Web Platforms, Desktop Systems
+- **Interactive Navigation**: Breadcrumb navigation and intuitive category browsing
+- **Project Galleries**: 2-column and 3-column responsive layouts
+- **Detailed Case Studies**: Comprehensive project descriptions with technical highlights
 
-## Getting Started
+## 🗂️ Website Structure
 
-First, run the development server:
+### Main Pages
+1. **Home** (`/`) - Professional landing page with core competencies and client success stories
+2. **About** (`/about`) - Detailed professional journey, experience across 7 industries
+3. **Project Portfolio** (`/project-portfolio`) - Central hub with category overview and featured projects
+
+### Portfolio Categories
+- **Enterprise Solutions** - AWS Lambda microservices, government systems, large-scale applications
+- **Web Platforms** - Modern web applications, e-commerce solutions, marketing platforms  
+- **Desktop Systems** - WPF applications, manufacturing systems, 3D visualization tools
+
+## 🛠️ Technologies Used
+
+### Core Framework
+- **Next.js 15.5.3** - React framework with App Router
+- **React 19.1.0** - Latest React with concurrent features
+- **TypeScript 5** - Static type checking
+
+### UI & Styling
+- **Material-UI 7.3.2** - Modern React component library
+- **Emotion** - CSS-in-JS styling solution
+- **Tailwind CSS 4** - Utility-first CSS framework
+- **Material Icons** - Consistent iconography
+
+### Development Tools
+- **ESLint 9** - Code linting and formatting
+- **Turbopack** - Fast development bundler
+- **PostCSS** - CSS processing
+
+## 🚀 Getting Started
+
+### Prerequisites
+- Node.js 18+ 
+- npm, yarn, pnpm, or bun
+
+### Development Server
 
 ```bash
+# Clone the repository
+git clone https://github.com/patcharapon-san/patcharapon-san.github.io.git
+cd patcharapon-san.github.io
+
+# Install dependencies
+npm install
+
+# Start development server with Turbopack
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) to view the site in development mode.
 
-## Project Structure
+### Available Scripts
 
-```
-src/
-├── app/
-│   ├── page.tsx                                    # Home page
-│   ├── about/
-│   │   └── page.tsx                               # About page
-│   └── project-portfolio/
-│       ├── page.tsx                               # Main portfolio page with overview
-│       ├── enterprise-solutions/
-│       │   └── page.tsx                          # Enterprise projects
-│       ├── web-platforms/
-│       │   └── page.tsx                          # Web platform projects
-│       └── desktop-systems/
-│           └── page.tsx                          # Desktop system projects
-├── components/
-│   ├── Navbar.tsx                                # Main navigation
-│   ├── PortfolioNavigation.tsx                   # Portfolio sub-navigation
-│   ├── HeroSection.tsx                           # Hero sections
-│   ├── ContentFullWidth.tsx                      # Content blocks
-│   ├── Gallery2xN.tsx                            # 2-column galleries
-│   ├── Gallery3xN.tsx                            # 3-column galleries
-│   └── Footer.tsx                                # Footer component
-└── utils/
-    └── colors.ts                                  # Color theme configuration
+```bash
+npm run dev          # Start development server with Turbopack
+npm run build        # Build for production
+npm run build:turbo  # Build with Turbopack
+npm start           # Start production server
+npm run lint        # Run ESLint
 ```
 
-## Technologies Used
+## 📁 Project Structure
 
-- **Next.js 15** with App Router
-- **React 19**
-- **Material-UI (MUI)** for components and styling
-- **TypeScript** for type safety
-- **Tailwind CSS** for additional styling
+```
+patcharapon-san.github.io/
+├── 📁 public/                          # Static assets
+│   ├── 🖼️ *.png, *.jpg                 # Project images and screenshots
+│   └── 🖼️ *.svg                        # Icons and logos
+├── 📁 src/
+│   ├── 📁 app/                         # Next.js App Router pages
+│   │   ├── 📄 layout.tsx               # Root layout with navigation
+│   │   ├── 📄 globals.css              # Global styles and CSS variables
+│   │   ├── 🏠 page.tsx                 # Home page - landing with competencies
+│   │   ├── 📁 skills/
+│   │   │   └── 📄 page.tsx             # Technical skills, technologies, achievements
+│   │   ├── 📁 about/
+│   │   │   └── 📄 page.tsx             # Professional journey and experience
+│   │   └── 📁 project-portfolio/
+│   │       ├── 📄 page.tsx             # Portfolio hub with category overview
+│   │       ├── 📁 enterprise-solutions/
+│   │       │   └── 📄 page.tsx         # AWS Lambda, Government systems
+│   │       ├── 📁 web-platforms/
+│   │       │   └── 📄 page.tsx         # E-commerce, Marketing platforms
+│   │       └── 📁 desktop-systems/
+│   │           └── 📄 page.tsx         # WPF, Manufacturing systems
+│   ├── 📁 components/                  # Reusable React components
+│   │   ├── 🧭 Navbar.tsx               # Main navigation with responsive design
+│   │   ├── 🧭 PortfolioNavigation.tsx  # Portfolio breadcrumb navigation
+│   │   ├── 🎯 HeroSection.tsx          # Primary hero component
+│   │   ├── 🎯 HeroSection2.tsx         # Alternative hero layout
+│   │   ├── 📝 ContentFullWidth.tsx     # Full-width content blocks
+│   │   ├── 🖼️ Gallery2xN.tsx           # 2-column responsive gallery
+│   │   ├── 🖼️ Gallery3xN.tsx           # 3-column responsive gallery
+│   │   ├── 🖼️ LargeImage.tsx           # Optimized image component
+│   │   ├── 📞 CallToAction.tsx         # CTA sections with contact forms
+│   │   ├── 🎨 ClientThemeProvider.tsx  # Material-UI theme configuration
+│   │   └── 🦶 Footer.tsx               # Site footer with links
+│   └── 📁 utils/
+│       └── 🎨 colors.ts                # Centralized color palette system
+├── ⚙️ next.config.ts                   # Next.js configuration for static export
+├── ⚙️ package.json                     # Dependencies and scripts
+├── ⚙️ tsconfig.json                   # TypeScript configuration
+└── 📖 README.md                       # This file
+```
 
-You can start editing the pages by modifying files in the `src/app/` directory. The pages auto-update as you edit the files.
+## 🎨 Design System
 
-## Learn More
+### Color Palette
+The project uses a comprehensive color system defined in `src/utils/colors.ts`:
+- **Primary**: Blue tones for main branding and CTAs
+- **Secondary**: Gray tones for supporting content
+- **Accent**: Purple tones for highlights and special elements
+- **Semantic**: Success, warning, error, and info colors
 
-To learn more about Next.js, take a look at the following resources:
+### Component Library
+- **Galleries**: Responsive project showcases (2x2, 3x3 layouts)
+- **Hero Sections**: Multiple variants for different page types
+- **Navigation**: Consistent navigation with breadcrumbs for portfolio
+- **Content Blocks**: Full-width content sections with image support
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 🚀 Deployment
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+This project is configured for **GitHub Pages** deployment with static site generation.
 
-## Deploy on Vercel
+### Automatic Deployment
+The site automatically deploys to GitHub Pages when changes are pushed to the `main` branch.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### Manual Deployment
+```bash
+# Build the static site
+npm run build
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+# The build output will be in the 'out' directory
+# GitHub Pages will serve from this directory
+```
+
+### Configuration
+- `next.config.ts` is configured with `output: 'export'` for static generation
+- Images are unoptimized for static hosting compatibility
+- Trailing slashes are enabled for better static hosting support
+
+## 🏗️ Development Notes
+
+### Key Features Implemented
+- ✅ **Static Site Generation**: Optimized for GitHub Pages
+- ✅ **Responsive Design**: Mobile-first Material-UI components
+- ✅ **Type Safety**: Full TypeScript implementation
+- ✅ **SEO Optimization**: Meta tags and Open Graph support
+- ✅ **Performance**: Turbopack bundling for fast development
+- ✅ **Color System**: Centralized theme management
+- ✅ **Component Reusability**: Modular, reusable React components
+
+### Recent Updates
+- Fixed hydration issues with GridLegacy components
+- Implemented centralized color palette system
+- Added comprehensive project portfolio structure
+- Optimized for static export and GitHub Pages deployment
+
+## 🤝 Contributing
+
+This is a personal portfolio project, but suggestions and feedback are welcome:
+
+1. Fork the repository
+2. Create a feature branch (`git checkout -b feature/improvement`)
+3. Commit your changes (`git commit -am 'Add some improvement'`)
+4. Push to the branch (`git push origin feature/improvement`)
+5. Open a Pull Request
+
+## 📄 License
+
+This project is personal portfolio code. Feel free to reference the structure and techniques, but please don't copy the content directly.
+
+## 📞 Contact
+
+**Patcharapon Sangsatra**
+- Portfolio: [patcharapon-san.github.io](https://patcharapon-san.github.io)
+- LinkedIn: [Connect with me](https://linkedin.com/in/patcharapon-sangsatra)
+- GitHub: [@patcharapon-san](https://github.com/patcharapon-san)
+
+---
+
+*Built with ❤️ using Next.js, React, and Material-UI*

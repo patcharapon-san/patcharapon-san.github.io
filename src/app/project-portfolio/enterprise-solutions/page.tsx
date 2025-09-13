@@ -10,22 +10,18 @@ const enterpriseProjects = [
   {
     name: "AWS Lambda Microservices Suite",
     text: "Comprehensive collection of 30+ serverless functions for enterprise automation, handling CRM integration, financial quotations, and document management. Achieved 80% reduction in manual processing time and 99.9% uptime.",
-    image: "https://picsum.photos/400/300?random=10"
   },
   {
     name: "Government Electronic Visa System",
     text: "Electronic visa application system for diplomatic missions handling 10,000+ daily applications. Led frontend migration from .NET web forms to React.js with normalized database schema and PCI-DSS compliant payment processing.",
-    image: "https://picsum.photos/400/300?random=11"
   },
   {
     name: "Oil & Gas Industry Solutions",
     text: "Comprehensive software solutions for petroleum engineering including reservoir management, drilling optimization, and production analysis. Built with .NET Framework, Azure cloud platform, and complex engineering calculations.",
-    image: "https://picsum.photos/400/300?random=12"
   },
   {
     name: "Marketing Technology Solutions Platform",
     text: "Digital marketing ecosystem supporting multiple business units with custom CMS, scalable SMTP service handling 20+ daily emails, and real-time analytics. Implemented load balancing and 70% performance improvement.",
-    image: "https://picsum.photos/400/300?random=13"
   },
 ];
 

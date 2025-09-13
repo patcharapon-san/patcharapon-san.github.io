@@ -19,32 +19,54 @@ const websiteName = "Patcharapon Sangsatra Portfolio";
 
 const navLinks = [
   { label: "Home", href: "/" },
+  { label: "Skills & Technologies", href: "/skills" },
   { label: "Project Portfolio", href: "/project-portfolio" },
   { label: "About", href: "/about" },
 ];
 
 export const metadata: Metadata = {
-  title: "Professional Web Development & Digital Solutions",
-  description: "MyAgency provides top-notch web development services including enterprise solutions, web platforms, and desktop systems. Explore our portfolio of successful projects.",
+  title: "Patcharapon Sangsatra - Full Stack Developer Portfolio",
+  description: "Full Stack Developer specializing in web development, enterprise solutions, and modern technologies. Explore projects in React, Next.js, .NET, and more.",
+  keywords: ["Full Stack Developer", "React Developer", "Next.js", ".NET Developer", "Web Development", "Portfolio", "Patcharapon Sangsatra"],
+  authors: [{ name: "Patcharapon Sangsatra" }],
+  creator: "Patcharapon Sangsatra",
+  publisher: "Patcharapon Sangsatra",
   openGraph: {
-    title: "Professional Web Development & Digital Solutions",
-    description: "Provides top-notch web development services including enterprise solutions, web platforms, and desktop systems. Explore our portfolio of successful projects.",
+    title: "Patcharapon Sangsatra - Full Stack Developer Portfolio",
+    description: "Full Stack Developer specializing in web development, enterprise solutions, and modern technologies. View my portfolio of successful projects and technical expertise.",
     type: "website",
-    url: "https://your-domain.com/",
+    url: "https://patcharapon-san.github.io/",
+    siteName: "Patcharapon Sangsatra Portfolio",
     images: [
       {
-        url: "https://your-domain.com/og-image.png",
+        url: "https://patcharapon-san.github.io/og-image.jpg",
         width: 1200,
         height: 630,
-        alt: "Professional Web Development Services",
+        alt: "Patcharapon Sangsatra - Full Stack Developer Portfolio",
       },
     ],
+    locale: "en_US",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Professional Web Development & Digital Solutions",
-    description: "Provides top-notch web development services including enterprise solutions, web platforms, and desktop systems. Explore our portfolio of successful projects.",
-    images: ["https://your-domain.com/og-image.png"],
+    title: "Patcharapon Sangsatra - Full Stack Developer Portfolio",
+    description: "Full Stack Developer specializing in web development, enterprise solutions, and modern technologies. View my portfolio and technical expertise.",
+    images: ["https://patcharapon-san.github.io/og-image.jpg"],
+    creator: "@patcharapon_san",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
+  verification: {
+    google: "your-google-verification-code",
   },
 };
 
