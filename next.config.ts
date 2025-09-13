@@ -1,11 +1,10 @@
 import type { NextConfig } from "next";
 
-const isProd = process.env.NODE_ENV === 'production';
 const nextConfig: NextConfig = {
   output: 'export',
+  distDir: 'out',
   trailingSlash: true,
   skipTrailingSlashRedirect: true,
-  distDir: 'out',
   images: {
     unoptimized: true,
     domains: ['picsum.photos'],

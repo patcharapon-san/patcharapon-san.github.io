@@ -6,7 +6,6 @@
     "dev": "next dev --turbopack",
     "build": "next build",
     "build:turbo": "next build --turbopack",
-    "export": "next export",
     "start": "next start",
     "lint": "eslint"
   },
