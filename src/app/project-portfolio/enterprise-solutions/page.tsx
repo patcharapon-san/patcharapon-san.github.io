@@ -3,7 +3,7 @@ import Gallery2xN from "@/components/Gallery2xN";
 import ContentFullWidth from "@/components/ContentFullWidth";
 import { Box, Typography, Container } from "@mui/material";
 import { colorCombos } from "@/utils/colors";
-import { AccountBalance, Cloud, OilBarrel, People } from "@mui/icons-material";
+import { AccountBalanceOutlined, Cloud, OilBarrel, People } from "@mui/icons-material";
 import LargeImage from "@/components/LargeImage";
 
 const enterpriseProjects = [
@@ -38,7 +38,7 @@ export default function EnterpriseSolutions() {
         <Typography variant="h2" component="h1" gutterBottom align="center" sx={{ marginBottom: "20px" }}>
           Enterprise Solutions
         </Typography>
-        <Typography variant="h6" align="center" sx={{ marginBottom: "60px", color: colorCombos.text.secondary }}>
+        <Typography variant="h6" align="center" sx={{ marginBottom: "60px", color: colorCombos.text.secondary_1 }}>
           Showcasing cloud-based systems, serverless architectures, and integration platforms that automate business processes and connect multiple systems for large organizations. Experience includes oil & gas industry applications, government systems, and marketing technology platforms.
         </Typography>
       </Container>
@@ -63,7 +63,7 @@ export default function EnterpriseSolutions() {
               <Typography variant="h6" gutterBottom sx={{ fontWeight: 600, color: colorCombos.text.title }}>
                 <Cloud fontSize="large" color="primary" />  AWS Lambda Microservices
               </Typography>
-              <Typography variant="body2" color={colorCombos.text.secondary}>
+              <Typography variant="body2" color={colorCombos.text.secondary_1}>
                 • 30+ independent serverless functions<br />
                 • &lt;2000ms response times for critical operations<br />
                 • 99.9% uptime with CloudWatch monitoring<br />
@@ -73,9 +73,9 @@ export default function EnterpriseSolutions() {
 
             <Box sx={{ p: 3, bgcolor: colorCombos.background.primary, borderRadius: 2, boxShadow: 1 }}>
               <Typography variant="h6" gutterBottom sx={{ fontWeight: 600, color: colorCombos.text.title }}>
-                <AccountBalance fontSize="large" color="primary" />  Government Systems
+                <AccountBalanceOutlined fontSize="large" color="primary" />  Government Systems
               </Typography>
-              <Typography variant="body2" color={colorCombos.text.secondary}>
+              <Typography variant="body2" color={colorCombos.text.secondary_1}>
                 • 10,000+ daily visa applications processed<br />
                 • React.js migration from legacy .NET forms<br />
                 • Multi-tier architecture with audit trails<br />
@@ -88,7 +88,7 @@ export default function EnterpriseSolutions() {
               <Typography variant="h6" gutterBottom sx={{ fontWeight: 600, color: colorCombos.text.title }}>
                 <OilBarrel fontSize="large" color="primary" /> Oil & Gas Solutions
               </Typography>
-              <Typography variant="body2" color={colorCombos.text.secondary}>
+              <Typography variant="body2" color={colorCombos.text.secondary_1}>
                 • Comprehensive Azure cloud architecture<br />
                 • Real-time petroleum engineering calculations<br />
                 • .NET Framework to .NET 8 modernization<br />
@@ -101,7 +101,7 @@ export default function EnterpriseSolutions() {
               <Typography variant="h6" gutterBottom sx={{ fontWeight: 600, color: colorCombos.text.title }}>
                 <People fontSize="large" color="primary" /> Marketing Technology
               </Typography>
-              <Typography variant="body2" color={colorCombos.text.secondary}>
+              <Typography variant="body2" color={colorCombos.text.secondary_1}>
                 • 20K+ daily emails processed<br />
                 • Custom CMS with multi-site support<br />
                 • 70% performance improvement through optimization<br />

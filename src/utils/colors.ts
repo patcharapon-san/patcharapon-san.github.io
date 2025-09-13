@@ -146,12 +146,16 @@ export const colorCombos = {
   
   text: {
     primary: colors.foreground,
-    secondary: colors.neutral[600],
+    secondary_1: colors.neutral[600],
+    secondary_2: colors.neutral[50],
     muted: colors.neutral[500],
     light: colors.neutral[400],
     title: colors.primary[600],
     link: colors.primary[600],
   },
+
+  // include text_outline for better readability
+  text_outline: withOpacity(colors.foreground, 0.87), 
   
   background: {
     primary: colors.background,

@@ -33,7 +33,7 @@ export default function Navbar({ title, navLinks }: { title: string; navLinks: {
                 component={Link}
                 href={link.href}
                 sx={{ 
-                  color: colorCombos.text.title, 
+                  color: colorCombos.text.primary, 
                   fontWeight: 600, 
                   textTransform: "none",
                   "&:hover": {

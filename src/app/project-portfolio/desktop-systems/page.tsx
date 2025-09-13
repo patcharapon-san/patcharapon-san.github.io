@@ -3,7 +3,7 @@ import Gallery2xN from "@/components/Gallery2xN";
 import ContentFullWidth from "@/components/ContentFullWidth";
 import { Box, Typography, Container } from "@mui/material";
 import { colorCombos } from "@/utils/colors";
-import { DesignServices, DesktopWindows, Factory, School } from "@mui/icons-material";
+import { DesignServices, DesktopWindowsOutlined, Factory, SchoolOutlined } from "@mui/icons-material";
 import LargeImage from "@/components/LargeImage";
 
 const desktopProjects = [
@@ -38,7 +38,7 @@ export default function DesktopSystems() {
         <Typography variant="h2" component="h1" gutterBottom align="center" sx={{ marginBottom: "20px" }}>
           Desktop Systems
         </Typography>
-        <Typography variant="h6" align="center" sx={{ marginBottom: "60px", color: colorCombos.text.secondary }}>
+        <Typography variant="h6" align="center" sx={{ marginBottom: "60px", color: colorCombos.text.secondary_1 }}>
           Rich client applications and specialized software solutions built for manufacturing, oil & gas, education, and production management. These applications demonstrate expertise in WPF, Windows Forms, and desktop integration technologies.
         </Typography>
       </Container>
@@ -63,7 +63,7 @@ export default function DesktopSystems() {
               <Typography variant="h6" gutterBottom sx={{ fontWeight: 600, color: colorCombos.text.title }}>
                 <Factory fontSize="large" color="primary" /> Manufacturing Systems
               </Typography>
-              <Typography variant="body2" color={colorCombos.text.secondary}>
+              <Typography variant="body2" color={colorCombos.text.secondary_1}>
                 • Production tracking with real-time monitoring<br />
                 • Equipment management and maintenance scheduling<br />
                 • Crystal Reports integration with A3/A4 formats<br />
@@ -74,9 +74,9 @@ export default function DesktopSystems() {
 
             <Box sx={{ p: 3, bgcolor: colorCombos.background.primary, borderRadius: 2, boxShadow: 1 }}>
               <Typography variant="h6" gutterBottom sx={{ fontWeight: 600, color: colorCombos.text.title }}>
-                <School fontSize="large" color="primary" /> Educational Tools
+                <SchoolOutlined fontSize="large" color="primary" /> Educational Tools
               </Typography>
-              <Typography variant="body2" color={colorCombos.text.secondary}>
+              <Typography variant="body2" color={colorCombos.text.secondary_1}>
                 • Interactive electrical power system simulations<br />
                 • Visual learning with bus schema configurations<br />
                 • Real-time component interaction and feedback<br />
@@ -87,9 +87,9 @@ export default function DesktopSystems() {
 
             <Box sx={{ p: 3, bgcolor: colorCombos.background.primary, borderRadius: 2, boxShadow: 1 }}>
               <Typography variant="h6" gutterBottom sx={{ fontWeight: 600, color: colorCombos.text.title }}>
-                <DesktopWindows fontSize="large" color="primary" /> Legacy Modernization
+                <DesktopWindowsOutlined fontSize="large" color="primary" /> Legacy Modernization
               </Typography>
-              <Typography variant="body2" color={colorCombos.text.secondary}>
+              <Typography variant="body2" color={colorCombos.text.secondary_1}>
                 • MS Access to SQL Server migration<br />
                 • Windows Forms to WPF transformation<br />
                 • 300% performance improvement<br />
@@ -102,7 +102,7 @@ export default function DesktopSystems() {
               <Typography variant="h6" gutterBottom sx={{ fontWeight: 600, color: colorCombos.text.title }}>
                 <DesignServices fontSize="large" color="primary" /> Architecture Expertise
               </Typography>
-              <Typography variant="body2" color={colorCombos.text.secondary}>
+              <Typography variant="body2" color={colorCombos.text.secondary_1}>
                 • 3-tier architecture design<br />
                 • MVVM pattern implementation<br />
                 • JWT authentication & role-based access<br />

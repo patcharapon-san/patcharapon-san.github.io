@@ -2,7 +2,9 @@
 import { Box, Button, Container, Typography, Paper } from "@mui/material";
 import { colorCombos } from "../utils/colors";
 
-export default function HeroSection({ title, subtitle, buttonText, buttonFunction }: { title?: string; subtitle?: string; buttonText?: string; buttonFunction?: () => void }) {
+export default function HeroSection({ title, subtitle, buttonText, buttonFunction, sx }:
+  { title?: string; subtitle?: string; buttonText?: string; buttonFunction?: () => void; sx?: object }) {
+
   return (
     <Box sx={{ bgcolor: colorCombos.background.accent }}>
       <Paper
@@ -11,13 +13,20 @@ export default function HeroSection({ title, subtitle, buttonText, buttonFunctio
           background: `linear-gradient(135deg, ${colorCombos.background.accent} 0%, ${colorCombos.background.secondary} 100%)`,
           py: { xs: 8, md: 12 },
           borderRadius: 4,
+          ...sx
         }}
       >
         <Container maxWidth="md" sx={{ textAlign: "center" }}>
-          <Typography variant="h2" component="h1" gutterBottom sx={{ fontWeight: 700, color: colorCombos.text.title }}>
+          <Typography variant="h2" component="h1" gutterBottom
+            sx={{
+              fontWeight: 700,
+              color: colorCombos.text.primary,
+              textShadow: `1px 1px 0 ${colorCombos.text.light}, -1px -1px 0 ${colorCombos.text.light}, 1px -1px 0 ${colorCombos.text.light}, -1px 1px 0 ${colorCombos.text.light}`, // Outline color and thickness
+
+            }}>
             {title}
           </Typography>
-          <Typography variant="h5" paragraph sx={{ mb: 4, color: colorCombos.text.secondary }}>
+          <Typography variant="h5" paragraph sx={{ mb: 4, color: colorCombos.text.light }}>
             {subtitle}
           </Typography>
           {buttonText && (

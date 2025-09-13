@@ -39,7 +39,7 @@ export default function Gallery3xN({ title, items }: { title?: string; items?: {
                   <Typography variant="h6" sx={{ fontWeight: 600, color: colorCombos.text.primary }}>
                     {svc.title}
                   </Typography>
-                  <Typography sx={{ color: colorCombos.text.secondary }}>
+                  <Typography sx={{ color: colorCombos.text.secondary_1 }}>
                     {svc.desc}
                   </Typography>
                 </Stack>

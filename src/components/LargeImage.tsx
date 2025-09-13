@@ -6,6 +6,7 @@ type LargeImageProps = {
     src: string;
     alt?: string;
     maxWidth?: string | number;
+    maxHeight?: string | number;
     borderRadius?: string | number;
 };
 
@@ -13,6 +14,7 @@ export default function LargeImage({
     src,
     alt = "Large display",
     maxWidth = "100%",
+    maxHeight = "100%",
     borderRadius = 16,
 }: LargeImageProps) {
     return (
@@ -33,8 +35,9 @@ export default function LargeImage({
                 alt={alt}
                 style={{
                     width: "100%",
-                    maxWidth,
                     height: "auto",
+                    maxWidth,
+                    maxHeight,
                     borderRadius,
                     boxShadow: `0 6px 32px ${colorCombos.card.shadow}`,
                 }}

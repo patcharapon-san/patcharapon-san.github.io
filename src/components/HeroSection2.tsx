@@ -18,7 +18,7 @@ export default function HeroSection() {
         <Typography variant="h2" component="h1" sx={{ fontWeight: 700, color: colorCombos.text.title, mb: 2 }}>
           Build Stunning Websites for Your Agency
         </Typography>
-        <Typography variant="h5" sx={{ mb: 4, color: colorCombos.text.secondary }}>
+        <Typography variant="h5" sx={{ mb: 4, color: colorCombos.text.secondary_1 }}>
           We help startups and businesses grow with modern web design and development.
         </Typography>
         <Button

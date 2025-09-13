@@ -1,17 +1,20 @@
 import { Box, Typography, Grid, Avatar, Container } from "@mui/material";
 import GridLegacy from "@mui/material/GridLegacy";
+import { colorCombos } from "@/utils/colors";
 
 export default function ContentFullWidth({
   image,
   title,
   text,
   text2,
-  imagePosition = "above"
+  imagePosition = "above",
+  sx
 }: {
   image?: string[];
   title?: string;
   text?: string;
   text2?: string;
+  sx?: object;
   imagePosition?: "above" | "below" | "None";
 }) {
 
@@ -34,8 +37,7 @@ export default function ContentFullWidth({
               height: 220,
               mx: "auto",
               mb: { xs: 3, md: 0 },
-              border: "3px solid var(--primary-200)", // Adding border with primary color
-              boxShadow: "0 4px 20px var(--neutral-300)" // Shadow using neutral color
+              borderRadius: 0,
             }}
           />
         )))}
@@ -57,7 +59,7 @@ export default function ContentFullWidth({
           sx={{
             fontWeight: 700,
             mb: 2,
-            color: "var(--foreground)", // Using foreground color
+            color: colorCombos.text.primary,
             position: "relative",
             "&::after": {
               content: '""',
@@ -66,7 +68,7 @@ export default function ContentFullWidth({
               left: 0,
               width: 60,
               height: 3,
-              backgroundColor: "var(--primary-500)", // Accent underline
+              backgroundColor: colorCombos.icon.primary,
               borderRadius: 2
             }
           }}
@@ -76,7 +78,7 @@ export default function ContentFullWidth({
         <Typography
           sx={{
             mb: 2,
-            color: "var(--neutral-600)", // Using neutral color instead of text.secondary
+            color: colorCombos.text.secondary_1,
             lineHeight: 1.6
           }}
         >
@@ -85,7 +87,7 @@ export default function ContentFullWidth({
         {text2 && (
           <Typography
             sx={{
-              color: "var(--neutral-500)", // Slightly lighter for second text
+              color: colorCombos.text.muted,
               lineHeight: 1.6,
               fontStyle: "italic"
             }}
@@ -101,8 +103,9 @@ export default function ContentFullWidth({
     <Box
       sx={{
         py: 8,
-        bgcolor: "var(--background)", // Using CSS custom property
-        borderTop: "1px solid var(--neutral-200)"
+        bgcolor: colorCombos.background.primary,
+        borderTop: `1px solid ${colorCombos.border.light}`,
+        ...sx
       }}
     >
       <Container>

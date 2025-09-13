@@ -49,7 +49,7 @@ export default function Gallery2xN({ title, items }: { title?: string; items?: {
                     {t.name}
                   </Typography>
                 </Box>
-                <Typography sx={{ color: colorCombos.text.secondary, fontStyle: "italic" }}>
+                <Typography sx={{ color: colorCombos.text.secondary_1, fontStyle: "italic" }}>
                   &quot;{t.text}&quot;
                 </Typography>
               </Paper>

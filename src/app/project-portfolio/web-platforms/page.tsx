@@ -3,7 +3,7 @@ import Gallery2xN from "@/components/Gallery2xN";
 import ContentFullWidth from "@/components/ContentFullWidth";
 import { Box, Typography, Container } from "@mui/material";
 import { colorCombos } from "@/utils/colors";
-import { Assessment, BusinessCenter, ShoppingCart, ViewInAr } from "@mui/icons-material";
+import { Assessment, BusinessCenter, ShoppingCartCheckout, ViewInAr } from "@mui/icons-material";
 import LargeImage from "@/components/LargeImage";
 
 const webPlatformProjects = [
@@ -38,7 +38,7 @@ export default function WebPlatforms() {
         <Typography variant="h2" component="h1" gutterBottom align="center" sx={{ marginBottom: "20px" }}>
           Web Platforms
         </Typography>
-        <Typography variant="h6" align="center" sx={{ marginBottom: "60px", color: colorCombos.text.secondary }}>
+        <Typography variant="h6" align="center" sx={{ marginBottom: "60px", color: colorCombos.text.secondary_1 }}>
           Modern web applications featuring advanced UI/UX, real-time data visualization, and interactive user experiences. Built with cutting-edge technologies including React, Next.js, Three.js, and cloud infrastructure.
         </Typography>
       </Container>
@@ -63,7 +63,7 @@ export default function WebPlatforms() {
               <Typography variant="h6" gutterBottom sx={{ fontWeight: 600, color: colorCombos.text.title }}>
                 <ViewInAr fontSize="large" color="primary" /> Manufacturing Order Management Platform
               </Typography>
-              <Typography variant="body2" color={colorCombos.text.secondary}>
+              <Typography variant="body2" color={colorCombos.text.secondary_1}>
                 • Order process platform for shop owners (manufacturers) with 3D visualization<br />
                 • Post-sale & engineering collaboration for STEP data review and order updates<br />
                 • Customer information management from external sources and new customer creation<br />
@@ -74,9 +74,9 @@ export default function WebPlatforms() {
 
             <Box sx={{ p: 3, bgcolor: colorCombos.background.primary, borderRadius: 2, boxShadow: 1 }}>
               <Typography variant="h6" gutterBottom sx={{ fontWeight: 600, color: colorCombos.text.title }}>
-                <ShoppingCart fontSize="large" color="primary" />  E-commerce Platforms
+                <ShoppingCartCheckout fontSize="large" color="primary" />  E-commerce Platforms
               </Typography>
-              <Typography variant="body2" color={colorCombos.text.secondary}>
+              <Typography variant="body2" color={colorCombos.text.secondary_1}>
                 • Complete ecosystem with React.js + .NET Core<br />
                 • Real-time inventory with SignalR integration<br />
                 • Automated order processing and warehouse management<br />
@@ -88,7 +88,7 @@ export default function WebPlatforms() {
               <Typography variant="h6" gutterBottom sx={{ fontWeight: 600, color: colorCombos.text.title }}>
                 <Assessment fontSize="large" color="primary" /> Analytics Platforms
               </Typography>
-              <Typography variant="body2" color={colorCombos.text.secondary}>
+              <Typography variant="body2" color={colorCombos.text.secondary_1}>
                 • Interactive charts with Recharts + MUI X Charts<br />
                 • Real-time dashboards with live data streaming<br />
                 • Multi-format export (PDF, Excel, CSV)<br />
@@ -100,7 +100,7 @@ export default function WebPlatforms() {
               <Typography variant="h6" gutterBottom sx={{ fontWeight: 600, color: colorCombos.text.title }}>
                 <BusinessCenter fontSize="large" color="primary" />  HR & Job Platforms
               </Typography>
-              <Typography variant="body2" color={colorCombos.text.secondary}>
+              <Typography variant="body2" color={colorCombos.text.secondary_1}>
                 • Dual-portal architecture with C# .NET Framework<br />
                 • Advanced search and filtering capabilities<br />
                 • Automated application tracking workflow<br />

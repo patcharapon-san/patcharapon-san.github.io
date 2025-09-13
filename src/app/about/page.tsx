@@ -33,7 +33,7 @@ export default function About() {
                             <Typography variant="h5" gutterBottom sx={{ fontWeight: 600, color: colorCombos.text.title }}>
                                 &ldquo;Code is poetry written for machines, but it should always serve humanity.&rdquo;
                             </Typography>
-                            <Typography variant="body1" color={colorCombos.text.secondary} sx={{ mt: 2 }}>
+                            <Typography variant="body1" color={colorCombos.text.secondary_1} sx={{ mt: 2 }}>
                                 Looking forward to working on projects that scale globally while maintaining personal user experiences,
                                 and make a positive impact on how people work and interact with technology.
                             </Typography>
@@ -59,7 +59,7 @@ export default function About() {
                                 <Typography variant="h6" gutterBottom sx={{ fontWeight: 600, color: colorCombos.text.title }}>
                                     <Factory fontSize="large" sx={{ color: colorCombos.icon.primary }} /> Manufacturing & Industrial
                                 </Typography>
-                                <Typography variant="body2" color={colorCombos.text.secondary}>
+                                <Typography variant="body2" color={colorCombos.text.secondary_1}>
                                     • Production tracking and equipment management<br />
                                     • Real-time monitoring and automated workflows<br />
                                     • Legacy system modernization and optimization
@@ -70,7 +70,7 @@ export default function About() {
                                 <Typography variant="h6" gutterBottom sx={{ fontWeight: 600, color: colorCombos.text.title }}>
                                     <AccountBalance fontSize="large" sx={{ color: colorCombos.icon.primary }} /> Government & Compliance
                                 </Typography>
-                                <Typography variant="body2" color={colorCombos.text.secondary}>
+                                <Typography variant="body2" color={colorCombos.text.secondary_1}>
                                     • Secure, compliant system development<br />
                                     • Visa processing and government workflows<br />
                                     • Enterprise-grade security implementation<br />
@@ -82,7 +82,7 @@ export default function About() {
                                 <Typography variant="h6" gutterBottom sx={{ fontWeight: 600, color: colorCombos.text.title }}>
                                     <ShoppingCart fontSize="large" sx={{ color: colorCombos.icon.primary }} /> E-commerce & Retail
                                 </Typography>
-                                <Typography variant="body2" color={colorCombos.text.secondary}>
+                                <Typography variant="body2" color={colorCombos.text.secondary_1}>
                                     • E-commerce ecosystem development<br />
                                     • Warehouse management and logistics<br />
                                     • Real-time inventory and order processing
@@ -93,38 +93,13 @@ export default function About() {
                                 <Typography variant="h6" gutterBottom sx={{ fontWeight: 600, color: colorCombos.text.title }}>
                                     <School fontSize="large" sx={{ color: colorCombos.icon.primary }} /> Education & Training
                                 </Typography>
-                                <Typography variant="body2" color={colorCombos.text.secondary}>
+                                <Typography variant="body2" color={colorCombos.text.secondary_1}>
                                     • Interactive learning applications<br />
                                     • 3D visualization for complex concepts<br />
                                     • Educational tool development for engineering<br />
                                     • Simplified technical concept delivery
                                 </Typography>
                             </Box>
-                        </Box>                        
-                        <Box sx={{ p: 4, bgcolor: colorCombos.background.primary, borderRadius: 2, boxShadow: 1, textAlign: 'center' }}>
-                            <Typography variant="h5" gutterBottom sx={{ fontWeight: 600, color: colorCombos.text.title, mb: 3 }}>
-                                Let&apos;s Connect
-                            </Typography>
-                            <Box sx={{ display: 'flex', justifyContent: 'center', gap: 3 }}>
-                                <Link href="https://www.linkedin.com/in/patcharaponsan/" target="_blank" rel="noopener noreferrer" sx={{ textDecoration: 'none' }}>
-                                    <IconButton size="large" sx={{ bgcolor: colorCombos.button.info.background, color: colorCombos.button.info.text, '&:hover': { bgcolor: colorCombos.button.info.hover } }}>
-                                        <LinkedIn fontSize="large" />
-                                    </IconButton>
-                                </Link>
-                                <Link href="mailto:p.sangsartra@gmail.com" sx={{ textDecoration: 'none' }}>
-                                    <IconButton size="large" sx={{ bgcolor: colorCombos.button.error.background, color: colorCombos.button.error.text, '&:hover': { bgcolor: colorCombos.button.error.hover } }}>
-                                        <Email fontSize="large" />
-                                    </IconButton>
-                                </Link>
-                                <Link href="https://github.com/patcharapon-san" target="_blank" rel="noopener noreferrer" sx={{ textDecoration: 'none' }}>
-                                    <IconButton size="large" sx={{ bgcolor: colorCombos.button.github.background, color: colorCombos.button.github.text, '&:hover': { bgcolor: colorCombos.button.github.hover } }}>
-                                        <GitHub fontSize="large" />
-                                    </IconButton>
-                                </Link>
-                            </Box>
-                            <Typography variant="body2" color={colorCombos.text.secondary} sx={{ mt: 2 }}>
-                                Feel free to reach out for collaborations, opportunities, or just to say hello!
-                            </Typography>
                         </Box>
                     </Container>
                 </Box>
