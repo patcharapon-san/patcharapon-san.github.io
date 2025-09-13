@@ -60,6 +60,7 @@ export default function Home() {
           buttonText="Explore My Work"
           buttonFunction={() => window.location.href = '/project-portfolio'}
           sx={{ backgroundImage: 'url(/work-station-1.jpg)', backgroundSize: 'cover' }}
+          textAlign="left"
         />
       </Box>
 

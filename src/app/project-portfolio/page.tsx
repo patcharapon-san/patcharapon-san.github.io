@@ -1,3 +1,4 @@
+"use client";
 import HeroSection from "@/components/HeroSection";
 import Gallery2xN from "@/components/Gallery2xN";
 import { Box, Typography, Paper, Stack, Container } from "@mui/material";
@@ -71,6 +72,8 @@ export default function ProjectPortfolio() {
       <HeroSection
         title="My Project Portfolio"
         subtitle="Explore my diverse range of projects across different industries and technologies."
+        sx={{ backgroundImage: 'url(/work-station-2.jpg)', backgroundSize: 'cover' }}
+        textAlign="right"
       />
 
       <Box sx={{ py: 8, bgcolor: colorCombos.background.accent }}>

@@ -2,8 +2,8 @@
 import { Box, Button, Container, Typography, Paper } from "@mui/material";
 import { colorCombos } from "../utils/colors";
 
-export default function HeroSection({ title, subtitle, buttonText, buttonFunction, sx }:
-  { title?: string; subtitle?: string; buttonText?: string; buttonFunction?: () => void; sx?: object }) {
+export default function HeroSection({ title, subtitle, buttonText, buttonFunction, sx, textAlign = "center" }:
+  { title?: string; subtitle?: string; buttonText?: string; buttonFunction?: () => void; sx?: object, textAlign?: "left" | "center" | "right" }) {
 
   return (
     <Box sx={{ bgcolor: colorCombos.background.accent }}>
@@ -16,19 +16,23 @@ export default function HeroSection({ title, subtitle, buttonText, buttonFunctio
           ...sx
         }}
       >
-        <Container maxWidth="md" sx={{ textAlign: "center" }}>
+        <Container maxWidth="md" sx={{
+          textAlign: { textAlign },
+          // if textAlign is left, margin-left to initail, if right set margin-right to initail, if center align set margin to auto
+          ml: textAlign === "left" ? 0 : textAlign === "right" ? "auto" : "auto",
+          mr: textAlign === "right" ? 0 : textAlign === "left" ? "auto" : "auto"
+        }}>
           <Typography variant="h2" component="h1" gutterBottom
             sx={{
               fontWeight: 700,
               color: colorCombos.text.primary,
               textShadow: `1px 1px 0 ${colorCombos.text.light}, -1px -1px 0 ${colorCombos.text.light}, 1px -1px 0 ${colorCombos.text.light}, -1px 1px 0 ${colorCombos.text.light}`, // Outline color and thickness
-
             }}>
             {title}
           </Typography>
-          <Typography variant="h5" paragraph sx={{ mb: 4, color: colorCombos.text.light }}>
+          <Typography variant="h5" sx={{ mb: 4, color: colorCombos.text.light }}>
             {subtitle}
-          </Typography>
+          </Typography>``
           {buttonText && (
             <Button
               onClick={buttonFunction}
@@ -38,10 +42,10 @@ export default function HeroSection({ title, subtitle, buttonText, buttonFunctio
                 px: 6,
                 py: 2,
                 fontWeight: 600,
-                bgcolor: colorCombos.button.primary.background,
-                color: colorCombos.button.primary.text,
+                bgcolor: colorCombos.button.secondary.background,
+                color: colorCombos.button.secondary.text,
                 "&:hover": {
-                  bgcolor: colorCombos.button.primary.hover
+                  bgcolor: colorCombos.button.secondary.hover
                 }
               }}
             >
