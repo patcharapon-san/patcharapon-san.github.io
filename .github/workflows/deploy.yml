@@ -3,7 +3,6 @@ name: Deploy Next.js to GitHub Pages
 on:
   push:
     branches:
-      - main
       - nextjs  # Deploy from nextjs branch as well
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
