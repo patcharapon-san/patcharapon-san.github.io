@@ -51,6 +51,42 @@ const chartProjects = [
     }
 ];
 
+// Backend & API Projects
+const backendProjects = [
+    {
+        title: "AWS API Service Architecture",
+        description: "Enterprise-scale serverless architecture with 30+ Lambda functions, comprehensive monitoring, and multi-tier security across AWS cloud services",
+        technologies: ["AWS Lambda", "API Gateway", "Aurora & RDS", "CloudWatch", "IAM", "S3", "Secrets Manager", "VPC", "Route 53", "Systems Manager", "Python", "FastAPI"],
+        features: ["Auto-scaling with CloudWatch", "Secure VPC networking", "Multi-database support", "Centralized monitoring", "99.9% uptime SLA"],
+        icon: <Architecture fontSize="large" color="info" />,
+        category: "AWS API Architecture"
+    },
+    {
+        title: "Azure API Service Architecture",
+        description: "Enterprise-grade API ecosystem with Microsoft Entra ID authorization, comprehensive system integration for inbound/outbound data flows across organizational systems",
+        technologies: ["Azure API Management", "Azure Functions", "Azure Key Vault", "Azure Storage", "Azure Application Insights", "Azure SQL Database", "Microsoft Entra ID"],
+        features: ["Microsoft Entra ID authentication", "Inbound/Outbound system integration", "API gateway management", "Cross-system data orchestration", "Comprehensive logging & monitoring"],
+        icon: <Architecture fontSize="large" color="info" />,
+        category: "Azure API Architecture"
+    },
+    {
+        title: "Electronic Visa Processing API",
+        description: "High-performance on-premises API system processing 10,000+ visa applications concurrently with government integration, implemented per SI project requirements",
+        technologies: ["ASP.NET Web API", "Windows Server", "SQL Server", "IIS", "Windows Services", "Active Directory"],
+        features: ["On-premises deployment", "Concurrent processing", "Government integration", "Secure authentication", "Real-time status tracking"],
+        icon: <Assessment fontSize="large" color="info" />,
+        category: "Government API"
+    },
+    {
+        title: "Data Processing Pipeline",
+        description: "Automated ETL pipeline with Azure Data Factory integrating multiple enterprise systems, achieving 96% performance improvement in report generation",
+        technologies: ["Azure Data Factory", "Azure Functions", "SQL Server", "Azure Storage", "Azure Key Vault"],
+        features: ["Multi-system integration", "ETL automation", "96% performance gain", "Scheduled processing", "Cross-platform data orchestration"],
+        icon: <ViewInAr fontSize="large" color="info" />,
+        category: "Data Pipeline"
+    }
+];
+
 // 3D Rendering & Visualization Projects
 const renderingProjects = [
     {
@@ -73,6 +109,13 @@ const showcaseCategories = [
         color: colorCombos.button.primary.background
     },
     {
+        title: "Backend & API Development",
+        description: "Scalable APIs, microservices, and data processing systems",
+        count: "300+ APIs",
+        icon: <Architecture fontSize="large" />,
+        color: colorCombos.button.secondary.text
+    },
+    {
         title: "Data Analytics & Charts",
         description: "Interactive charts, data visualization, and statistical analysis tools",
         count: "20+ Implementations",
@@ -80,29 +123,22 @@ const showcaseCategories = [
         color: colorCombos.button.success.background
     },
     {
-        title: "Automated Reports",
-        description: "Scheduled reports, PDF generation, and data export automation",
-        count: "10+ Report Systems",
-        icon: <Assessment fontSize="large" />,
-        color: colorCombos.button.warning.background
-    },
-    {
         title: "3D Visualizations",
         description: "3D rendering, product configurators, and immersive data visualization",
         count: "3D Projects",
         icon: <ThreeDRotation fontSize="large" />,
-        color: colorCombos.button.secondary.text
+        color: colorCombos.button.warning.background
     }
 ];
 
 // Key Technologies Used
 const visualizationTech = [
-    { name: "Chart.js", description: "Interactive charts and graphs", years: "2+" },
-    { name: "Three.js", description: "3D web graphics and rendering", years: "2+" },
-    { name: "Power BI", description: "Business intelligence dashboards", years: "1+" },
     { name: "Crystal Reports", description: "Enterprise reporting solution", years: "5+" },
     { name: "Telerik", description: "UI components and reporting tools", years: "4+" },
     { name: "Infragistics", description: "Advanced UI controls and data visualization", years: "4+" },
+    { name: "Chart.js", description: "Interactive charts and graphs", years: "2+" },
+    { name: "Three.js", description: "3D web graphics and rendering", years: "2+" },
+    { name: "Power BI", description: "Business intelligence dashboards", years: "1+" },
 ];
 
 const ShowcaseCard = ({ project }: { project: {
@@ -273,8 +309,28 @@ export default function Showcase() {
                 </Container>
             </Box>
 
-            {/* 3D Rendering Projects */}
+            {/* Backend & API Projects */}
             <Box sx={{ py: 8, bgcolor: colorCombos.background.accent }}>
+                <Container>
+                    <Typography variant="h4" align="center" sx={{ fontWeight: 700, mb: 2, color: colorCombos.text.primary }}>
+                        Backend & API Development
+                    </Typography>
+                    <Typography variant="h6" align="center" sx={{ mb: 6, color: colorCombos.text.secondary_1 }}>
+                        Scalable backend systems, APIs, and data processing solutions
+                    </Typography>
+
+                    <GridLegacy container spacing={4}>
+                        {backendProjects.map((project, index) => (
+                            <GridLegacy item xs={12} md={6} lg={6} key={index}>
+                                <ShowcaseCard project={project} />
+                            </GridLegacy>
+                        ))}
+                    </GridLegacy>
+                </Container>
+            </Box>
+
+            {/* 3D Rendering Projects */}
+            <Box sx={{ py: 8, bgcolor: colorCombos.background.primary }}>
                 <Container>
                     <Typography variant="h4" align="center" sx={{ fontWeight: 700, mb: 2, color: colorCombos.text.primary }}>
                         3D Rendering & Visualization
@@ -285,7 +341,7 @@ export default function Showcase() {
 
                     <GridLegacy container spacing={4} justifyContent="center">
                         {renderingProjects.map((project, index) => (
-                            <GridLegacy item xs={12} md={6} lg={4} key={index}>
+                            <GridLegacy item xs={12} md={6} lg={6} key={index}>
                                 <ShowcaseCard project={project} />
                             </GridLegacy>
                         ))}
@@ -294,7 +350,7 @@ export default function Showcase() {
             </Box>
 
             {/* Visualization Technologies */}
-            <Box sx={{ py: 8, bgcolor: colorCombos.background.primary }}>
+            <Box sx={{ py: 8, bgcolor: colorCombos.background.accent }}>
                 <Container>
                     <Typography variant="h4" align="center" sx={{ fontWeight: 700, mb: 2, color: colorCombos.text.primary }}>
                         Visualization Technologies
@@ -345,7 +401,7 @@ export default function Showcase() {
             </Box>
 
             {/* Key Achievements in Visualization */}
-            <Box sx={{ py: 8, bgcolor: colorCombos.background.accent }}>
+            <Box sx={{ py: 8, bgcolor: colorCombos.background.primary }}>
                 <Container>
                     <Typography variant="h4" align="center" sx={{ fontWeight: 700, mb: 6, color: colorCombos.text.primary }}>
                         Visualization Impact & Results

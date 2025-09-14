@@ -17,33 +17,37 @@ import { colorCombos } from "@/utils/colors";
 // Programming Languages with years of experience
 const programmingLanguages = [
     { name: "C#/.NET", years: "9+", description: "Enterprise applications, WPF, Web API", category: "expert" },
-    { name: "JavaScript/TypeScript", years: "6+", description: "Modern web development, Node.js", category: "expert" },
     { name: "SQL", years: "8+", description: "Database design, optimization, stored procedures", category: "expert" },
     { name: "HTML/CSS", years: "7+", description: "Semantic markup, responsive design", category: "expert" },
-    { name: "Python", years: "3+", description: "Automation, data processing, scripting", category: "proficient" },
+    { name: "JavaScript/TypeScript", years: "6+", description: "Modern web development, Node.js", category: "expert" },
     { name: "PowerShell", years: "4+", description: "System administration, DevOps automation", category: "proficient" },
-    { name: "VB.NET", years: "2+", description: "Legacy system maintenance", category: "proficient" },
+    { name: "Python", years: "3+", description: "Automation, data processing, scripting", category: "proficient" },
     { name: "XAML", years: "3+", description: "WPF/UWP application UI development", category: "proficient" },
+    { name: "VB.NET", years: "2+", description: "Legacy system maintenance", category: "proficient" },
 ];
 
 // Frontend Technologies
 const frontendTech = [
+    { name: "ASP.NET Core MVC", years: "6+", description: "Server-side rendering, Razor views" },
     { name: "React", years: "4+", description: "Hooks, Context, SSR, Modern patterns" },
     { name: "Next.js", years: "2+", description: "App Router, Static generation, Performance" },
     { name: "Material-UI", years: "3+", description: "Theming, Custom components, Responsive design" },
+    { name: "Chart.js", years: "2+", description: "Interactive charts, Data visualization" },
+    { name: "Three.js", years: "2+", description: "3D web graphics and rendering" },
     { name: "Tailwind CSS", years: "2+", description: "Utility-first, Custom design systems" },
-    { name: "ASP.NET Core MVC", years: "5+", description: "Server-side rendering, Razor views" },
-    { name: "WPF", years: "2+", description: "Desktop applications, MVVM, Custom controls" },
+    { name: "WPF", years: "3+", description: "Desktop applications, MVVM, Custom controls" },
 ];
 
 // Backend & Cloud Technologies
 const backendCloudTech = [
-    { name: "AWS Lambda", years: "2+", description: "Serverless functions, Event-driven architecture" },
     { name: "ASP.NET Web API", years: "8+", description: "RESTful services, Authentication, Middleware" },
-    { name: "Node.js", years: "3+", description: "Express, RESTful APIs, Microservices" },
     { name: "Entity Framework", years: "8+", description: "ORM, Code First, Database migrations" },
-    { name: "Azure Services", years: "4+", description: "App Services, Data Factory, Azure Functions, Application Insights, Data, SQL Database, Storage" },
-    { name: "Azure DevOps", years: "3+", description: "CI/CD pipelines, Repos, Boards" },
+    { name: "Azure Services", years: "4+", description: "App Services, Data Factory, Azure Functions, Storage, etc." },
+    { name: "Microsoft Entra ID", years: "3+", description: "Identity management, Authorization, SSO" },
+    { name: "Azure DevOps", years: "4+", description: "CI/CD pipelines, Repos, Boards" },
+    { name: "Node.js", years: "3+", description: "Express, RESTful APIs, Microservices" },
+    { name: "AWS Lambda", years: "2+", description: "Serverless functions, Event-driven architecture" },
+    { name: "FastAPI", years: "2+", description: "Python web framework, API development" },
     { name: "Docker", years: "1+", description: "Containerization, Microservices deployment" },
 ];
 
@@ -143,7 +147,7 @@ export default function Skills() {
                         </GridLegacy>
                         <GridLegacy item xs={6} md={3} sx={{ textAlign: 'center' }}>
                             <Typography variant="h3" sx={{ fontWeight: 700, color: colorCombos.text.title, mb: 1 }}>
-                                15+
+                                20+
                             </Typography>
                             <Typography variant="h6" sx={{ color: colorCombos.text.secondary_1 }}>
                                 Technologies
