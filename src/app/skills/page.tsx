@@ -63,7 +63,7 @@ const industryExperience = [
     { name: "E-commerce", years: "2+", projects: "Payment processing, Order management", icon: <WebOutlined fontSize="large" color="primary" /> },
     { name: "Marketing Tech", years: "2+", projects: "Email automation, CMS, Analytics", icon: <Code fontSize="large" color="primary" /> },
     { name: "HR Technology", years: "2+", projects: "Recruitment systems, Employee management", icon: <People fontSize="large" color="primary" /> },
-    { name: "Education", years: "1+", projects: "Learning management, Student information", icon: <SchoolOutlined fontSize="large" color="primary" /> },
+    { name: "Education", years: "2+", projects: "Learning management, Student information", icon: <SchoolOutlined fontSize="large" color="primary" /> },
 ];
 
 // Key Achievements

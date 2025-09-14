@@ -12,6 +12,7 @@ export default function HeroSection({ title, subtitle, buttonText, buttonFunctio
         sx={{
           background: `linear-gradient(135deg, ${colorCombos.background.accent} 0%, ${colorCombos.background.secondary} 100%)`,
           py: { xs: 8, md: 12 },
+          px: { xs: 2, md: 4 },
           borderRadius: 4,
           ...sx
         }}
