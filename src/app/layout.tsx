@@ -21,6 +21,7 @@ const navLinks = [
   { label: "Home", href: "/" },
   { label: "Skills & Technologies", href: "/skills" },
   { label: "Project Portfolio", href: "/project-portfolio" },
+  { label: "Showcase", href: "/showcase" },
   { label: "About", href: "/about" },
 ];
 
