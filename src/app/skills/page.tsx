@@ -42,7 +42,8 @@ const backendCloudTech = [
     { name: "ASP.NET Web API", years: "8+", description: "RESTful services, Authentication, Middleware" },
     { name: "Node.js", years: "3+", description: "Express, RESTful APIs, Microservices" },
     { name: "Entity Framework", years: "8+", description: "ORM, Code First, Database migrations" },
-    { name: "Azure Services", years: "4+", description: "App Services, SQL Database, Storage" },
+    { name: "Azure Services", years: "4+", description: "App Services, Data Factory, Azure Functions, Application Insights, Data, SQL Database, Storage" },
+    { name: "Azure DevOps", years: "3+", description: "CI/CD pipelines, Repos, Boards" },
     { name: "Docker", years: "1+", description: "Containerization, Microservices deployment" },
 ];
 
@@ -57,11 +58,11 @@ const databases = [
 // Industry Experience
 const industryExperience = [
     { name: "Oil & Gas", years: "4+", projects: "Production systems, Regulatory compliance", icon: <OilBarrel fontSize="large" color="primary" /> },
-    { name: "Government", years: "1.11", projects: "Electronic visa systems, Public services", icon: <AccountBalanceOutlined fontSize="large" color="primary" /> },
+    { name: "Government", years: "1+", projects: "Electronic visa systems, Public services", icon: <AccountBalanceOutlined fontSize="large" color="primary" /> },
     { name: "Manufacturing", years: "2+", projects: "Production tracking, Inventory management", icon: <Factory fontSize="large" color="primary" /> },
     { name: "E-commerce", years: "2+", projects: "Payment processing, Order management", icon: <WebOutlined fontSize="large" color="primary" /> },
-    { name: "Marketing Tech", years: "2.4", projects: "Email automation, CMS, Analytics", icon: <Code fontSize="large" color="primary" /> },
-    { name: "HR Technology", years: "2.4", projects: "Recruitment systems, Employee management", icon: <People fontSize="large" color="primary" /> },
+    { name: "Marketing Tech", years: "2+", projects: "Email automation, CMS, Analytics", icon: <Code fontSize="large" color="primary" /> },
+    { name: "HR Technology", years: "2+", projects: "Recruitment systems, Employee management", icon: <People fontSize="large" color="primary" /> },
     { name: "Education", years: "1+", projects: "Learning management, Student information", icon: <SchoolOutlined fontSize="large" color="primary" /> },
 ];
 
@@ -150,7 +151,7 @@ export default function Skills() {
                         </GridLegacy>
                         <GridLegacy item xs={6} md={3} sx={{ textAlign: 'center' }}>
                             <Typography variant="h3" sx={{ fontWeight: 700, color: colorCombos.text.title, mb: 1 }}>
-                                50+
+                                30+
                             </Typography>
                             <Typography variant="h6" sx={{ color: colorCombos.text.secondary_1 }}>
                                 Projects Delivered
