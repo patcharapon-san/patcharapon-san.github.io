@@ -93,12 +93,27 @@ export default function Home() {
                   display: 'flex',
                   flexDirection: 'column',
                   justifyContent: 'center',
+                  position: 'relative',
                   '&:hover': {
                     bgcolor: colorCombos.background.accent,
                     transform: 'translateY(-4px)',
                     boxShadow: `0 8px 25px ${colorCombos.card.shadow}`,
                     borderColor: colorCombos.button.primary.background,
                     transition: 'all 0.3s ease-in-out'
+                  },
+                  '&:active': {
+                    transform: 'translateY(-2px)',
+                    boxShadow: `0 4px 15px ${colorCombos.card.shadow}`,
+                  },
+                  '&::after': {
+                    content: '"→"',
+                    position: 'absolute',
+                    bottom: 8,
+                    right: 12,
+                    fontSize: '18px',
+                    color: colorCombos.button.primary.background,
+                    opacity: { xs: 1, md: 0.7 },
+                    transition: 'opacity 0.3s ease'
                   }
                 }}
               >
@@ -124,12 +139,27 @@ export default function Home() {
                   display: 'flex',
                   flexDirection: 'column',
                   justifyContent: 'center',
+                  position: 'relative',
                   '&:hover': {
                     bgcolor: colorCombos.background.accent,
                     transform: 'translateY(-4px)',
                     boxShadow: `0 8px 25px ${colorCombos.card.shadow}`,
                     borderColor: colorCombos.button.primary.background,
                     transition: 'all 0.3s ease-in-out'
+                  },
+                  '&:active': {
+                    transform: 'translateY(-2px)',
+                    boxShadow: `0 4px 15px ${colorCombos.card.shadow}`,
+                  },
+                  '&::after': {
+                    content: '"→"',
+                    position: 'absolute',
+                    bottom: 8,
+                    right: 12,
+                    fontSize: '18px',
+                    color: colorCombos.button.secondary.text,
+                    opacity: { xs: 1, md: 0.7 },
+                    transition: 'opacity 0.3s ease'
                   }
                 }}
               >
@@ -155,12 +185,27 @@ export default function Home() {
                   display: 'flex',
                   flexDirection: 'column',
                   justifyContent: 'center',
+                  position: 'relative',
                   '&:hover': {
                     bgcolor: colorCombos.background.accent,
                     transform: 'translateY(-4px)',
                     boxShadow: `0 8px 25px ${colorCombos.card.shadow}`,
                     borderColor: colorCombos.button.primary.background,
                     transition: 'all 0.3s ease-in-out'
+                  },
+                  '&:active': {
+                    transform: 'translateY(-2px)',
+                    boxShadow: `0 4px 15px ${colorCombos.card.shadow}`,
+                  },
+                  '&::after': {
+                    content: '"→"',
+                    position: 'absolute',
+                    bottom: 8,
+                    right: 12,
+                    fontSize: '18px',
+                    color: colorCombos.button.success.background,
+                    opacity: { xs: 1, md: 0.7 },
+                    transition: 'opacity 0.3s ease'
                   }
                 }}
               >
@@ -186,12 +231,27 @@ export default function Home() {
                   display: 'flex',
                   flexDirection: 'column',
                   justifyContent: 'center',
+                  position: 'relative',
                   '&:hover': {
                     bgcolor: colorCombos.background.accent,
                     transform: 'translateY(-4px)',
                     boxShadow: `0 8px 25px ${colorCombos.card.shadow}`,
                     borderColor: colorCombos.button.primary.background,
                     transition: 'all 0.3s ease-in-out'
+                  },
+                  '&:active': {
+                    transform: 'translateY(-2px)',
+                    boxShadow: `0 4px 15px ${colorCombos.card.shadow}`,
+                  },
+                  '&::after': {
+                    content: '"→"',
+                    position: 'absolute',
+                    bottom: 8,
+                    right: 12,
+                    fontSize: '18px',
+                    color: colorCombos.button.warning.background,
+                    opacity: { xs: 1, md: 0.7 },
+                    transition: 'opacity 0.3s ease'
                   }
                 }}
               >
