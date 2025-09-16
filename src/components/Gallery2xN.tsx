@@ -50,7 +50,7 @@ export default function Gallery2xN({ title, items }: { title?: string; items?: {
                   </Typography>
                 </Box>
                 <Typography sx={{ color: colorCombos.text.secondary_1, fontStyle: "italic" }}>
-                  &quot;{t.text}&quot;
+                  {t.text}
                 </Typography>
               </Paper>
             </GridLegacy>

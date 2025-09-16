@@ -35,7 +35,7 @@ export default function WebPlatforms() {
           Web Platforms
         </Typography>
         <Typography variant="h6" align="center" sx={{ marginBottom: "60px", color: colorCombos.text.secondary_1 }}>
-          Modern web applications featuring advanced UI/UX, real-time data visualization, and interactive user experiences. Built with cutting-edge technologies including React, Next.js, Three.js, and cloud infrastructure.
+          Modern web applications featuring <strong>advanced UI/UX</strong>, <strong>real-time data visualization</strong>, and <strong>interactive user experiences</strong>. Built with cutting-edge technologies including <strong>React</strong>, <strong>Next.js</strong>, <strong>Three.js</strong>, and <strong>cloud infrastructure</strong>.
         </Typography>
       </Container>
 
@@ -43,8 +43,8 @@ export default function WebPlatforms() {
       
       <ContentFullWidth
         title="Advanced Web Application Development"
-        text="Specialized in building sophisticated web platforms with 3D visualization using Three.js, real-time analytics with interactive charts, e-commerce ecosystems with warehouse management, and comprehensive business intelligence platforms."
-        text2="Notable achievements include 150% user engagement improvement through interactive 3D features, 81% reduction in order processing time, support for 500+ concurrent users, and 44% reduction in time-to-hire through automated workflows."
+        text="Specialized in building sophisticated web platforms with 3D visualization using <strong>Three.js</strong>, <strong>real-time analytics</strong> with <strong>interactive charts</strong>, <strong>e-commerce ecosystems</strong> with <strong>warehouse management</strong>, and <strong>comprehensive business intelligence platforms</strong>."
+        text2="Notable achievements include <strong>150% user engagement improvement</strong> through interactive 3D features, <strong>81% reduction in order processing time</strong>, support for <strong>500+ concurrent users</strong>, and <strong>44% reduction in time-to-hire</strong> through automated workflows."
         imagePosition="None"
       />
 
@@ -61,10 +61,10 @@ export default function WebPlatforms() {
               </Typography>
               <Typography variant="body2" color={colorCombos.text.secondary_1}>
                 • Order process platform for shop owners (manufacturers) with 3D visualization<br />
-                • Post-sale & engineering collaboration for STEP data review and order updates<br />
+                • Post-sale & engineering collaboration for <strong>STEP data review</strong> and order updates<br />
                 • Customer information management from external sources and new customer creation<br />
-                • AI integration for STEP to order data conversion<br />
-                • Third-party integrations (FlowAccount) and internal system connectivity
+                • <strong>AI integration</strong> for STEP to order data conversion<br />
+                • <strong>Third-party integrations (FlowAccount)</strong> and internal system connectivity
               </Typography>
             </Box>
 
@@ -73,10 +73,10 @@ export default function WebPlatforms() {
                 <ShoppingCartCheckout fontSize="large" color="primary" />  E-commerce Platforms
               </Typography>
               <Typography variant="body2" color={colorCombos.text.secondary_1}>
-                • Complete ecosystem with React.js + .NET Core<br />
-                • Real-time inventory with SignalR integration<br />
+                • <strong>Complete ecosystem</strong> with React.js + .NET Core<br />
+                • <strong>Real-time inventory</strong> with SignalR integration<br />
                 • Automated order processing and warehouse management<br />
-                • 96% inventory accuracy improvement
+                • <strong>96% inventory accuracy improvement</strong>
               </Typography>
             </Box>
 
@@ -85,9 +85,9 @@ export default function WebPlatforms() {
                 <Assessment fontSize="large" color="primary" /> Analytics Platforms
               </Typography>
               <Typography variant="body2" color={colorCombos.text.secondary_1}>
-                • Interactive charts with Recharts + MUI X Charts<br />
-                • Real-time dashboards with live data streaming<br />
-                • Multi-format export (PDF, Excel, CSV)<br />
+                • <strong>Interactive charts</strong> with Recharts + MUI X Charts<br />
+                • <strong>Real-time dashboards</strong> with live data streaming<br />
+                • <strong>Multi-format export</strong> (PDF, Excel, CSV)<br />
                 • Optimized for large datasets with virtual scrolling
               </Typography>
             </Box>
@@ -97,10 +97,10 @@ export default function WebPlatforms() {
                 <BusinessCenter fontSize="large" color="primary" />  HR & Job Platforms
               </Typography>
               <Typography variant="body2" color={colorCombos.text.secondary_1}>
-                • Dual-portal architecture with C# .NET Framework<br />
+                • <strong>Dual-portal architecture</strong> with C# .NET Framework<br />
                 • Advanced search and filtering capabilities<br />
-                • Automated application tracking workflow<br />
-                • 83% faster application response time
+                • <strong>Automated application tracking</strong> workflow<br />
+                • <strong>83% faster application response time</strong>
               </Typography>
             </Box>
           </Box>

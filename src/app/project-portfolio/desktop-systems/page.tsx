@@ -35,7 +35,7 @@ export default function DesktopSystems() {
           Desktop Systems
         </Typography>
         <Typography variant="h6" align="center" sx={{ marginBottom: "60px", color: colorCombos.text.secondary_1 }}>
-          Rich client applications and specialized software solutions built for manufacturing, oil & gas, education, and production management. These applications demonstrate expertise in WPF, Windows Forms, and desktop integration technologies.
+          <strong>Rich client applications</strong> and <strong>specialized software solutions</strong> built for <strong>manufacturing</strong>, <strong>oil & gas</strong>, <strong>education</strong>, and <strong>production management</strong>. These applications demonstrate expertise in <strong>WPF</strong>, <strong>Windows Forms</strong>, and <strong>desktop integration technologies</strong>.
         </Typography>
       </Container>
       
@@ -43,8 +43,8 @@ export default function DesktopSystems() {
             
       <ContentFullWidth
         title="Enterprise Desktop Solutions"
-        text="Specialized in building robust desktop applications using modern frameworks like WPF with MVVM pattern, Entity Framework, and cloud integration. Experience includes manufacturing systems, educational tools, and legacy system modernization."
-        text2="Notable achievements include 300% performance improvements through database optimization, successful MS Access to SQL Server migrations with 100% data integrity, and comprehensive 3-tier architectures supporting concurrent users with enterprise-grade security."
+        text="Specialized in building <strong>robust desktop applications</strong> using modern frameworks like <strong>WPF with MVVM pattern</strong>, <strong>Entity Framework</strong>, and <strong>cloud integration</strong>. Experience includes <strong>manufacturing systems</strong>, <strong>educational tools</strong>, and <strong>legacy system modernization</strong>."
+        text2="Notable achievements include <strong>300% performance improvements</strong> through <strong>database optimization</strong>, successful <strong>MS Access to SQL Server migrations</strong> with <strong>100% data integrity</strong>, and comprehensive <strong>3-tier architectures</strong> supporting <strong>concurrent users</strong> with <strong>enterprise-grade security</strong>."
         imagePosition="None"
       />
 
@@ -60,11 +60,11 @@ export default function DesktopSystems() {
                 <Factory fontSize="large" color="primary" /> Manufacturing Systems
               </Typography>
               <Typography variant="body2" color={colorCombos.text.secondary_1}>
-                • Production tracking with real-time monitoring<br />
+                • <strong>Production tracking</strong> with real-time monitoring<br />
                 • Equipment management and maintenance scheduling<br />
                 • Crystal Reports integration with A3/A4 formats<br />
-                • Cloud integration for automated workflows<br />
-                • 96% reduction in report generation time
+                • <strong>Cloud integration</strong> for automated workflows<br />
+                • <strong>96% reduction</strong> in report generation time
               </Typography>
             </Box>
 
@@ -73,10 +73,10 @@ export default function DesktopSystems() {
                 <SchoolOutlined fontSize="large" color="primary" /> Educational Tools
               </Typography>
               <Typography variant="body2" color={colorCombos.text.secondary_1}>
-                • Interactive electrical power system simulations<br />
-                • Visual learning with bus schema configurations<br />
+                • Interactive <strong>electrical power system</strong> simulations<br />
+                • Visual learning with <strong>bus schema configurations</strong><br />
                 • Real-time component interaction and feedback<br />
-                • GDI+ custom drawing for electrical states<br />
+                • <strong>GDI+ custom drawing</strong> for electrical states<br />
                 • Simplified complex engineering concepts
               </Typography>
             </Box>
@@ -86,11 +86,11 @@ export default function DesktopSystems() {
                 <DesktopWindowsOutlined fontSize="large" color="primary" /> Legacy Modernization
               </Typography>
               <Typography variant="body2" color={colorCombos.text.secondary_1}>
-                • MS Access to SQL Server migration<br />
+                • <strong>MS Access to SQL Server</strong> migration<br />
                 • Windows Forms to WPF transformation<br />
-                • 300% performance improvement<br />
+                • <strong>300% performance improvement</strong><br />
                 • Concurrent user support (1 → 50+ users)<br />
-                • 100% data integrity preservation
+                • <strong>100% data integrity</strong> preservation
               </Typography>
             </Box>
 
@@ -99,11 +99,11 @@ export default function DesktopSystems() {
                 <DesignServices fontSize="large" color="primary" /> Architecture Expertise
               </Typography>
               <Typography variant="body2" color={colorCombos.text.secondary_1}>
-                • 3-tier architecture design<br />
-                • MVVM pattern implementation<br />
+                • <strong>3-tier architecture</strong> design<br />
+                • <strong>MVVM pattern</strong> implementation<br />
                 • JWT authentication & role-based access<br />
                 • Entity Framework with dual database support<br />
-                • RESTful API integration
+                • <strong>RESTful API integration</strong>
               </Typography>
             </Box>
           </Box>

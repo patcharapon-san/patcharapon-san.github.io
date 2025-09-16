@@ -31,9 +31,11 @@ export default function HeroSection({ title, subtitle, buttonText, buttonFunctio
             }}>
             {title}
           </Typography>
-          <Typography variant="h5" sx={{ mb: 4, color: colorCombos.text.light }}>
-            {subtitle}
-          </Typography>
+          <Typography 
+            variant="h5" 
+            sx={{ mb: 4, color: colorCombos.text.light }}
+            dangerouslySetInnerHTML={{ __html: subtitle || '' }}
+          />
           {buttonText && (
             <Button
               onClick={buttonFunction}

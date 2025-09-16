@@ -21,7 +21,7 @@ const enterpriseProjects = [
   },
   {
     name: "Marketing Technology Solutions Platform",
-    text: "Digital marketing ecosystem supporting multiple business units with custom CMS, scalable SMTP service handling 20+ daily emails, and real-time analytics. Implemented load balancing and 70% performance improvement.",
+    text: "Digital marketing ecosystem supporting multiple business units with custom CMS, scalable SMTP service handling 20K+ daily emails, and real-time analytics. Implemented load balancing and 70% performance improvement.",
   },
 ];
 
@@ -35,7 +35,7 @@ export default function EnterpriseSolutions() {
           Enterprise Solutions
         </Typography>
         <Typography variant="h6" align="center" sx={{ marginBottom: "60px", color: colorCombos.text.secondary_1 }}>
-          Showcasing cloud-based systems, serverless architectures, and integration platforms that automate business processes and connect multiple systems for large organizations. Experience includes oil & gas industry applications, government systems, and marketing technology platforms.
+          Showcasing <strong>cloud-based systems</strong>, <strong>serverless architectures</strong>, and <strong>integration platforms</strong> that automate business processes and connect multiple systems for large organizations. Experience includes <strong>oil & gas industry applications</strong>, <strong>government systems</strong>, and <strong>marketing technology platforms</strong>.
         </Typography>
       </Container>
             
@@ -43,8 +43,8 @@ export default function EnterpriseSolutions() {
 
       <ContentFullWidth
         title="Cloud-Native Enterprise Architecture"
-        text="Specialized in building scalable enterprise solutions using AWS Lambda microservices, Azure cloud platforms, and modern .NET applications. Experience spans government systems, oil & gas industry, and marketing technology platforms."
-        text2="Notable achievements include 30+ Lambda functions with 99.9% uptime, daily processed applications, 80% reduction in manual processing time, and comprehensive compliance with government standards and industry regulations."
+        text="Specialized in building <strong>scalable enterprise solutions</strong> using <strong>AWS Lambda microservices</strong>, <strong>Azure cloud platforms</strong>, and <strong>modern .NET applications</strong>. Experience spans <strong>government systems</strong>, <strong>oil & gas industry</strong>, and <strong>marketing technology platforms</strong>."
+        text2="Notable achievements include <strong>30+ Lambda functions</strong> with <strong>99.9% uptime</strong>, <strong>10,000+ daily processed applications</strong>, <strong>80% reduction in manual processing time</strong>, and comprehensive compliance with <strong>government standards</strong> and <strong>industry regulations</strong>."
         imagePosition="None"
       />
 
@@ -60,10 +60,10 @@ export default function EnterpriseSolutions() {
                 <Cloud fontSize="large" color="primary" />  AWS Lambda Microservices
               </Typography>
               <Typography variant="body2" color={colorCombos.text.secondary_1}>
-                • 30+ independent serverless functions<br />
+                • <strong>30+ independent serverless functions</strong><br />
                 • &lt;2000ms response times for critical operations<br />
-                • 99.9% uptime with CloudWatch monitoring<br />
-                • 80% reduction in manual processing time
+                • <strong>99.9% uptime</strong> with CloudWatch monitoring<br />
+                • <strong>80% reduction</strong> in manual processing time
               </Typography>
             </Box>
 
@@ -72,11 +72,11 @@ export default function EnterpriseSolutions() {
                 <AccountBalanceOutlined fontSize="large" color="primary" />  Government Systems
               </Typography>
               <Typography variant="body2" color={colorCombos.text.secondary_1}>
-                • 10,000+ daily visa applications processed<br />
-                • React.js migration from legacy .NET forms<br />
+                • <strong>10,000+ daily visa applications</strong> processed<br />
+                • <strong>React.js migration</strong> from legacy .NET forms<br />
                 • Multi-tier architecture with audit trails<br />
-                • PCI-DSS compliant payment processing<br />
-                • 99.95% system availability achieved
+                • <strong>PCI-DSS compliant</strong> payment processing<br />
+                • <strong>99.95% system availability</strong> achieved
               </Typography>
             </Box>
 
@@ -85,11 +85,11 @@ export default function EnterpriseSolutions() {
                 <OilBarrel fontSize="large" color="primary" /> Oil & Gas Solutions
               </Typography>
               <Typography variant="body2" color={colorCombos.text.secondary_1}>
-                • Comprehensive Azure cloud architecture<br />
+                • Comprehensive <strong>Azure cloud architecture</strong><br />
                 • Real-time petroleum engineering calculations<br />
-                • .NET Framework to .NET 8 modernization<br />
-                • 15% improvement in well performance<br />
-                • 99.8% uptime with Azure SLA
+                • <strong>.NET Framework to .NET 8</strong> modernization<br />
+                • <strong>15% improvement</strong> in well performance<br />
+                • <strong>99.8% uptime</strong> with Azure SLA
               </Typography>
             </Box>
 
@@ -98,11 +98,11 @@ export default function EnterpriseSolutions() {
                 <People fontSize="large" color="primary" /> Marketing Technology
               </Typography>
               <Typography variant="body2" color={colorCombos.text.secondary_1}>
-                • 20K+ daily emails processed<br />
+                • <strong>20K+ daily emails</strong> processed<br />
                 • Custom CMS with multi-site support<br />
-                • 70% performance improvement through optimization<br />
+                • <strong>70% performance improvement</strong> through optimization<br />
                 • Load balancing with Redis caching<br />
-                • 99.2% email delivery rate achieved
+                • <strong>99.2% email delivery rate</strong> achieved
               </Typography>
             </Box>
           </Box>

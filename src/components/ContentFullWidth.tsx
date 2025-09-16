@@ -81,9 +81,8 @@ export default function ContentFullWidth({
             color: colorCombos.text.secondary_1,
             lineHeight: 1.6
           }}
-        >
-          {text}
-        </Typography>
+          dangerouslySetInnerHTML={{ __html: text || '' }}
+        />
         {text2 && (
           <Typography
             sx={{
@@ -91,9 +90,8 @@ export default function ContentFullWidth({
               lineHeight: 1.6,
               fontStyle: "italic"
             }}
-          >
-            {text2}
-          </Typography>
+            dangerouslySetInnerHTML={{ __html: text2 }}
+          />
         )}
       </GridLegacy>
     </>

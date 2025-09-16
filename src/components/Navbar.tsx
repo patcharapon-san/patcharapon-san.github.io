@@ -61,11 +61,22 @@ export default function Navbar({ title, navLinks }: { title: string; navLinks: {
     <>
       <AppBar 
         position="sticky" 
-        elevation={0}
+        elevation={2}
         sx={{ 
-          backgroundColor: colorCombos.background.accent,
-          borderBottom: `1px solid ${colorCombos.border.light}`,
-          color: colorCombos.text.primary
+          backgroundColor: colorCombos.background.primary,
+          borderBottom: `2px solid ${colorCombos.border.light}`,
+          color: colorCombos.text.primary,
+          backdropFilter: 'blur(10px)',
+          '&::before': {
+            content: '""',
+            position: 'absolute',
+            top: 0,
+            left: 0,
+            right: 0,
+            bottom: 0,
+            backgroundColor: 'rgba(255, 255, 255, 0.9)',
+            zIndex: -1
+          }
         }}
       >
         <Container>
@@ -93,9 +104,16 @@ export default function Navbar({ title, navLinks }: { title: string; navLinks: {
                       color: colorCombos.text.primary, 
                       fontWeight: 600, 
                       textTransform: "none",
+                      mx: 1,
+                      px: 2,
+                      py: 1,
+                      borderRadius: 2,
                       "&:hover": {
-                        backgroundColor: colorCombos.background.secondary
-                      }
+                        backgroundColor: colorCombos.background.accent,
+                        transform: 'translateY(-1px)',
+                        boxShadow: `0 4px 8px ${colorCombos.card.shadow}`
+                      },
+                      transition: 'all 0.3s ease-in-out'
                     }}
                   >
                     {link.label}
