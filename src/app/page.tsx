@@ -80,8 +80,8 @@ export default function Home() {
             Discover my expertise, projects, and professional journey
           </Typography>
           
-          <Stack direction={{ xs: 'column', sm: 'row' }} spacing={3} justifyContent="center" alignItems="center">
-            <Link href="/skills" style={{ textDecoration: 'none', width: '100%', maxWidth: '280px' }}>
+          <Stack direction={{ xs: 'column', sm: 'row' }} spacing={3} justifyContent="center" alignItems={{ xs: 'center', sm: 'stretch' }}>
+            <Link href="/skills" style={{ textDecoration: 'none', width: '100%', maxWidth: '280px', display: 'flex' }}>
               <Paper
                 sx={{
                   p: 3,
@@ -89,11 +89,13 @@ export default function Home() {
                   bgcolor: colorCombos.background.primary,
                   border: `2px solid ${colorCombos.border.light}`,
                   cursor: 'pointer',
-                  height: '140px',
+                  minHeight: '140px',
                   display: 'flex',
                   flexDirection: 'column',
                   justifyContent: 'center',
                   position: 'relative',
+                  overflow: 'hidden',
+                  flex: 1,
                   '&:hover': {
                     bgcolor: colorCombos.background.accent,
                     transform: 'translateY(-4px)',
@@ -127,7 +129,7 @@ export default function Home() {
               </Paper>
             </Link>
 
-            <Link href="/project-portfolio" style={{ textDecoration: 'none', width: '100%', maxWidth: '280px' }}>
+            <Link href="/project-portfolio" style={{ textDecoration: 'none', width: '100%', maxWidth: '280px', display: 'flex' }}>
               <Paper
                 sx={{
                   p: 3,
@@ -135,11 +137,13 @@ export default function Home() {
                   bgcolor: colorCombos.background.primary,
                   border: `2px solid ${colorCombos.border.light}`,
                   cursor: 'pointer',
-                  height: '140px',
+                  minHeight: '140px',
                   display: 'flex',
                   flexDirection: 'column',
                   justifyContent: 'center',
                   position: 'relative',
+                  overflow: 'hidden',
+                  flex: 1,
                   '&:hover': {
                     bgcolor: colorCombos.background.accent,
                     transform: 'translateY(-4px)',
@@ -173,7 +177,7 @@ export default function Home() {
               </Paper>
             </Link>
 
-            <Link href="/showcase" style={{ textDecoration: 'none', width: '100%', maxWidth: '280px' }}>
+            <Link href="/showcase" style={{ textDecoration: 'none', width: '100%', maxWidth: '280px', display: 'flex' }}>
               <Paper
                 sx={{
                   p: 3,
@@ -181,11 +185,13 @@ export default function Home() {
                   bgcolor: colorCombos.background.primary,
                   border: `2px solid ${colorCombos.border.light}`,
                   cursor: 'pointer',
-                  height: '140px',
+                  minHeight: '140px',
                   display: 'flex',
                   flexDirection: 'column',
                   justifyContent: 'center',
                   position: 'relative',
+                  overflow: 'hidden',
+                  flex: 1,
                   '&:hover': {
                     bgcolor: colorCombos.background.accent,
                     transform: 'translateY(-4px)',
@@ -219,7 +225,7 @@ export default function Home() {
               </Paper>
             </Link>
 
-            <Link href="/about" style={{ textDecoration: 'none', width: '100%', maxWidth: '280px' }}>
+            <Link href="/about" style={{ textDecoration: 'none', width: '100%', maxWidth: '280px', display: 'flex' }}>
               <Paper
                 sx={{
                   p: 3,
@@ -227,11 +233,13 @@ export default function Home() {
                   bgcolor: colorCombos.background.primary,
                   border: `2px solid ${colorCombos.border.light}`,
                   cursor: 'pointer',
-                  height: '140px',
+                  minHeight: '140px',
                   display: 'flex',
                   flexDirection: 'column',
                   justifyContent: 'center',
                   position: 'relative',
+                  overflow: 'hidden',
+                  flex: 1,
                   '&:hover': {
                     bgcolor: colorCombos.background.accent,
                     transform: 'translateY(-4px)',
