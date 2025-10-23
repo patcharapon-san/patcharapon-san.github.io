@@ -15,6 +15,7 @@ import {
 } from "@mui/icons-material";
 import { colorCombos } from "@/utils/colors";
 import { getYearsOfExperience } from "@/utils/experience";
+import { demos } from "@/data/demos";
 import {
     chartProjectsData,
     backendProjectsData,
@@ -36,14 +37,16 @@ const iconMap: Record<ShowcaseIconKey, React.ReactNode> = {
     BubbleChart: <BubbleChart fontSize="large" />,
 };
 
-const ShowcaseCard = ({ project }: { project: {
-    title: string;
-    description: string;
-    technologies: string[];
-    features: string[];
-    icon: React.ReactNode;
-    category: string;
-} }) => (
+const ShowcaseCard = ({ project }: {
+    project: {
+        title: string;
+        description: string;
+        technologies: string[];
+        features: string[];
+        icon: React.ReactNode;
+        category: string;
+    }
+}) => (
     <Paper
         sx={{
             p: 3,
@@ -123,7 +126,63 @@ const ShowcaseCard = ({ project }: { project: {
     </Paper>
 );
 
+const showcaseDemos =
+    (
+        <>
+            {/* Live Demos (merged from /demos) */}
+            <Box id="live-demos" sx={{ py: 8, mt: 5, bgcolor: colorCombos.background.primary }}>
+                <Container>
+                    <Typography variant="h4" align="center" sx={{ fontWeight: 700, mb: 2, color: colorCombos.text.primary }}>
+                        Live Demos
+                    </Typography>
+                    <Typography variant="h6" align="center" sx={{ mb: 6, color: colorCombos.text.secondary_1 }}>
+                        Small, focused proofs of concept you can try in your browser
+                    </Typography>
+
+                    <GridLegacy container spacing={4}>
+                        {demos.map((demo) => (
+                            <GridLegacy key={demo.slug} item xs={12} md={6}>
+                                <Link href={`/demos/${demo.slug}`} style={{ textDecoration: 'none' }}>
+                                    <Paper
+                                        sx={{
+                                            p: 3,
+                                            height: '100%',
+                                            bgcolor: colorCombos.background.primary,
+                                            border: `1px solid ${colorCombos.border.light}`,
+                                            '&:hover': {
+                                                bgcolor: colorCombos.background.accent,
+                                                transform: 'translateY(-4px)',
+                                                boxShadow: `0 8px 25px ${colorCombos.card.shadow}`,
+                                                transition: 'all 0.3s ease-in-out'
+                                            }
+                                        }}
+                                    >
+                                        <Typography variant="h5" sx={{ fontWeight: 600, color: colorCombos.text.title, mb: 1 }}>
+                                            {demo.title}
+                                        </Typography>
+                                        <Stack direction="row" spacing={1} sx={{ mb: 2, flexWrap: 'wrap', gap: 1 }}>
+                                            {demo.technologies.map((t) => (
+                                                <Chip key={t} label={t} size="small" variant="outlined" sx={{ borderColor: colorCombos.border.light, color: colorCombos.text.secondary_1 }} />
+                                            ))}
+                                            {demo.status && (
+                                                <Chip label={demo.status.toUpperCase()} size="small" sx={{ background: colorCombos.button.warning.background, color: colorCombos.button.primary.text }} />
+                                            )}
+                                        </Stack>
+                                        <Typography variant="body2" sx={{ color: colorCombos.text.secondary_1 }}>
+                                            {demo.summary}
+                                        </Typography>
+                                    </Paper>
+                                </Link>
+                            </GridLegacy>
+                        ))}
+                    </GridLegacy>
+                </Container>
+            </Box>
+        </>
+    );
+
 export default function Showcase() {
+
     return (
         <>
             <HeroSection
@@ -139,7 +198,6 @@ export default function Showcase() {
                     <Typography variant="h4" align="center" sx={{ fontWeight: 700, mb: 6, color: colorCombos.text.primary }}>
                         Showcase Categories
                     </Typography>
-                    
                     <GridLegacy container spacing={4}>
                         {showcaseCategoriesData.map((category, index) => (
                             <GridLegacy item xs={12} sm={6} md={3} key={index}>
@@ -181,6 +239,7 @@ export default function Showcase() {
                             </GridLegacy>
                         ))}
                     </GridLegacy>
+                    {showcaseDemos}
                 </Container>
             </Box>
 
@@ -193,7 +252,6 @@ export default function Showcase() {
                     <Typography variant="h6" align="center" sx={{ mb: 6, color: colorCombos.text.secondary_1 }}>
                         Interactive data visualization and business intelligence solutions
                     </Typography>
-
                     <GridLegacy container spacing={4}>
                         {chartProjectsData.map((project, index) => (
                             <GridLegacy item xs={12} md={6} key={index}>
@@ -213,7 +271,6 @@ export default function Showcase() {
                     <Typography variant="h6" align="center" sx={{ mb: 6, color: colorCombos.text.secondary_1 }}>
                         Scalable backend systems, APIs, and data processing solutions
                     </Typography>
-
                     <GridLegacy container spacing={4}>
                         {backendProjectsData.map((project, index) => (
                             <GridLegacy item xs={12} md={6} lg={6} key={index}>
@@ -258,40 +315,40 @@ export default function Showcase() {
                         {visualizationTechData.map((tech, index) => {
                             const years = typeof tech.startYear === 'number' ? `${getYearsOfExperience(tech.startYear)}+` : (tech.yearsLabel ?? "");
                             return (
-                            <GridLegacy item xs={12} sm={6} md={4} lg={4} key={index}>
-                                <Paper
-                                    sx={{
-                                        p: 3,
-                                        textAlign: 'center',
-                                        height: '100%',
-                                        bgcolor: colorCombos.background.primary,
-                                        border: `1px solid ${colorCombos.border.light}`,
-                                        '&:hover': {
-                                            bgcolor: colorCombos.background.accent,
-                                            transform: 'translateY(-2px)',
-                                            boxShadow: `0 4px 15px ${colorCombos.card.shadow}`,
-                                            transition: 'all 0.3s ease-in-out'
-                                        }
-                                    }}
-                                >
-                                    <Typography variant="h6" sx={{ fontWeight: 600, mb: 1, color: colorCombos.text.primary }}>
-                                        {tech.name}
-                                    </Typography>
-                                    <Chip
-                                        label={`${years} years`}
-                                        size="small"
+                                <GridLegacy item xs={12} sm={6} md={4} lg={4} key={index}>
+                                    <Paper
                                         sx={{
-                                            mb: 2,
-                                            backgroundColor: colorCombos.button.primary.background,
-                                            color: colorCombos.button.primary.text,
-                                            fontWeight: 600
+                                            p: 3,
+                                            textAlign: 'center',
+                                            height: '100%',
+                                            bgcolor: colorCombos.background.primary,
+                                            border: `1px solid ${colorCombos.border.light}`,
+                                            '&:hover': {
+                                                bgcolor: colorCombos.background.accent,
+                                                transform: 'translateY(-2px)',
+                                                boxShadow: `0 4px 15px ${colorCombos.card.shadow}`,
+                                                transition: 'all 0.3s ease-in-out'
+                                            }
                                         }}
-                                    />
-                                    <Typography variant="body2" sx={{ color: colorCombos.text.secondary_1 }}>
-                                        {tech.description}
-                                    </Typography>
-                                </Paper>
-                            </GridLegacy>
+                                    >
+                                        <Typography variant="h6" sx={{ fontWeight: 600, mb: 1, color: colorCombos.text.primary }}>
+                                            {tech.name}
+                                        </Typography>
+                                        <Chip
+                                            label={`${years} years`}
+                                            size="small"
+                                            sx={{
+                                                mb: 2,
+                                                backgroundColor: colorCombos.button.primary.background,
+                                                color: colorCombos.button.primary.text,
+                                                fontWeight: 600
+                                            }}
+                                        />
+                                        <Typography variant="body2" sx={{ color: colorCombos.text.secondary_1 }}>
+                                            {tech.description}
+                                        </Typography>
+                                    </Paper>
+                                </GridLegacy>
                             );
                         })}
                     </GridLegacy>
@@ -317,7 +374,7 @@ export default function Showcase() {
                                 Live production monitoring with trend prediction and alerts
                             </Typography>
                         </GridLegacy>
-                        
+
                         <GridLegacy item xs={12} md={4} sx={{ textAlign: 'center' }}>
                             <Typography variant="h2" sx={{ fontWeight: 700, color: colorCombos.text.title, mb: 1 }}>
                                 Multi-cloud
@@ -329,7 +386,7 @@ export default function Showcase() {
                                 Azure & AWS integration for scalable visualization solutions
                             </Typography>
                         </GridLegacy>
-                        
+
                         <GridLegacy item xs={12} md={4} sx={{ textAlign: 'center' }}>
                             <Typography variant="h2" sx={{ fontWeight: 700, color: colorCombos.text.title, mb: 1 }}>
                                 Enterprise

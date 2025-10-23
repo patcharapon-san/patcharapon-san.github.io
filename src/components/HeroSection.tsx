@@ -33,7 +33,7 @@ export default function HeroSection({ title, subtitle, buttonText, buttonFunctio
           </Typography>
           <Typography 
             variant="h5" 
-            sx={{ mb: 4, color: colorCombos.text.light }}
+            sx={{ mb: 4, color: colorCombos.text.extraLight }}
             dangerouslySetInnerHTML={{ __html: subtitle || '' }}
           />
           {buttonText && (
