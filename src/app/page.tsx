@@ -16,7 +16,7 @@ import {
 import { Box, Container, Typography, Paper, Stack } from "@mui/material";
 import { colorCombos } from "@/utils/colors";
 import Link from "next/link";
-
+import { getYearsOfExperience } from "@/utils/experience";
 
 const coreCompetencies = [
   { icon: <Code fontSize="large" color="primary" />, title: "Full-Stack Development", desc: "End-to-end application development from UI to database with cloud integration." },
@@ -57,12 +57,13 @@ const clientSuccessStories = [
 ];
 
 export default function Home() {
+  const totalExperienceYears = getYearsOfExperience(2016);
   return (
     <>
       <Box id="home">
         <HeroSection
           title="Hey, I'm Patcharapon Sangsatra"
-          subtitle="Full-Stack Developer specializing in enterprise solutions, cloud architecture, and system integration with 10+ years of experience across diverse industries."
+          subtitle={`Full-Stack Developer specializing in enterprise solutions, cloud architecture, and system integration with ${totalExperienceYears}+ years of experience across diverse industries.`}
           buttonText="View Portfolio Projects"
           buttonFunction={() => window.location.href = '/project-portfolio'}
           sx={{ backgroundImage: 'url(/work-station-1.jpg)', backgroundSize: 'cover' }}
@@ -79,7 +80,7 @@ export default function Home() {
           <Typography variant="h6" align="center" sx={{ mb: 6, color: colorCombos.text.secondary_1 }}>
             Discover my expertise, projects, and professional journey
           </Typography>
-          
+
           <Stack direction={{ xs: 'column', sm: 'row' }} spacing={3} justifyContent="center" alignItems={{ xs: 'center', sm: 'stretch' }}>
             <Link href="/skills" style={{ textDecoration: 'none', width: '100%', maxWidth: '280px', display: 'flex' }}>
               <Paper
@@ -124,7 +125,7 @@ export default function Home() {
                   Skills & Technologies
                 </Typography>
                 <Typography variant="body2" sx={{ color: colorCombos.text.secondary_1 }}>
-                  10+ years of experience across multiple technologies
+                  {`${totalExperienceYears}+ years of experience across multiple technologies`}
                 </Typography>
               </Paper>
             </Link>
@@ -280,7 +281,7 @@ export default function Home() {
         <ContentFullWidth
           image={["/work-station-1.jpg"]}
           title="Professional Background"
-          text="With over <strong>10+ years of experience</strong> across <strong>enterprise environments</strong> and <strong>independent contractor/freelance projects</strong>, I've specialized in oil & gas industry applications, CRM systems, job platforms, e-commerce systems, and government solutions."
+          text={`With over <strong>${totalExperienceYears}+ years of experience</strong> across <strong>enterprise environments</strong> and <strong>independent contractor/freelance projects</strong>, I've specialized in oil & gas industry applications, CRM systems, job platforms, e-commerce systems, and government solutions.`}
           text2="I focus on building <strong>full-stack applications</strong>, <strong>serverless cloud systems</strong>, and <strong>integration solutions</strong> spanning from desktop applications to cloud-based microservices with strong expertise in Azure and AWS cloud services"
           imagePosition="None"
           sx={{ backgroundColor: 'rgba(255, 255, 255, 0.0)', borderTop: 'none' }} />

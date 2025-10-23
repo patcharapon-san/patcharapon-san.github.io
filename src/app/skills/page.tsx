@@ -13,72 +13,27 @@ import {
     People
 } from "@mui/icons-material";
 import { colorCombos } from "@/utils/colors";
+import { getYearsOfExperience, fmtYears } from "@/utils/experience";
+import {
+    programmingLanguagesData,
+    frontendTechData,
+    backendCloudTechData,
+    databasesData,
+    industryExperienceData,
+    keyAchievementsData,
+    type IndustryIconKey
+} from "@/data/skills";
 
-// Programming Languages with years of experience
-const programmingLanguages = [
-    { name: "C#/.NET", years: "9+", description: "Enterprise applications, WPF, Web API", category: "expert" },
-    { name: "SQL", years: "8+", description: "Database design, optimization, stored procedures", category: "expert" },
-    { name: "HTML/CSS", years: "7+", description: "Semantic markup, responsive design", category: "expert" },
-    { name: "JavaScript/TypeScript", years: "6+", description: "Modern web development, Node.js", category: "expert" },
-    { name: "PowerShell", years: "4+", description: "System administration, DevOps automation", category: "proficient" },
-    { name: "Python", years: "3+", description: "Automation, data processing, scripting", category: "proficient" },
-    { name: "XAML", years: "3+", description: "WPF/UWP application UI development", category: "proficient" },
-    { name: "VB.NET", years: "2+", description: "Legacy system maintenance", category: "proficient" },
-];
-
-// Frontend Technologies
-const frontendTech = [
-    { name: "ASP.NET Core MVC", years: "6+", description: "Server-side rendering, Razor views" },
-    { name: "React", years: "4+", description: "Hooks, Context, SSR, Modern patterns" },
-    { name: "Next.js", years: "2+", description: "App Router, Static generation, Performance" },
-    { name: "Material-UI", years: "3+", description: "Theming, Custom components, Responsive design" },
-    { name: "Chart.js", years: "2+", description: "Interactive charts, Data visualization" },
-    { name: "Three.js", years: "2+", description: "3D web graphics and rendering" },
-    { name: "Tailwind CSS", years: "2+", description: "Utility-first, Custom design systems" },
-    { name: "WPF", years: "3+", description: "Desktop applications, MVVM, Custom controls" },
-];
-
-// Backend & Cloud Technologies
-const backendCloudTech = [
-    { name: "ASP.NET Web API", years: "8+", description: "RESTful services, Authentication, Middleware" },
-    { name: "Entity Framework", years: "8+", description: "ORM, Code First, Database migrations" },
-    { name: "Azure Services", years: "4+", description: "App Services, Data Factory, Azure Functions, Storage, etc." },
-    { name: "Microsoft Entra ID", years: "3+", description: "Identity management, Authorization, SSO" },
-    { name: "Azure DevOps", years: "4+", description: "CI/CD pipelines, Repos, Boards" },
-    { name: "Node.js", years: "3+", description: "Express, RESTful APIs, Microservices" },
-    { name: "AWS Lambda", years: "2+", description: "Serverless functions, Event-driven architecture" },
-    { name: "FastAPI", years: "2+", description: "Python web framework, API development" },
-    { name: "Docker", years: "1+", description: "Containerization, Microservices deployment" },
-];
-
-// Databases
-const databases = [
-    { name: "SQL Server", years: "9+", description: "T-SQL, Stored procedures, Performance optimization" },
-    { name: "MySQL", years: "3+", description: "Database design, Replication, High availability" },
-    { name: "PostgreSQL", years: "1+", description: "Advanced queries, JSON support, Full-text search" },
-    { name: "Oracle", years: "3+", description: "Enterprise databases, PL/SQL, Data warehousing" },
-];
-
-// Industry Experience
-const industryExperience = [
-    { name: "Oil & Gas", years: "4+", projects: "Production systems, Regulatory compliance", icon: <OilBarrel fontSize="large" color="primary" /> },
-    { name: "Government", years: "1+", projects: "Electronic visa systems, Public services", icon: <AccountBalanceOutlined fontSize="large" color="primary" /> },
-    { name: "Manufacturing", years: "2+", projects: "Production tracking, Inventory management", icon: <Factory fontSize="large" color="primary" /> },
-    { name: "E-commerce", years: "2+", projects: "Payment processing, Order management", icon: <WebOutlined fontSize="large" color="primary" /> },
-    { name: "Marketing Tech", years: "2+", projects: "Email automation, CMS, Analytics", icon: <Code fontSize="large" color="primary" /> },
-    { name: "HR Technology", years: "2+", projects: "Recruitment systems, Employee management", icon: <People fontSize="large" color="primary" /> },
-    { name: "Education", years: "2+", projects: "Learning management, Student information", icon: <SchoolOutlined fontSize="large" color="primary" /> },
-];
-
-// Key Achievements
-const keyAchievements = [
-    { title: "Performance Optimization", description: "96% reduction in report generation time", impact: "High" },
-    { title: "Microservices Architecture", description: "30+ AWS Lambda functions in production", impact: "High" },
-    { title: "System Reliability", description: "99.9% uptime for critical business systems", impact: "High" },
-    { title: "Process Automation", description: "80% reduction in manual processing", impact: "Medium" },
-    { title: "Email Marketing Platform", description: "20,000+ daily emails processed", impact: "Medium" },
-    { title: "Concurrent Processing", description: "10,000+ visa applications at peak time", impact: "High" },
-];
+// Data-driven helpers
+const iconMap: Record<IndustryIconKey, React.ReactNode> = {
+    OilBarrel: <OilBarrel fontSize="large" color="primary" />,
+    AccountBalanceOutlined: <AccountBalanceOutlined fontSize="large" color="primary" />,
+    Factory: <Factory fontSize="large" color="primary" />,
+    WebOutlined: <WebOutlined fontSize="large" color="primary" />,
+    Code: <Code fontSize="large" color="primary" />,
+    People: <People fontSize="large" color="primary" />,
+    SchoolOutlined: <SchoolOutlined fontSize="large" color="primary" />,
+};
 
 const SkillCard = ({ name, years, description, category }: { name: string; years?: string; description: string; category?: string }) => (
     <Paper sx={{
@@ -116,11 +71,12 @@ const SkillCard = ({ name, years, description, category }: { name: string; years
 );
 
 export default function Skills() {
+    const totalYears = getYearsOfExperience(2016);
     return (
         <>
             <HeroSection
                 title="Skills & Technologies"
-                subtitle="10+ years of full-stack development expertise across multiple industries and modern technologies."
+                subtitle={`${totalYears}+ years of full-stack development expertise across multiple industries and modern technologies.`}
                 sx={{ backgroundImage: 'url(/work-station-3.jpg)', backgroundSize: 'cover' }}
                 textAlign="center"
             />
@@ -131,7 +87,7 @@ export default function Skills() {
                     <GridLegacy container spacing={4} justifyContent="center">
                         <GridLegacy item xs={6} md={3} sx={{ textAlign: 'center' }}>
                             <Typography variant="h3" sx={{ fontWeight: 700, color: colorCombos.text.title, mb: 1 }}>
-                                10+
+                                {`${totalYears}+`}
                             </Typography>
                             <Typography variant="h6" sx={{ color: colorCombos.text.secondary_1 }}>
                                 Years Experience
@@ -181,20 +137,36 @@ export default function Skills() {
                                 <Typography variant="h5" sx={{ fontWeight: 600, mb: 3, color: colorCombos.text.title }}>
                                     Extensive Experience (5+ years)
                                 </Typography>
-                                {programmingLanguages.filter(lang => lang.category === 'expert').map((lang, index) => (
-                                    <SkillCard key={index} {...lang} />
-                                ))}
+                                {programmingLanguagesData
+                                    .filter(lang => lang.category === 'expert')
+                                    .map((lang, index) => (
+                                        <SkillCard
+                                            key={index}
+                                            name={lang.name}
+                                            years={fmtYears(lang.yearsLabel, lang.startYear)}
+                                            description={lang.description}
+                                            category={lang.category}
+                                        />
+                                    ))}
                             </Paper>
                         </GridLegacy>
 
                         <GridLegacy item xs={12} md={6}>
                             <Paper sx={{ p: 4, bgcolor: colorCombos.background.primary, border: `1px solid ${colorCombos.border.light}` }}>
                                 <Typography variant="h5" sx={{ fontWeight: 600, mb: 3, color: colorCombos.text.title }}>
-                                    Working Experience (1-4 years)
+                                    Working Experience (1-5 years)
                                 </Typography>
-                                {programmingLanguages.filter(lang => lang.category === 'proficient').map((lang, index) => (
-                                    <SkillCard key={index} {...lang} />
-                                ))}
+                                {programmingLanguagesData
+                                    .filter(lang => lang.category === 'proficient')
+                                    .map((lang, index) => (
+                                        <SkillCard
+                                            key={index}
+                                            name={lang.name}
+                                            years={fmtYears(lang.yearsLabel, lang.startYear)}
+                                            description={lang.description}
+                                            category={lang.category}
+                                        />
+                                    ))}
                             </Paper>
                         </GridLegacy>
                     </GridLegacy>
@@ -209,9 +181,9 @@ export default function Skills() {
                     </Typography>
 
                     <GridLegacy container spacing={3}>
-                        {frontendTech.map((tech, index) => (
+                        {frontendTechData.map((tech, index) => (
                             <GridLegacy item xs={12} md={6} key={index}>
-                                <SkillCard name={tech.name} years={tech.years} description={tech.description} />
+                                <SkillCard name={tech.name} years={fmtYears(tech.yearsLabel, tech.startYear)} description={tech.description} />
                             </GridLegacy>
                         ))}
                     </GridLegacy>
@@ -226,9 +198,9 @@ export default function Skills() {
                     </Typography>
 
                     <GridLegacy container spacing={3}>
-                        {backendCloudTech.map((tech, index) => (
+                        {backendCloudTechData.map((tech, index) => (
                             <GridLegacy item xs={12} md={6} key={index}>
-                                <SkillCard name={tech.name} years={tech.years} description={tech.description} />
+                                <SkillCard name={tech.name} years={fmtYears(tech.yearsLabel, tech.startYear)} description={tech.description} />
                             </GridLegacy>
                         ))}
                     </GridLegacy>
@@ -243,9 +215,9 @@ export default function Skills() {
                     </Typography>
 
                     <GridLegacy container spacing={3}>
-                        {databases.map((db, index) => (
+                        {databasesData.map((db, index) => (
                             <GridLegacy item xs={12} md={6} key={index}>
-                                <SkillCard name={db.name} years={db.years} description={db.description} />
+                                <SkillCard name={db.name} years={fmtYears(db.yearsLabel, db.startYear)} description={db.description} />
                             </GridLegacy>
                         ))}
                     </GridLegacy>
@@ -263,7 +235,7 @@ export default function Skills() {
                     </Typography>
 
                     <GridLegacy container spacing={4}>
-                        {industryExperience.map((industry, index) => (
+                        {industryExperienceData.map((industry, index) => (
                             <GridLegacy item xs={12} md={6} lg={4} key={index}>
                                 <Paper
                                     sx={{
@@ -281,13 +253,13 @@ export default function Skills() {
                                     }}
                                 >
                                     <Box sx={{ mb: 2 }}>
-                                        {industry.icon}
+                                        {iconMap[industry.iconKey as IndustryIconKey]}
                                     </Box>
                                     <Typography variant="h6" sx={{ fontWeight: 600, mb: 1, color: colorCombos.text.primary }}>
                                         {industry.name}
                                     </Typography>
                                     <Chip
-                                        label={`${industry.years} years`}
+                                        label={`${fmtYears(industry.yearsLabel, industry.startYear)} years`}
                                         size="small"
                                         sx={{
                                             mb: 2,
@@ -316,7 +288,7 @@ export default function Skills() {
                     </Typography>
 
                     <GridLegacy container spacing={4}>
-                        {keyAchievements.map((achievement, index) => (
+                        {keyAchievementsData.map((achievement, index) => (
                             <GridLegacy item xs={12} md={6} key={index}>
                                 <Paper
                                     sx={{

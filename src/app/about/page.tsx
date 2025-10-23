@@ -4,8 +4,10 @@ import { Box, Typography, Container } from "@mui/material";
 import { AccountBalanceOutlined, Factory, SchoolOutlined, ShoppingCartOutlined } from "@mui/icons-material";
 import { colorCombos } from "@/utils/colors";
 import HeroSection from "@/components/HeroSection";
+import { getYearsOfExperience } from "@/utils/experience";
 
 export default function About() {
+    const totalExperienceYears = getYearsOfExperience(2016);
     return (
         <>
             <HeroSection
@@ -16,7 +18,7 @@ export default function About() {
 
             <ContentFullWidth
                 title="My Development Journey"
-                text="I'm a passionate <strong>software developer</strong> with a journey that spans over <strong>10 years</strong> across diverse industries and technologies. What drives me is the challenge of solving <strong>complex business problems</strong> through <strong>elegant technical solutions</strong>. My diverse experience across <strong>7 different industries</strong> has given me unique perspectives on how technology needs vary across sectors: <strong>Oil & Gas</strong>, <strong>Government</strong>, <strong>Manufacturing</strong>, <strong>E-commerce</strong>, <strong>Marketing</strong>, <strong>HR Technology</strong>, and <strong>Education</strong>."
+                text={`I'm a passionate <strong>software developer</strong> with a journey that spans over <strong>${totalExperienceYears} years</strong> across diverse industries and technologies. What drives me is the challenge of solving <strong>complex business problems</strong> through <strong>elegant technical solutions</strong>. My diverse experience across <strong>7 different industries</strong> has given me unique perspectives on how technology needs vary across sectors: <strong>Oil & Gas</strong>, <strong>Government</strong>, <strong>Manufacturing</strong>, <strong>E-commerce</strong>, <strong>Marketing</strong>, <strong>HR Technology</strong>, and <strong>Education</strong>.`}
                 text2="Starting as a <strong>Front-End/Back-End Developer</strong>, I quickly discovered my passion for creating systems that make people's work easier and more efficient. I evolved into <strong>Solutions Architect</strong>, designing <strong>comprehensive technology ecosystems</strong>. Over the years, I've embraced new technologies and methodologies, from traditional <strong>desktop / website applications</strong> to modern <strong>cloud-native architectures</strong>. My expertise now spans <strong>full-stack development</strong>, <strong>serverless computing</strong>, and <strong>system integration</strong>."
                 imagePosition="None"
             />
