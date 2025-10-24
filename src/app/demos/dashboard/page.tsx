@@ -7,7 +7,9 @@ import Sparkline from "@/components/charts/Sparkline";
 import BarChartMini from "@/components/charts/BarChartMini";
 import PieChartDonut from "@/components/charts/PieChartDonut";
 import ScatterPlotMini from "@/components/charts/ScatterPlotMini";
+import MultiLineChart from "@/components/charts/MultiLineChart";
 import { colorCombos } from "@/utils/colors";
+import { SYSTEM_METRICS_DATA, generateDateLabels } from "@/data/dashboardMetrics";
 import { CheckCircle, ErrorOutline, Timeline, People, CloudQueue, Http } from "@mui/icons-material";
 
 // Lightweight mock generators
@@ -25,12 +27,23 @@ export default function DashboardDemo() {
   const [eventsSeries, setEventsSeries] = useState<number[]>(Array.from({ length: 24 }, () => randInt(600, 1000)));
   const [latencySeries, setLatencySeries] = useState<number[]>(Array.from({ length: 24 }, () => randInt(90, 180)));
 
+  // Generate month labels for x-axis
+  const monthLabels = generateDateLabels(30);
+
   // Extra visuals: pie breakdown and scatter relation
   const [pieData, setPieData] = useState<number[]>([50, 30, 20]); // e.g., Users/System/API share
   type Pt = { x: number; y: number };
   const [scatterPoints, setScatterPoints] = useState<Pt[]>(() =>
     Array.from({ length: 24 }, (_, i) => ({ x: 80 + i * 2, y: 100 + randInt(-20, 20) }))
   );
+
+  // Derived metrics that correlate with pie chart and scatter plot
+  const [derivedMetrics, setDerivedMetrics] = useState({
+    userTrafficLoad: 50, // Correlates with pie chart user percentage
+    systemLoad: 30, // Correlates with pie chart system percentage  
+    apiLoad: 20, // Correlates with pie chart API percentage
+    performanceIndex: Math.round((128 / 120) * 100), // Correlates with scatter plot relationship
+  });
 
   type ActivityRow = { time: string; type: "info" | "warn" | "error"; message: string };
   const [activity, setActivity] = useState<ActivityRow[]>([
@@ -61,7 +74,16 @@ export default function DashboardDemo() {
   const b = Math.max(10, 35 + randInt(-10, 10));
   const c = Math.max(10, 25 + randInt(-10, 10));
   const sum = a + b + c;
-  setPieData([Math.round((a / sum) * 100), Math.round((b / sum) * 100), Math.round((c / sum) * 100)]);
+  const newPieData = [Math.round((a / sum) * 100), Math.round((b / sum) * 100), Math.round((c / sum) * 100)];
+  setPieData(newPieData);
+
+  // Update derived metrics based on current KPIs and pie data
+  setDerivedMetrics({
+    userTrafficLoad: newPieData[0],
+    systemLoad: newPieData[1],
+    apiLoad: newPieData[2],
+    performanceIndex: Math.round((nextUsers / nextLatency) * 100),
+  });
 
   // Update scatter with latest relation users vs latency
   const nextPoint = { x: Math.max(50, nextUsers), y: nextLatency + randInt(-8, 8) };
@@ -123,6 +145,31 @@ export default function DashboardDemo() {
 
           {/* Charts Row */}
           <GridLegacy container spacing={3} sx={{ mb: 3 }}>
+            <GridLegacy item xs={12}>
+              <Paper sx={{ p: 3, border: `1px solid ${colorCombos.border.light}`, bgcolor: colorCombos.background.primary }}>
+                <Typography variant="h6" sx={{ fontWeight: 600, color: colorCombos.text.title, mb: 1 }}>System Performance Metrics (30 Days)</Typography>
+                <Typography variant="body2" sx={{ color: colorCombos.text.secondary_1, mb: 2 }}>
+                  Historical performance trends showing Active Connections, Throughput, Response Time, Success Rate, and Error Count over the past month
+                </Typography>
+                <MultiLineChart
+                  series={[
+                    { label: 'Active Connections', data: SYSTEM_METRICS_DATA.activeConnections, color: colorCombos.button.primary.background },
+                    { label: 'Throughput/Min', data: SYSTEM_METRICS_DATA.throughputPerMin, color: colorCombos.button.success.background },
+                    { label: 'Response Time (ms)', data: SYSTEM_METRICS_DATA.responseTime, color: colorCombos.button.warning.background },
+                    { label: 'Success Rate (%)', data: SYSTEM_METRICS_DATA.successRate, color: colorCombos.button.secondary.text },
+                    { label: 'Error Count', data: SYSTEM_METRICS_DATA.errorCount, color: '#e91e63' },
+                  ]}
+                  width={800}
+                  height={350}
+                  xAxisLabels={monthLabels}
+                  gridColor={colorCombos.border.light}
+                />
+              </Paper>
+            </GridLegacy>
+          </GridLegacy>
+
+          {/* Secondary Charts Row */}
+          <GridLegacy container spacing={3} sx={{ mb: 3 }}>
             <GridLegacy item xs={12} md={8}>
               <Paper sx={{ p: 3, border: `1px solid ${colorCombos.border.light}`, bgcolor: colorCombos.background.primary }}>
                 <Typography variant="h6" sx={{ fontWeight: 600, color: colorCombos.text.title, mb: 1 }}>Requests per Minute (last 24 ticks)</Typography>
@@ -145,6 +192,12 @@ export default function DashboardDemo() {
                     <ErrorOutline sx={{ color: colorCombos.button.warning.background }} />
                     <Typography sx={{ color: colorCombos.text.secondary_1 }}>2 degraded endpoints</Typography>
                   </Stack>
+                  <Stack direction="row" spacing={1} alignItems="center">
+                    <Timeline sx={{ color: colorCombos.button.primary.background }} />
+                    <Typography sx={{ color: colorCombos.text.secondary_1 }}>
+                      Perf Index: {derivedMetrics.performanceIndex}
+                    </Typography>
+                  </Stack>
                 </Stack>
               </Paper>
             </GridLegacy>
@@ -154,8 +207,10 @@ export default function DashboardDemo() {
           <GridLegacy container spacing={3} sx={{ mb: 3 }}>
             <GridLegacy item xs={12} md={4}>
               <Paper sx={{ p: 3, border: `1px solid ${colorCombos.border.light}`, bgcolor: colorCombos.background.primary, textAlign: 'center' }}>
-                <Typography variant="h6" sx={{ fontWeight: 600, color: colorCombos.text.title, mb: 1 }}>Traffic Breakdown</Typography>
-                <Typography variant="body2" sx={{ color: colorCombos.text.secondary_1, mb: 2 }}>Users / System / API</Typography>
+                <Typography variant="h6" sx={{ fontWeight: 600, color: colorCombos.text.title, mb: 1 }}>Traffic Distribution</Typography>
+                <Typography variant="body2" sx={{ color: colorCombos.text.secondary_1, mb: 2 }}>
+                  Current load breakdown (Users/System/API) - these percentages influence throughput patterns in the performance chart
+                </Typography>
                 <Box sx={{ display: 'flex', justifyContent: 'center' }}>
                   <PieChartDonut data={pieData} width={200} height={200} thickness={20} colors={[colorCombos.button.primary.background, colorCombos.button.success.background, colorCombos.button.warning.background]} />
                 </Box>
@@ -168,8 +223,10 @@ export default function DashboardDemo() {
             </GridLegacy>
             <GridLegacy item xs={12} md={8}>
               <Paper sx={{ p: 3, border: `1px solid ${colorCombos.border.light}`, bgcolor: colorCombos.background.primary }}>
-                <Typography variant="h6" sx={{ fontWeight: 600, color: colorCombos.text.title, mb: 1 }}>Latency vs Users</Typography>
-                <Typography variant="body2" sx={{ color: colorCombos.text.secondary_1, mb: 2 }}>Each dot is a tick; higher x = more users, higher y = slower API</Typography>
+                <Typography variant="h6" sx={{ fontWeight: 600, color: colorCombos.text.title, mb: 1 }}>Latency vs Users Correlation</Typography>
+                <Typography variant="body2" sx={{ color: colorCombos.text.secondary_1, mb: 2 }}>
+                  Each dot shows user count vs API response time. This relationship feeds into the multi-line chart&apos;s Active Connections and Response Time series above.
+                </Typography>
                 <ScatterPlotMini points={scatterPoints} width={520} height={220} pointColor={colorCombos.button.secondary.text} />
               </Paper>
             </GridLegacy>
