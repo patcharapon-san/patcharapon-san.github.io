@@ -112,8 +112,9 @@ export default function DashboardDemo() {
       <HeroSection
         title="Monitoring Dashboard Demo"
         subtitle="Realtime-ish KPIs, mini charts and activity stream using mock data."
-        sx={{ backgroundImage: 'url(/work-station-5.jpg)', backgroundSize: 'cover' }}
         textAlign="center"
+        backgroundImage="/work-station-5.jpg"
+        backgroundImageAlt="Work Station"
       />
 
       <Box sx={{ py: 6, bgcolor: colorCombos.background.primary }}>

@@ -72,8 +72,9 @@ export default function ProjectPortfolio() {
       <HeroSection
         title="My Project Portfolio"
         subtitle="Explore my diverse range of projects across different industries and technologies."
-        sx={{ backgroundImage: 'url(/work-station-2.jpg)', backgroundSize: 'cover' }}
         textAlign="right"
+        backgroundImage="/work-station-2.jpg"
+        backgroundImageAlt="Work Station"
       />
 
       <Box sx={{ py: 8, bgcolor: colorCombos.background.accent }}>

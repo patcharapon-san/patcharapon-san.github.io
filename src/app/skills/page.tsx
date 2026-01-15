@@ -77,8 +77,9 @@ export default function Skills() {
             <HeroSection
                 title="Skills & Technologies"
                 subtitle={`${totalYears}+ years of full-stack development expertise across multiple industries and modern technologies.`}
-                sx={{ backgroundImage: 'url(/work-station-3.jpg)', backgroundSize: 'cover' }}
                 textAlign="center"
+                backgroundImage="/work-station-3.jpg"
+                backgroundImageAlt="Work Station"
             />
 
             {/* Quick Stats Section */}

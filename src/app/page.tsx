@@ -66,8 +66,9 @@ export default function Home() {
           subtitle={`Full-Stack Developer specializing in enterprise solutions, cloud architecture, and system integration with ${totalExperienceYears}+ years of experience across diverse industries.`}
           buttonText="View Portfolio Projects"
           buttonFunction={() => window.location.href = '/project-portfolio'}
-          sx={{ backgroundImage: 'url(/work-station-1.jpg)', backgroundSize: 'cover' }}
           textAlign="left"
+          backgroundImage="/work-station-1.jpg"
+          backgroundImageAlt="Work Station"
         />
       </Box>
 

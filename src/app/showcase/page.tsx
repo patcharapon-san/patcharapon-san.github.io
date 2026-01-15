@@ -188,8 +188,9 @@ export default function Showcase() {
             <HeroSection
                 title="Project Showcase"
                 subtitle="Explore my expertise in data visualization, dashboards, reports, and 3D rendering across various industries and technologies."
-                sx={{ backgroundImage: 'url(/work-station-3.jpg)', backgroundSize: 'cover' }}
                 textAlign="center"
+                backgroundImage="/work-station-3.jpg"
+                backgroundImageAlt="Work Station"
             />
 
             {/* Quick Overview */}

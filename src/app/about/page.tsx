@@ -12,8 +12,9 @@ export default function About() {
         <>
             <HeroSection
                 title="About Me"
-                sx={{ backgroundImage: 'url(/work-station-4.jpg)', backgroundSize: 'cover' }}
                 textAlign="center"
+                backgroundImage="/work-station-4.jpg"
+                backgroundImageAlt="Work Station"
             />
 
             <ContentFullWidth

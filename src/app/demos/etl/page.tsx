@@ -14,7 +14,8 @@ export default function EtlDemo() {
       <HeroSection
         title="ETL Orchestration Demo"
         subtitle="Overview of Azure Data Factory orchestration with Azure Functions transforms and published outputs."
-        sx={{ backgroundImage: 'url(/work-station-2.jpg)', backgroundSize: 'cover' }}
+        backgroundImage="/work-station-2.jpg"
+        backgroundImageAlt="Work Station"
         textAlign="center"
       />
 
