@@ -81,7 +81,9 @@ export default function About() {
                                 <ShoppingCartOutlined fontSize="large" sx={{ color: colorCombos.icon.primary }} /> E-commerce & Retail
                             </Typography>
                             <Typography variant="body2" color={colorCombos.text.secondary_1}>
-                                • <strong>E-commerce ecosystem development</strong><br />
+                                • <strong>E-commerce ecosystem development</strong> (PHP Laravel & .NET)<br />
+                                • <strong>Social commerce integration</strong> with Facebook API<br />
+                                • <strong>Role-based analytics</strong> for comment-to-order insights<br />
                                 • Warehouse management and logistics<br />
                                 • <strong>Real-time inventory</strong> and order processing
                             </Typography>

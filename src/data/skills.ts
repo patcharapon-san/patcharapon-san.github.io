@@ -47,6 +47,7 @@ export const programmingLanguagesData: SkillData[] = [
   { name: "PowerShell", yearsLabel: "4+", description: "System administration, DevOps automation", category: "proficient" },
   { name: "Python", yearsLabel: "3+", description: "Automation, data processing, scripting", category: "proficient" },
   { name: "XAML", yearsLabel: "3+", description: "WPF/UWP application UI development", category: "proficient" },
+  { name: "PHP", startYear: 2025, description: "Laravel framework, E-commerce applications", category: "proficient" },
   { name: "VB.NET", yearsLabel: "2+", description: "Legacy system maintenance", category: "proficient" },
 ];
 
@@ -72,6 +73,7 @@ export const backendCloudTechData: TechData[] = [
   { name: "Node.js", yearsLabel: "3+", description: "Express, RESTful APIs, Microservices" },
   { name: "AWS Lambda", yearsLabel: "2+", description: "Serverless functions, Event-driven architecture" },
   { name: "FastAPI", yearsLabel: "2+", description: "Python web framework, API development" },
+  { name: "Laravel", startYear: 2025, description: "PHP framework, MVC architecture, E-commerce platforms" },
   { name: "Docker", yearsLabel: "1+", description: "Containerization, Microservices deployment" },
 ];
 
@@ -88,7 +90,7 @@ export const industryExperienceData: IndustryData[] = [
   { name: "Oil & Gas", yearsLabel: "4+", projects: "Production systems, Regulatory compliance", iconKey: "OilBarrel" },
   { name: "Government", yearsLabel: "1+", projects: "Electronic visa systems, Public services", iconKey: "AccountBalanceOutlined" },
   { name: "Manufacturing", yearsLabel: "2+", projects: "Production tracking, Inventory management", iconKey: "Factory" },
-  { name: "E-commerce", yearsLabel: "2+", projects: "Payment processing, Order management", iconKey: "WebOutlined" },
+  { name: "E-commerce", yearsLabel: "2+", projects: "Payment processing, Order management, Facebook API integration (messages & posts), Role-based analytics for comment-to-order conversion", iconKey: "WebOutlined" },
   { name: "Marketing Tech", yearsLabel: "2+", projects: "Email automation, CMS, Analytics", iconKey: "Code" },
   { name: "HR Technology", yearsLabel: "2+", projects: "Recruitment systems, Employee management", iconKey: "People" },
   { name: "Education", yearsLabel: "2+", projects: "Learning management, Student information", iconKey: "SchoolOutlined" },

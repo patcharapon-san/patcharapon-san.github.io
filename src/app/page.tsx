@@ -42,7 +42,7 @@ const clientSuccessStories = [
   {
     icon: <ShoppingCartOutlined fontSize="large" color="primary" />,
     name: "E-commerce Platform",
-    text: "Built complete ecosystem including warehouse management and delivery tracking. Improved operational efficiency significantly.",
+    text: "Built complete ecosystem with Facebook API integration for social commerce, role-based analytics for comment-to-order conversion, warehouse management, and delivery tracking. Improved operational efficiency significantly.",
   },
   {
     icon: <OilBarrel fontSize="large" color="primary" />,

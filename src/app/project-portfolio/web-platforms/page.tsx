@@ -13,7 +13,7 @@ const webPlatformProjects = [
   },
   {
     name: "E-commerce & Warehouse Management Platform",
-    text: "Complete e-commerce ecosystem with customer store, warehouse management, delivery tracking, and business intelligence. Reduced order processing time by 81% and improved inventory accuracy to 96%.",
+    text: "Complete e-commerce ecosystem with customer store, warehouse management, delivery tracking, Facebook API integration for social commerce (messages and posts), role-based analytics system for comment-to-order conversion, and business intelligence. Reduced order processing time by 81% and improved inventory accuracy to 96%.",
   },
   {
     name: "Business Analytics Web Platform",
@@ -73,7 +73,9 @@ export default function WebPlatforms() {
                 <ShoppingCartCheckout fontSize="large" color="primary" />  E-commerce Platforms
               </Typography>
               <Typography variant="body2" color={colorCombos.text.secondary_1}>
-                • <strong>Complete ecosystem</strong> with React.js + .NET Core<br />
+                • <strong>Complete ecosystem</strong> with React.js, PHP Laravel, and .NET Core<br />
+                • <strong>Facebook API integration</strong> for social commerce (messages & posts)<br />
+                • <strong>Role-based analytics</strong> for comment-to-order conversion tracking<br />
                 • <strong>Real-time inventory</strong> with SignalR integration<br />
                 • Automated order processing and warehouse management<br />
                 • <strong>96% inventory accuracy improvement</strong>
