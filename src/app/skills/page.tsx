@@ -18,6 +18,8 @@ import {
     programmingLanguagesData,
     frontendTechData,
     backendCloudTechData,
+    aiToolsData,
+    devOpsData,
     databasesData,
     industryExperienceData,
     keyAchievementsData,
@@ -104,7 +106,7 @@ export default function Skills() {
                         </GridLegacy>
                         <GridLegacy item xs={6} md={3} sx={{ textAlign: 'center' }}>
                             <Typography variant="h3" sx={{ fontWeight: 700, color: colorCombos.text.title, mb: 1 }}>
-                                20+
+                                40+
                             </Typography>
                             <Typography variant="h6" sx={{ color: colorCombos.text.secondary_1 }}>
                                 Technologies
@@ -208,8 +210,28 @@ export default function Skills() {
                 </Container>
             </Box>
 
-            {/* Databases */}
+            {/* AI-Assisted Development */}
             <Box sx={{ py: 8, bgcolor: colorCombos.background.accent }}>
+                <Container>
+                    <Typography variant="h4" align="center" sx={{ fontWeight: 700, mb: 2, color: colorCombos.text.primary }}>
+                        AI-Assisted Development
+                    </Typography>
+                    <Typography variant="h6" align="center" sx={{ mb: 6, color: colorCombos.text.secondary_1 }}>
+                        From prompt engineering to multi-agent systems that build and maintain production software
+                    </Typography>
+
+                    <GridLegacy container spacing={3}>
+                        {aiToolsData.map((tech, index) => (
+                            <GridLegacy item xs={12} md={6} key={index}>
+                                <SkillCard name={tech.name} years={fmtYears(tech.yearsLabel, tech.startYear)} description={tech.description} />
+                            </GridLegacy>
+                        ))}
+                    </GridLegacy>
+                </Container>
+            </Box>
+
+            {/* Databases */}
+            <Box sx={{ py: 8, bgcolor: colorCombos.background.primary }}>
                 <Container>
                     <Typography variant="h4" align="center" sx={{ fontWeight: 700, mb: 6, color: colorCombos.text.primary }}>
                         Database Technologies
@@ -219,6 +241,26 @@ export default function Skills() {
                         {databasesData.map((db, index) => (
                             <GridLegacy item xs={12} md={6} key={index}>
                                 <SkillCard name={db.name} years={fmtYears(db.yearsLabel, db.startYear)} description={db.description} />
+                            </GridLegacy>
+                        ))}
+                    </GridLegacy>
+                </Container>
+            </Box>
+
+            {/* DevOps & CI/CD */}
+            <Box sx={{ py: 8, bgcolor: colorCombos.background.accent }}>
+                <Container>
+                    <Typography variant="h4" align="center" sx={{ fontWeight: 700, mb: 2, color: colorCombos.text.primary }}>
+                        DevOps & CI/CD
+                    </Typography>
+                    <Typography variant="h6" align="center" sx={{ mb: 6, color: colorCombos.text.secondary_1 }}>
+                        Automated test & deployment pipelines across multiple platforms and cloud providers
+                    </Typography>
+
+                    <GridLegacy container spacing={3}>
+                        {devOpsData.map((tech, index) => (
+                            <GridLegacy item xs={12} md={6} key={index}>
+                                <SkillCard name={tech.name} years={fmtYears(tech.yearsLabel, tech.startYear)} description={tech.description} />
                             </GridLegacy>
                         ))}
                     </GridLegacy>
