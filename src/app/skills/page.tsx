@@ -353,6 +353,13 @@ export default function Skills() {
                                     <Typography variant="body1" sx={{ color: colorCombos.text.secondary_1 }}>
                                         {achievement.description}
                                     </Typography>
+                                    {achievement.demoSlug && (
+                                        <Link href={`/demos/${achievement.demoSlug}`} style={{ textDecoration: 'none' }}>
+                                            <Typography variant="body2" sx={{ mt: 1.5, fontWeight: 600, color: colorCombos.text.title }}>
+                                                See it run &rarr;
+                                            </Typography>
+                                        </Link>
+                                    )}
                                 </Paper>
                             </GridLegacy>
                         ))}

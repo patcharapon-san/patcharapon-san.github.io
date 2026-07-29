@@ -1,183 +1,178 @@
 "use client";
 
 import React from "react";
+import { etlSources, type EtlNodeId, type EtlNodeState } from "@/data/etlRun";
 
 export type EtlFlowDiagramProps = {
+    states?: Partial<Record<EtlNodeId, EtlNodeState>>;
     width?: number;
     height?: number;
 };
 
-// Simple SVG-based ETL flow diagram
-// Layout (left ➔ right):
-// [ERP] [CRM] [Payments] [Inventory] [Support] ➔ [Azure Data Factory] ➔ [Azure Functions]
-//                                                               ➘                ➔ [Azure SQL]
-//                                                                ➔ [Blob Storage]
-// Side: [Key Vault] (dashed to ADF/Func) and [App Insights] (dashed to Func/SQL)
-export default function EtlFlowDiagram({ width = 1100, height = 460 }: EtlFlowDiagramProps) {
-    const box = (x: number, y: number, w: number, h: number, fill: string, stroke = "#111", rx = 8) => (
-        <rect x={x} y={y} width={w} height={h} fill={fill} stroke={stroke} strokeWidth={1.5} rx={rx} />
-    );
-    const label = (x: number, y: number, text: string, color = "#111", size = 14, weight = 600) => (
-        <text x={x} y={y} fill={color} fontSize={size} fontWeight={weight} textAnchor="middle" dominantBaseline="middle">
-            {text}
-        </text>
-    );
-    const arrow = (
-        x1: number,
-        y1: number,
-        x2: number,
-        y2: number,
-        color = "#555",
-        dashed = false
-    ) => (
-        <g>
-            <defs>
-                <marker id="arrow" markerWidth="10" markerHeight="10" refX="10" refY="3" orient="auto" markerUnits="strokeWidth">
-                    <path d="M0,0 L0,6 L9,3 z" fill={color} />
-                </marker>
-            </defs>
-            <line
-                x1={x1}
-                y1={y1}
-                x2={x2}
-                y2={y2}
-                stroke={color}
-                strokeWidth={2}
-                strokeDasharray={dashed ? "6,6" : undefined}
-                markerEnd="url(#arrow)"
-            />
-        </g>
+// SVG-based ETL flow diagram, driven by live run state.
+// Layout (left -> right):
+// [5 upstream sources] -> [Azure Data Factory] -> [Azure Functions] -> [Blob Storage]
+//                                                                  -> [Azure SQL]
+// Side services (dashed): [Key Vault], [App Insights], [Alerts]
+//
+// Node fill encodes state so a run can be watched stage by stage. Nodes default to
+// "pending" (grey) when no state is supplied for them.
+
+const palette: Record<EtlNodeState, { fill: string; stroke: string; text: string }> = {
+    pending: { fill: "#f5f5f5", stroke: "#9e9e9e", text: "#616161" },
+    running: { fill: "#e3f2fd", stroke: "#1976d2", text: "#0d47a1" },
+    done: { fill: "#e8f5e9", stroke: "#2e7d32", text: "#1b5e20" },
+    late: { fill: "#fff8e1", stroke: "#f9a825", text: "#f57f17" },
+    failed: { fill: "#ffebee", stroke: "#d32f2f", text: "#b71c1c" },
+    retrying: { fill: "#fff3e0", stroke: "#ed6c02", text: "#e65100" },
+};
+
+const ARROW_COLORS = ["#9e9e9e", "#1976d2", "#2e7d32", "#ed6c02", "#d32f2f", "#f9a825"] as const;
+const markerId = (color: string) => `etlflow-arrow-${color.replace("#", "")}`;
+
+// Arrow colour follows the state of the node the arrow feeds out of
+const flowColor = (state: EtlNodeState): string => {
+    switch (state) {
+        case "done":
+            return "#2e7d32";
+        case "running":
+            return "#1976d2";
+        case "failed":
+            return "#d32f2f";
+        case "retrying":
+            return "#ed6c02";
+        case "late":
+            return "#f9a825";
+        default:
+            return "#9e9e9e";
+    }
+};
+
+export default function EtlFlowDiagram({ states = {}, width = 1100, height = 460 }: EtlFlowDiagramProps) {
+    const stateOf = (id: EtlNodeId): EtlNodeState => states[id] ?? "pending";
+
+    const node = (
+        x: number,
+        y: number,
+        w: number,
+        h: number,
+        title: string,
+        subtitle: string | null,
+        state: EtlNodeState,
+        titleSize = 14
+    ) => {
+        const c = palette[state];
+        return (
+            <g>
+                <rect
+                    x={x}
+                    y={y}
+                    width={w}
+                    height={h}
+                    fill={c.fill}
+                    stroke={c.stroke}
+                    strokeWidth={state === "pending" ? 1.5 : 2.5}
+                    rx={8}
+                />
+                <text
+                    x={x + w / 2}
+                    y={subtitle ? y + h / 2 - 8 : y + h / 2}
+                    fill={c.text}
+                    fontSize={titleSize}
+                    fontWeight={700}
+                    textAnchor="middle"
+                    dominantBaseline="middle"
+                >
+                    {title}
+                </text>
+                {subtitle && (
+                    <text x={x + w / 2} y={y + h / 2 + 11} fill={c.text} fontSize={11} textAnchor="middle" dominantBaseline="middle">
+                        {subtitle}
+                    </text>
+                )}
+            </g>
+        );
+    };
+
+    const arrow = (x1: number, y1: number, x2: number, y2: number, color: string, dashed = false) => (
+        <line
+            x1={x1}
+            y1={y1}
+            x2={x2}
+            y2={y2}
+            stroke={color}
+            strokeWidth={2}
+            strokeDasharray={dashed ? "6,6" : undefined}
+            markerEnd={`url(#${markerId(color)})`}
+        />
     );
 
     // Coordinates
-    const spacingY = 80;
     const spacingX = 60;
-
     const leftX = 40;
     const srcW = 130;
     const srcH = 38;
     const srcGap = 14;
-    const srcStartY = 40;
+    const srcStartY = 50;
 
-    const adfW = 200;
-    const adfH = 60;
-    const adfX = 300;
-    const adfY = 100;
+    const adfW = 200, adfH = 60, adfX = 300, adfY = 130;
+    const funcW = 220, funcH = 60, funcX = adfX + adfW + spacingX, funcY = adfY;
 
-    const funcW = 220;
-    const funcH = 60;
-    const funcX = adfX + adfW + spacingX;
-    const funcY = adfY;
+    const blobW = 170, blobH = 50, blobX = funcX + funcW + spacingX, blobY = funcY - 55;
+    const sqlW = 170, sqlH = 50, sqlX = blobX, sqlY = funcY + 55;
 
-    const blobW = 160;
-    const blobH = 50;
-    const blobX = funcX + funcW + spacingX;
-    const blobY = funcY - 50;
-
-    const sqlW = 160;
-    const sqlH = 50;
-    const sqlX = blobX;
-    const sqlY = funcY + 50;
-
-    const kvW = 140;
-    const kvH = 44;
-    const kvX = adfX + 30;
-    const kvY = adfY + adfH + spacingY;
-
-    const aiW = 160;
-    const aiH = 44;
-    const aiX = funcX + 30;
-    const aiY = funcY + funcH + spacingY;
-
-    // Alerts/Notifications box (client-agnostic)
-    const alertW = 160;
-    const alertH = 44;
-    const alertX = blobX;
-    const alertY = aiY;
-
-    const sources = ["Ops Telemetry", "Asset Metrics", "Event History", "Model Outputs", "Curated Lake"];
+    const sideY = 330;
+    const kvW = 150, kvH = 44, kvX = adfX + 25;
+    const aiW = 170, aiH = 44, aiX = funcX + 25;
+    const alertW = 170, alertH = 44, alertX = blobX;
 
     return (
-        <svg width={width} height={height} role="img" aria-label="ETL process flow diagram">
-            {/* Background */}
+        <svg width={width} height={height} role="img" aria-label="ETL pipeline run diagram">
+            <defs>
+                {ARROW_COLORS.map((color) => (
+                    <marker key={color} id={markerId(color)} markerWidth="10" markerHeight="10" refX="10" refY="3" orient="auto" markerUnits="strokeWidth">
+                        <path d="M0,0 L0,6 L9,3 z" fill={color} />
+                    </marker>
+                ))}
+            </defs>
+
             <rect x={0} y={0} width={width} height={height} fill="#ffffff" />
 
-            {/* Title */}
             <text x={width / 2} y={28} fontSize={18} fontWeight={700} fill="#0f172a" textAnchor="middle">
-                End-to-End ETL Process Flow
+                End-to-End ETL Pipeline Run
             </text>
 
-            {/* Sources */}
-            {sources.map((s, i) => {
+            {/* Upstream sources */}
+            {etlSources.map((s, i) => {
                 const y = srcStartY + i * (srcH + srcGap);
+                const state = stateOf(s.id);
                 return (
-                    <g key={s}>
-                        {box(leftX, y, srcW, srcH, "#e3f2fd", "#1976d2")}
-                        {label(leftX + srcW / 2, y + srcH / 2, s, "#0d47a1", 14)}
-                        {arrow(leftX + srcW, y + srcH / 2, adfX, adfY + adfH / 2, "#1976d2")}
+                    <g key={s.id}>
+                        {node(leftX, y, srcW, srcH, s.label, null, state, 12)}
+                        {arrow(leftX + srcW, y + srcH / 2, adfX, adfY + adfH / 2, flowColor(state))}
                     </g>
                 );
             })}
 
-            {/* Azure Data Factory */}
-            {box(adfX, adfY, adfW, adfH, "#e3f2fd", "#1976d2")}
-            {label(adfX + adfW / 2, adfY + adfH / 2 - 8, "Azure Data Factory", "#0d47a1")}
-            <text x={adfX + adfW / 2} y={adfY + adfH / 2 + 12} fontSize={12} fill="#0d47a1" textAnchor="middle">
-                Orchestrate & Ingest
-            </text>
+            {/* Orchestration and transform */}
+            {node(adfX, adfY, adfW, adfH, "Azure Data Factory", "orchestrate & ingest", stateOf("adf"))}
+            {node(funcX, funcY, funcW, funcH, "Azure Functions", "transform & validate", stateOf("func"))}
+            {arrow(adfX + adfW, adfY + adfH / 2, funcX, funcY + funcH / 2, flowColor(stateOf("adf")))}
 
-            {/* Azure Functions */}
-            {box(funcX, funcY, funcW, funcH, "#fff3e0", "#ed6c02")}
-            {label(funcX + funcW / 2, funcY + funcH / 2 - 8, "Azure Functions", "#e65100")}
-            <text x={funcX + funcW / 2} y={funcY + funcH / 2 + 12} fontSize={12} fill="#e65100" textAnchor="middle">
-                Transform & Validate
-            </text>
-
-            {/* Storage outputs */}
-            {box(blobX, blobY, blobW, blobH, "#e8f5e9", "#2e7d32")}
-            {label(blobX + blobW / 2, blobY + blobH / 2, "Azure Blob Storage", "#1b5e20", 13)}
-
-            {box(sqlX, sqlY, sqlW, sqlH, "#e8f5e9", "#2e7d32")}
-            {label(sqlX + sqlW / 2, sqlY + sqlH / 2, "Azure SQL Database", "#1b5e20", 13)}
+            {/* Published targets */}
+            {node(blobX, blobY, blobW, blobH, "Azure Blob Storage", null, stateOf("blob"), 13)}
+            {node(sqlX, sqlY, sqlW, sqlH, "Azure SQL Database", null, stateOf("sql"), 13)}
+            {arrow(funcX + funcW, funcY + funcH / 2, blobX, blobY + blobH / 2, flowColor(stateOf("func")))}
+            {arrow(funcX + funcW, funcY + funcH / 2, sqlX, sqlY + sqlH / 2, flowColor(stateOf("func")))}
 
             {/* Side services */}
-            {box(kvX, kvY, kvW, kvH, "#ede7f6", "#5e35b1")}
-            {label(kvX + kvW / 2, kvY + kvH / 2, "Azure Key Vault", "#4527a0", 12)}
+            {node(kvX, sideY, kvW, kvH, "Azure Key Vault", null, stateOf("keyvault"), 12)}
+            {node(aiX, sideY, aiW, aiH, "App Insights", null, stateOf("insights"), 12)}
+            {node(alertX, sideY, alertW, alertH, "Alerts (Monitor / Email)", null, stateOf("alerts"), 11)}
 
-            {box(aiX, aiY, aiW, aiH, "#f3e5f5", "#8e24aa")}
-            {label(aiX + aiW / 2, aiY + aiH / 2, "Azure App Insights", "#6a1b9a", 12)}
-
-            {/* Alerts & Notifications */}
-            {box(alertX, alertY, alertW, alertH, "#fffde7", "#f9a825")}
-            {label(alertX + alertW / 2, alertY + alertH / 2, "Alerts (Monitor / Email)", "#f57f17", 12)}
-
-            {/* Arrows between main stages */}
-            {arrow(adfX + adfW, adfY + adfH / 2, funcX, funcY + funcH / 2, "#555")}
-            {arrow(funcX + funcW, funcY + funcH / 2, blobX, blobY + blobH / 2, "#2e7d32")}
-            {arrow(funcX + funcW, funcY + funcH / 2, sqlX, sqlY + sqlH / 2, "#2e7d32")}
-
-            {/* Dashed arrows for Key Vault & Insights */}
-            {arrow(kvX + kvW / 2, kvY, adfX + (adfW / 2), adfY + adfH, "#5e35b1", true)}
-            {arrow(kvX + kvW / 2, kvY, funcX, funcY + funcH, "#5e35b1", true)}
-            {arrow(aiX + aiW / 2, aiY, funcX + (funcW / 2), funcY + funcH, "#8e24aa", true)}
-            {arrow(aiX + aiW / 2, aiY, sqlX, sqlY + (sqlH/2), "#8e24aa", true)}
-            {arrow(aiX + aiW, aiY + aiH / 2, alertX, alertY + alertH / 2, "#f9a825", true)}
-
-            {/* Legend */}
-            <g>
-                <rect x={20} y={height - 100} width={width - 40} height={70} fill="#fafafa" stroke="#e0e0e0" rx={8} />
-                <text x={40} y={height - 75} fontSize={12} fill="#111" fontWeight={700}>
-                    Legend
-                </text>
-                <circle cx={120} cy={height - 50} r={6} fill="#1976d2" />
-                <text x={135} y={height - 47} fontSize={12} fill="#374151">Ingestion / Orchestration</text>
-                <circle cx={330} cy={height - 50} r={6} fill="#ed6c02" />
-                <text x={345} y={height - 47} fontSize={12} fill="#374151">Transformation</text>
-                <circle cx={510} cy={height - 50} r={6} fill="#2e7d32" />
-                <text x={525} y={height - 47} fontSize={12} fill="#374151">Published Data Targets</text>
-                <rect x={720} y={height - 56} width={24} height={10} fill="none" stroke="#9e9e9e" strokeDasharray="6,6" />
-                <text x={750} y={height - 47} fontSize={12} fill="#374151">Observability, Secrets & Alerts</text>
-            </g>
+            {arrow(kvX + kvW / 2, sideY, adfX + adfW / 2, adfY + adfH, flowColor(stateOf("keyvault")), true)}
+            {arrow(aiX + aiW / 2, sideY, funcX + funcW / 2, funcY + funcH, flowColor(stateOf("insights")), true)}
+            {arrow(aiX + aiW, sideY + aiH / 2, alertX, sideY + alertH / 2, flowColor(stateOf("alerts")), true)}
         </svg>
     );
 }

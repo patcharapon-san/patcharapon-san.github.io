@@ -24,7 +24,7 @@ export const demos: DemoItem[] = [
   {
     title: "ETL Orchestration Demo",
     slug: "etl",
-    summary: "Overview + process flow diagram: Azure Data Factory orchestrates data from multiple systems, Azure Functions transform, and outputs published to Storage & Azure SQL.",
+    summary: "Replay one overnight Azure Data Factory run end to end - a late upstream source, an alert to on-call, a transform that fails on a 429 and recovers on retry, and the dataset still published ahead of SLA.",
     technologies: [
       "Azure Data Factory",
       "Azure Functions",
