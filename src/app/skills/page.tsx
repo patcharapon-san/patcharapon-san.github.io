@@ -18,12 +18,23 @@ import {
     programmingLanguagesData,
     frontendTechData,
     backendCloudTechData,
-    aiToolingData,
+    aiToolsData,
+    devOpsData,
     databasesData,
     industryExperienceData,
     keyAchievementsData,
     type IndustryIconKey
 } from "@/data/skills";
+
+// Rounded down to the nearest 5 so the headline stat stays honest as the lists grow
+const technologyCount = [
+    programmingLanguagesData,
+    frontendTechData,
+    backendCloudTechData,
+    aiToolsData,
+    devOpsData,
+    databasesData,
+].reduce((total, list) => total + list.length, 0);
 
 // Data-driven helpers
 const iconMap: Record<IndustryIconKey, React.ReactNode> = {
@@ -70,15 +81,6 @@ const SkillCard = ({ name, years, description, category }: { name: string; years
         </Typography>
     </Paper>
 );
-
-// Rounded down to the nearest 5 so the headline stat stays honest as the lists grow
-const technologyCount = [
-    programmingLanguagesData,
-    frontendTechData,
-    backendCloudTechData,
-    aiToolingData,
-    databasesData,
-].reduce((total, list) => total + list.length, 0);
 
 export default function Skills() {
     const totalYears = getYearsOfExperience(2016);
@@ -218,8 +220,28 @@ export default function Skills() {
                 </Container>
             </Box>
 
-            {/* Databases */}
+            {/* AI-Assisted Development */}
             <Box sx={{ py: 8, bgcolor: colorCombos.background.accent }}>
+                <Container>
+                    <Typography variant="h4" align="center" sx={{ fontWeight: 700, mb: 2, color: colorCombos.text.primary }}>
+                        AI-Assisted Development
+                    </Typography>
+                    <Typography variant="h6" align="center" sx={{ mb: 6, color: colorCombos.text.secondary_1 }}>
+                        From prompt engineering to multi-agent systems that build and maintain production software
+                    </Typography>
+
+                    <GridLegacy container spacing={3}>
+                        {aiToolsData.map((tech, index) => (
+                            <GridLegacy item xs={12} md={6} key={index}>
+                                <SkillCard name={tech.name} years={fmtYears(tech.yearsLabel, tech.startYear)} description={tech.description} />
+                            </GridLegacy>
+                        ))}
+                    </GridLegacy>
+                </Container>
+            </Box>
+
+            {/* Databases */}
+            <Box sx={{ py: 8, bgcolor: colorCombos.background.primary }}>
                 <Container>
                     <Typography variant="h4" align="center" sx={{ fontWeight: 700, mb: 6, color: colorCombos.text.primary }}>
                         Database Technologies
@@ -235,20 +257,20 @@ export default function Skills() {
                 </Container>
             </Box>
 
-            {/* AI & Developer Tooling */}
-            <Box sx={{ py: 8, bgcolor: colorCombos.background.primary }}>
+            {/* DevOps & CI/CD */}
+            <Box sx={{ py: 8, bgcolor: colorCombos.background.accent }}>
                 <Container>
                     <Typography variant="h4" align="center" sx={{ fontWeight: 700, mb: 2, color: colorCombos.text.primary }}>
-                        AI & Developer Tooling
+                        DevOps & CI/CD
                     </Typography>
                     <Typography variant="h6" align="center" sx={{ mb: 6, color: colorCombos.text.secondary_1 }}>
-                        AI-augmented development workflows used daily in production work
+                        Automated test & deployment pipelines across multiple platforms and cloud providers
                     </Typography>
 
                     <GridLegacy container spacing={3}>
-                        {aiToolingData.map((tool, index) => (
+                        {devOpsData.map((tech, index) => (
                             <GridLegacy item xs={12} md={6} key={index}>
-                                <SkillCard name={tool.name} years={fmtYears(tool.yearsLabel, tool.startYear)} description={tool.description} />
+                                <SkillCard name={tech.name} years={fmtYears(tech.yearsLabel, tech.startYear)} description={tech.description} />
                             </GridLegacy>
                         ))}
                     </GridLegacy>
@@ -256,7 +278,7 @@ export default function Skills() {
             </Box>
 
             {/* Industry Experience */}
-            <Box sx={{ py: 8, bgcolor: colorCombos.background.accent }}>
+            <Box sx={{ py: 8, bgcolor: colorCombos.background.primary }}>
                 <Container>
                     <Typography variant="h4" align="center" sx={{ fontWeight: 700, mb: 2, color: colorCombos.text.primary }}>
                         Industry Experience
@@ -309,7 +331,7 @@ export default function Skills() {
             </Box>
 
             {/* Key Achievements */}
-            <Box sx={{ py: 8, bgcolor: colorCombos.background.primary }}>
+            <Box sx={{ py: 8, bgcolor: colorCombos.background.accent }}>
                 <Container>
                     <Typography variant="h4" align="center" sx={{ fontWeight: 700, mb: 2, color: colorCombos.text.primary }}>
                         Key Achievements & Impact
