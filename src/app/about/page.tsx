@@ -1,7 +1,7 @@
 import ContentFullWidth from "@/components/ContentFullWidth";
 import LargeImage from "@/components/LargeImage";
 import { Box, Typography, Container } from "@mui/material";
-import { AccountBalanceOutlined, Factory, SchoolOutlined, ShoppingCartOutlined } from "@mui/icons-material";
+import { AccountBalanceOutlined, Factory, OilBarrel, People, SchoolOutlined, ShoppingCartOutlined } from "@mui/icons-material";
 import { colorCombos } from "@/utils/colors";
 import HeroSection from "@/components/HeroSection";
 import { getYearsOfExperience } from "@/utils/experience";
@@ -20,7 +20,7 @@ export default function About() {
             <ContentFullWidth
                 title="My Development Journey"
                 text={`I'm a passionate <strong>software developer</strong> with a journey that spans over <strong>${totalExperienceYears} years</strong> across diverse industries and technologies. What drives me is the challenge of solving <strong>complex business problems</strong> through <strong>elegant technical solutions</strong>. My diverse experience across <strong>7 different industries</strong> has given me unique perspectives on how technology needs vary across sectors: <strong>Oil & Gas</strong>, <strong>Government</strong>, <strong>Manufacturing</strong>, <strong>E-commerce</strong>, <strong>Marketing</strong>, <strong>HR Technology</strong>, and <strong>Education</strong>.`}
-                text2="Starting as a <strong>Front-End/Back-End Developer</strong>, I quickly discovered my passion for creating systems that make people's work easier and more efficient. I evolved into <strong>Solutions Architect</strong>, designing <strong>comprehensive technology ecosystems</strong>. Over the years, I've embraced new technologies and methodologies, from traditional <strong>desktop / website applications</strong> to modern <strong>cloud-native architectures</strong>. My expertise now spans <strong>full-stack development</strong>, <strong>serverless computing</strong>, and <strong>system integration</strong>."
+                text2="Starting as a <strong>Front-End/Back-End Developer</strong>, I quickly discovered my passion for creating systems that make people's work easier and more efficient. I evolved into a <strong>Solutions Architect</strong>, designing <strong>comprehensive technology ecosystems</strong>, and today I work as a <strong>Specialist / Team Lead</strong> &mdash; setting <strong>technical direction</strong>, mentoring developers, and owning delivery end to end while staying hands-on in the code. Over the years, I've embraced new technologies and methodologies, from traditional <strong>desktop / website applications</strong> to modern <strong>cloud-native architectures</strong>. My expertise now spans <strong>full-stack development</strong>, <strong>serverless computing</strong>, <strong>system integration</strong>, and <strong>AI-augmented engineering</strong>."
                 imagePosition="None"
             />
 
@@ -28,8 +28,15 @@ export default function About() {
 
             <ContentFullWidth
                 title="Work Philosophy & Approach"
-                text="As both <strong>enterprise team member</strong> and <strong>independent contractor</strong>, I've learned to be self-motivated, client-focused with strong communication skills, and adaptable to different team dynamics. I believe in <strong>quality over quantity</strong> and building robust, maintainable solutions."
+                text="As an <strong>enterprise team member</strong>, <strong>independent contractor</strong>, and now a <strong>team lead</strong>, I've learned to be self-motivated, client-focused with strong communication skills, and adaptable to different team dynamics. I believe in <strong>quality over quantity</strong> and building robust, maintainable solutions &mdash; and in leaving a team stronger than I found it through <strong>code review</strong>, <strong>knowledge sharing</strong>, and <strong>pragmatic technical standards</strong>."
                 text2="Whether it's helping manufacturing teams track production efficiently, enabling students to learn complex engineering concepts through interactive tools, or streamlining government processes, I'm driven by the <strong>impact my work has on real people's daily lives</strong>."
+                imagePosition="None"
+            />
+
+            <ContentFullWidth
+                title="Building with AI"
+                text="Over the past <strong>two years</strong> I've rebuilt how I deliver software around <strong>AI-assisted development</strong>. What began with inline code completion has grown into a full workflow: <strong>agentic coding tools</strong>, <strong>multi-agent orchestration</strong>, and carefully engineered context that takes an idea to a production-ready implementation far faster than before."
+                text2="I treat AI as a <strong>force multiplier, not a replacement for engineering judgment</strong>. Generated code is still reviewed, tested, and held to the same standard as anything I write by hand &mdash; the real win is <strong>faster exploration</strong>, <strong>broader coverage</strong>, and less time on boilerplate so more goes into <strong>architecture and business outcomes</strong>. I also help my team adopt these practices safely, establishing the guardrails and review habits that let <strong>quality scale alongside velocity</strong>."
                 imagePosition="None"
             />
 
@@ -98,6 +105,30 @@ export default function About() {
                                 • <strong>3D visualization</strong> for complex concepts<br />
                                 • Educational tool development for engineering<br />
                                 • Simplified technical concept delivery
+                            </Typography>
+                        </Box>
+
+                        <Box sx={{ p: 3, bgcolor: colorCombos.background.primary, borderRadius: 2, boxShadow: 1 }}>
+                            <Typography variant="h6" gutterBottom sx={{ fontWeight: 600, color: colorCombos.text.title }}>
+                                <OilBarrel fontSize="large" sx={{ color: colorCombos.icon.primary }} /> Oil & Gas & Energy
+                            </Typography>
+                            <Typography variant="body2" color={colorCombos.text.secondary_1}>
+                                • <strong>Production and reservoir management</strong> systems<br />
+                                • <strong>Regulatory compliance</strong> and reporting workflows<br />
+                                • <strong>Cloud ETL pipelines</strong> for operational telemetry<br />
+                                • Petroleum engineering tooling and analytics
+                            </Typography>
+                        </Box>
+
+                        <Box sx={{ p: 3, bgcolor: colorCombos.background.primary, borderRadius: 2, boxShadow: 1 }}>
+                            <Typography variant="h6" gutterBottom sx={{ fontWeight: 600, color: colorCombos.text.title }}>
+                                <People fontSize="large" sx={{ color: colorCombos.icon.primary }} /> Marketing & HR Technology
+                            </Typography>
+                            <Typography variant="body2" color={colorCombos.text.secondary_1}>
+                                • <strong>Email automation</strong> at scale (20,000+ daily)<br />
+                                • <strong>CMS and campaign analytics</strong> platforms<br />
+                                • <strong>Recruitment and employee management</strong> systems<br />
+                                • Third-party integration and data pipelines
                             </Typography>
                         </Box>
                     </Box>

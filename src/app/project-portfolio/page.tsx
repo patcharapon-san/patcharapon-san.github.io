@@ -3,7 +3,7 @@ import HeroSection from "@/components/HeroSection";
 import Gallery2xN from "@/components/Gallery2xN";
 import { Box, Typography, Paper, Stack, Container } from "@mui/material";
 import GridLegacy from "@mui/material/GridLegacy";
-import { Business, Web, DesktopWindowsOutlined, Cloud, AirplaneTicket, OilBarrel, SchoolOutlined, People } from "@mui/icons-material";
+import { Business, Web, DesktopWindowsOutlined, Cloud, AirplaneTicket, OilBarrel, SchoolOutlined, People, ShoppingCartOutlined, Assessment } from "@mui/icons-material";
 import { colorCombos } from "@/utils/colors";
 import Link from "next/link";
 
@@ -63,6 +63,18 @@ const allProjects = [
     icon: <People fontSize="large" color="primary" />,
     name: "Marketing Technology Platform",
     text: "Digital marketing ecosystem processing 20K+ daily emails with custom CMS and 70% performance optimization.",
+  },
+  // E-commerce
+  {
+    icon: <ShoppingCartOutlined fontSize="large" color="primary" />,
+    name: "E-commerce Ecosystem Platform",
+    text: "Complete commerce platform built with PHP Laravel and .NET, featuring Facebook API social commerce, role-based analytics for comment-to-order conversion, warehouse management, and delivery tracking.",
+  },
+  // Data & Cloud Engineering
+  {
+    icon: <Assessment fontSize="large" color="primary" />,
+    name: "Enterprise ETL Orchestration",
+    text: "Azure Data Factory pipelines consolidating multiple upstream systems, achieving 99.5% on-time data availability and ~80% less manual reconciliation.",
   },
 ];
 

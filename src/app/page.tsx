@@ -11,7 +11,9 @@ import {
   Terminal,
   WorkOutline,
   ViewModule,
-  Assessment
+  Assessment,
+  AutoAwesome,
+  Groups
 } from "@mui/icons-material";
 import { Box, Container, Typography, Paper, Stack } from "@mui/material";
 import { colorCombos } from "@/utils/colors";
@@ -25,6 +27,9 @@ const coreCompetencies = [
   { icon: <Cloud fontSize="large" color="primary" />, title: "Cloud Architecture", desc: "AWS/Azure services implementation and serverless solutions." },
   { icon: <DesktopWindowsOutlined fontSize="large" color="primary" />, title: "Desktop Applications", desc: "Rich client applications with modern UI frameworks and 3D visualization." },
   { icon: <Build fontSize="large" color="primary" />, title: "Performance Optimization", desc: "Database tuning, application optimization, and security enhancement." },
+  { icon: <AutoAwesome fontSize="large" color="primary" />, title: "AI-Augmented Delivery", desc: "Agentic coding workflows and multi-agent orchestration to ship faster without trading away quality." },
+  { icon: <Groups fontSize="large" color="primary" />, title: "Technical Leadership", desc: "Leading delivery, mentoring developers, and setting pragmatic standards through code review." },
+  { icon: <Assessment fontSize="large" color="primary" />, title: "Data & Analytics", desc: "Cloud ETL pipelines, reporting platforms, and interactive dashboards for decision-making." },
 ];
 
 
