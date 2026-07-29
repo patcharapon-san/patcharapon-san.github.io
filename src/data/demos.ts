@@ -8,6 +8,13 @@ export interface DemoItem {
 
 export const demos: DemoItem[] = [
   {
+    title: "Agentic Workflow Demo",
+    slug: "agentic",
+    summary: "Step through a task moving across a multi-agent pipeline - planner, parallel workers, review gate - including the rejection and retry loop (scripted simulation).",
+    technologies: ["Next.js", "React", "TypeScript", "SVG", "MUI"],
+    status: "beta",
+  },
+  {
     title: "Monitoring Dashboard Demo",
     slug: "dashboard",
     summary: "Realtime-ish monitoring of users, events, batches and APIs with KPIs, mini charts and an activity table (mock data).",
@@ -17,7 +24,7 @@ export const demos: DemoItem[] = [
   {
     title: "ETL Orchestration Demo",
     slug: "etl",
-    summary: "Overview + process flow diagram: Azure Data Factory orchestrates data from multiple systems, Azure Functions transform, and outputs published to Storage & Azure SQL.",
+    summary: "Replay one overnight Azure Data Factory run end to end - a late upstream source, an alert to on-call, a transform that fails on a 429 and recovers on retry, and the dataset still published ahead of SLA.",
     technologies: [
       "Azure Data Factory",
       "Azure Functions",

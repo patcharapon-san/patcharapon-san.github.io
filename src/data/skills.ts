@@ -36,6 +36,8 @@ export interface AchievementData {
   title: string;
   description: string;
   impact: "High" | "Medium" | "Low";
+  // Slug of a demo that lets a reader verify the claim instead of taking it on trust
+  demoSlug?: string;
 }
 
 // Programming Languages
@@ -124,9 +126,11 @@ export const keyAchievementsData: AchievementData[] = [
   { title: "Performance Optimization", description: "96% reduction in report generation time", impact: "High" },
   { title: "Microservices Architecture", description: "30+ AWS Lambda functions in production", impact: "High" },
   { title: "System Reliability", description: "99.9% uptime for critical business systems", impact: "High" },
-  { title: "Process Automation", description: "80% reduction in manual processing", impact: "Medium" },
+  { title: "Process Automation", description: "80% reduction in manual processing", impact: "Medium", demoSlug: "etl" },
   { title: "Email Marketing Platform", description: "20,000+ daily emails processed", impact: "Medium" },
   { title: "Concurrent Processing", description: "10,000+ visa applications at peak time", impact: "High" },
   { title: "Framework Modernization", description: ".NET Framework 4.8 → .NET 8 production migration", impact: "High" },
   { title: "Legacy Data Migration", description: "Migrated MS Access system to PostgreSQL", impact: "Medium" },
+  { title: "Technical Leadership", description: "Technical direction, code review, and developer mentoring as team lead", impact: "High" },
+  { title: "AI-Augmented Delivery", description: "Agentic and multi-agent workflows adopted in day-to-day development", impact: "High", demoSlug: "agentic" },
 ];

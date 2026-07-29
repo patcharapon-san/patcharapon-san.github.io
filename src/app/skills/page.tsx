@@ -26,6 +26,16 @@ import {
     type IndustryIconKey
 } from "@/data/skills";
 
+// Rounded down to the nearest 5 so the headline stat stays honest as the lists grow
+const technologyCount = [
+    programmingLanguagesData,
+    frontendTechData,
+    backendCloudTechData,
+    aiToolsData,
+    devOpsData,
+    databasesData,
+].reduce((total, list) => total + list.length, 0);
+
 // Data-driven helpers
 const iconMap: Record<IndustryIconKey, React.ReactNode> = {
     OilBarrel: <OilBarrel fontSize="large" color="primary" />,
@@ -106,7 +116,7 @@ export default function Skills() {
                         </GridLegacy>
                         <GridLegacy item xs={6} md={3} sx={{ textAlign: 'center' }}>
                             <Typography variant="h3" sx={{ fontWeight: 700, color: colorCombos.text.title, mb: 1 }}>
-                                40+
+                                {`${Math.floor(technologyCount / 5) * 5}+`}
                             </Typography>
                             <Typography variant="h6" sx={{ color: colorCombos.text.secondary_1 }}>
                                 Technologies
@@ -327,7 +337,7 @@ export default function Skills() {
                         Key Achievements & Impact
                     </Typography>
                     <Typography variant="h6" align="center" sx={{ mb: 6, color: colorCombos.text.secondary_1 }}>
-                        Quantifiable results and business impact across projects
+                        Measurable results, technical leadership, and business impact across projects
                     </Typography>
 
                     <GridLegacy container spacing={4}>
@@ -365,6 +375,13 @@ export default function Skills() {
                                     <Typography variant="body1" sx={{ color: colorCombos.text.secondary_1 }}>
                                         {achievement.description}
                                     </Typography>
+                                    {achievement.demoSlug && (
+                                        <Link href={`/demos/${achievement.demoSlug}`} style={{ textDecoration: 'none' }}>
+                                            <Typography variant="body2" sx={{ mt: 1.5, fontWeight: 600, color: colorCombos.text.title }}>
+                                                See it run &rarr;
+                                            </Typography>
+                                        </Link>
+                                    )}
                                 </Paper>
                             </GridLegacy>
                         ))}
