@@ -8,6 +8,13 @@ export interface DemoItem {
 
 export const demos: DemoItem[] = [
   {
+    title: "Agentic Workflow Demo",
+    slug: "agentic",
+    summary: "Step through a task moving across a multi-agent pipeline - planner, parallel workers, review gate - including the rejection and retry loop (scripted simulation).",
+    technologies: ["Next.js", "React", "TypeScript", "SVG", "MUI"],
+    status: "beta",
+  },
+  {
     title: "Monitoring Dashboard Demo",
     slug: "dashboard",
     summary: "Realtime-ish monitoring of users, events, batches and APIs with KPIs, mini charts and an activity table (mock data).",
